@@ -1,1 +1,4 @@
-[0430/141605.376:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[0515/070451.086:ERROR:os_crypt_win.cc(93)] Failed to decrypt: 키를 지정된 상태에서 사용하기에 부적합합니다. (0x8009000B)
+[0515/070454.334:WARNING:spdy_session.cc(3431)] Received HEADERS for invalid stream 1
+[0515/070455.777:WARNING:value_store_frontend.cc(45)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0515/070651.333:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
