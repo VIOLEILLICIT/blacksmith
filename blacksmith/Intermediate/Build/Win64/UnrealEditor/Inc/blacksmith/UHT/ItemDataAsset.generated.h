@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BLACKSMITH_ItemDataAsset_generated_h
 
-#define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUItemDataAsset(); \
 	friend struct Z_Construct_UClass_UItemDataAsset_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UItemDataAsset)
 
 
-#define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_10_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UItemDataAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UItemDataAsset();
 
 
-#define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_7_PROLOG
-#define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_10_GENERATED_BODY \
+#define FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_7_PROLOG
+#define FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_10_INCLASS_NO_PURE_DECLS \
-	FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_10_ENHANCED_CONSTRUCTORS \
+	FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_10_INCLASS_NO_PURE_DECLS \
+	FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -50,7 +50,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> BLACKSMITH_API UClass* StaticClass<class UItemDataAsset>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h
+#define CURRENT_FILE_ID FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

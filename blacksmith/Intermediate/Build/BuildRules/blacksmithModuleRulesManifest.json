@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\blacksmith.Build.cs",
-		"C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith.Target.cs",
-		"C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmithEditor.Target.cs"
+		"C:\\Users\\1\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\blacksmith.Build.cs",
+		"C:\\Users\\1\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith.Target.cs",
+		"C:\\Users\\1\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmithEditor.Target.cs"
 	],
 	"EngineVersion": "5.5.4"
 }
