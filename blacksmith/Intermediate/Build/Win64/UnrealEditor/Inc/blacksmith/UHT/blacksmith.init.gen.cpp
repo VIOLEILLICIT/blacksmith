@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeblacksmith_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xE712B69C,
+				0x52B83871,
 				0xD0665336,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeblacksmith_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_blacksmith.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_blacksmith(Z_Construct_UPackage__Script_blacksmith, TEXT("/Script/blacksmith"), Z_Registration_Info_UPackage__Script_blacksmith, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xE712B69C, 0xD0665336));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_blacksmith(Z_Construct_UPackage__Script_blacksmith, TEXT("/Script/blacksmith"), Z_Registration_Info_UPackage__Script_blacksmith, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x52B83871, 0xD0665336));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
