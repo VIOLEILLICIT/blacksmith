@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-blacksmith.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\신동규\Desktop\3학년 1학기\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\Users\신동규\Desktop\3학년 1학기\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\blacksmith.init.gen.cpp.obj"
+"C:\Users\신동규\Desktop\3학년 1학기\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\WaterRuneUpgradeSystem.gen.cpp.obj"
+"C:\Users\신동규\Desktop\3학년 1학기\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\blacksmith.cpp.obj"
+"C:\Users\신동규\Desktop\3학년 1학기\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\WaterRuneUpgradeSystem.cpp.obj"
+"C:\Users\신동규\Desktop\3학년 1학기\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\PerModuleInline.gen.cpp.obj"
+"C:\Users\신동규\Desktop\3학년 1학기\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\Default.rc2.res"
+/OUT:"C:\Users\신동규\Desktop\3학년 1학기\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\UnrealEditor-blacksmith.lib"

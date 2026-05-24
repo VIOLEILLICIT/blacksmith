@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\blacksmith\\blacksmith\\Source\\blacksmith\\blacksmith.Build.cs",
+		"C:\\blacksmith\\blacksmith\\Source\\blacksmith.Target.cs",
+		"C:\\blacksmith\\blacksmith\\Source\\blacksmithEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}

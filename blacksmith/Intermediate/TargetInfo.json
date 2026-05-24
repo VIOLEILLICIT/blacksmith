@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "blacksmith",
+			"Path": "..\\Source\\blacksmith.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "blacksmithEditor",
+			"Path": "..\\Source\\blacksmithEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
