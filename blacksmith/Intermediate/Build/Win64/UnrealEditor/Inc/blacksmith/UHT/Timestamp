@@ -1,6 +1,9 @@
-C:\Users\1\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\BlacksmithPlayer.h
-C:\Users\1\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\InteractableInterface.h
-C:\Users\1\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\SharedTypes.h
-C:\Users\1\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\NPCComponent.h
-C:\Users\1\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\BaseNPC.h
-C:\Users\1\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\ItemDataAsset.h
+C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\BaseNPC.h
+C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\BlacksmithPlayer.h
+C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\InventoryComponent.h
+C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\InteractableInterface.h
+C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\ItemDataAsset.h
+C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\NPCComponent.h
+C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\SharedTypes.h
+C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\W_ItemSlot.h
+C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\W_Inventory.h
