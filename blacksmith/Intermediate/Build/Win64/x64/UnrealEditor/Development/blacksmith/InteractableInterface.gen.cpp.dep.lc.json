@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\interactableinterface.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\blacksmitheditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blacksmith\\definitions.blacksmith.h",
+            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\interactableinterface.h",
+            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\interactableinterface.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
