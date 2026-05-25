@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\waterruneupgradesystem.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\blacksmitheditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blacksmith\\definitions.blacksmith.h",
+            "c:\\blacksmith\\blacksmith\\source\\blacksmith\\waterruneupgradesystem.h",
+            "c:\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\waterruneupgradesystem.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
