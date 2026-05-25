@@ -8,7 +8,11 @@ public class blacksmith : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
+<<<<<<< HEAD
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+=======
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "UMG" });
+>>>>>>> main
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
