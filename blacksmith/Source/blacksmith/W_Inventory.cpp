@@ -22,6 +22,7 @@ void UW_Inventory::RefreshInventory(UInventoryComponent* InventoryComp)
 			
 			if (NewSlot)
 			{
+				NewSlot->ParentInventory = this;
 				// 4. 데이터 밀어넣기
 				NewSlot->UpdateSlot(InvItem.ItemAsset, InvItem.Quantity);
 				

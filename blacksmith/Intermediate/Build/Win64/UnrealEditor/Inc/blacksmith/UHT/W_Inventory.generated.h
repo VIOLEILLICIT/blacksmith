@@ -10,6 +10,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class UInventoryComponent;
+class UItemDataAsset;
 #ifdef BLACKSMITH_W_Inventory_generated_h
 #error "W_Inventory.generated.h already included, missing '#pragma once' in W_Inventory.h"
 #endif
@@ -19,6 +20,7 @@ class UInventoryComponent;
 	DECLARE_FUNCTION(execRefreshInventory);
 
 
+#define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_13_CALLBACK_WRAPPERS
 #define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUW_Inventory(); \
@@ -47,6 +49,7 @@ public: \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_13_CALLBACK_WRAPPERS \
 	FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_13_INCLASS_NO_PURE_DECLS \
 	FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_13_ENHANCED_CONSTRUCTORS \
 private: \

@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Inventory() {}
 
 // Begin Cross Module References
 BLACKSMITH_API UClass* Z_Construct_UClass_UInventoryComponent_NoRegister();
+BLACKSMITH_API UClass* Z_Construct_UClass_UItemDataAsset_NoRegister();
 BLACKSMITH_API UClass* Z_Construct_UClass_UW_Inventory();
 BLACKSMITH_API UClass* Z_Construct_UClass_UW_Inventory_NoRegister();
 BLACKSMITH_API UClass* Z_Construct_UClass_UW_ItemSlot_NoRegister();
@@ -72,6 +73,54 @@ DEFINE_FUNCTION(UW_Inventory::execRefreshInventory)
 }
 // End Class UW_Inventory Function RefreshInventory
 
+// Begin Class UW_Inventory Function UpdateDetailView
+struct W_Inventory_eventUpdateDetailView_Parms
+{
+	UItemDataAsset* Asset;
+	int32 Count;
+};
+static const FName NAME_UW_Inventory_UpdateDetailView = FName(TEXT("UpdateDetailView"));
+void UW_Inventory::UpdateDetailView(UItemDataAsset* Asset, int32 Count)
+{
+	W_Inventory_eventUpdateDetailView_Parms Parms;
+	Parms.Asset=Asset;
+	Parms.Count=Count;
+	UFunction* Func = FindFunctionChecked(NAME_UW_Inventory_UpdateDetailView);
+	ProcessEvent(Func,&Parms);
+}
+struct Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Inventory" },
+		{ "ModuleRelativePath", "W_Inventory.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Asset;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Count;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::NewProp_Asset = { "Asset", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(W_Inventory_eventUpdateDetailView_Parms, Asset), Z_Construct_UClass_UItemDataAsset_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::NewProp_Count = { "Count", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(W_Inventory_eventUpdateDetailView_Parms, Count), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::NewProp_Asset,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::NewProp_Count,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UW_Inventory, nullptr, "UpdateDetailView", nullptr, nullptr, Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::PropPointers), sizeof(W_Inventory_eventUpdateDetailView_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::Function_MetaDataParams), Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::Function_MetaDataParams) };
+static_assert(sizeof(W_Inventory_eventUpdateDetailView_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UW_Inventory_UpdateDetailView()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UW_Inventory_UpdateDetailView_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Class UW_Inventory Function UpdateDetailView
+
 // Begin Class UW_Inventory
 void UW_Inventory::StaticRegisterNativesUW_Inventory()
 {
@@ -121,6 +170,7 @@ struct Z_Construct_UClass_UW_Inventory_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UW_Inventory_RefreshInventory, "RefreshInventory" }, // 3895705266
+		{ &Z_Construct_UFunction_UW_Inventory_UpdateDetailView, "UpdateDetailView" }, // 1876802426
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -176,10 +226,10 @@ UW_Inventory::~UW_Inventory() {}
 struct Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UW_Inventory, UW_Inventory::StaticClass, TEXT("UW_Inventory"), &Z_Registration_Info_UClass_UW_Inventory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UW_Inventory), 4010475010U) },
+		{ Z_Construct_UClass_UW_Inventory, UW_Inventory::StaticClass, TEXT("UW_Inventory"), &Z_Registration_Info_UClass_UW_Inventory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UW_Inventory), 3801099622U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_4166240671(TEXT("/Script/blacksmith"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_2657375646(TEXT("/Script/blacksmith"),
 	Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

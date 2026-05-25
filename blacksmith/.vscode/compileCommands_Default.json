@@ -1,6 +1,6 @@
 [
 	{
-		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\ShaerdTypes.cpp",
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\BaseNPC.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
 			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
@@ -8,7 +8,135 @@
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\ShaerdTypes.h",
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\BaseNPC.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\BlacksmithPlayer.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\BlacksmithPlayer.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\InteractableInterface.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\InteractableInterface.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\InventoryComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\InventoryComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\ItemDataAsset.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\ItemDataAsset.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\NPCComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\NPCComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\SharedTypes.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\SharedTypes.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\W_Inventory.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\W_Inventory.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\W_ItemSlot.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\W_ItemSlot.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
 			"@C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\.vscode\\compileCommands_Default\\blacksmith.1.rsp"

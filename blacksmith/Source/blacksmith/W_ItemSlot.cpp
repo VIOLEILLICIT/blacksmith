@@ -7,6 +7,10 @@ void UW_ItemSlot::UpdateSlot(UItemDataAsset* Asset, int32 Count)
 {
 	if (Asset)
 	{
+
+		// ⭐️ 추가된 부분: 내 정보 기억하기
+		CurrentAsset = Asset;
+		CurrentCount = Count;
 		// 1. 그림 바꾸기
 		if (Asset->ItemIcon)
 		{
