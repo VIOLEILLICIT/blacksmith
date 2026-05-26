@@ -49,4 +49,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Inventory")
 	bool CraftItem(UItemDataAsset* TargetWeapon);
+
+	UFUNCTION(BlueprintCallable, Category = "Inventory|Cheat")
+	void AddAllItemsCheat(int32 AmountPerItem = 10);
 };

@@ -1,4 +1,5 @@
 #include "InventoryComponent.h"
+#include "Engine/ObjectLibrary.h"
 
 UInventoryComponent::UInventoryComponent()
 {
@@ -99,4 +100,32 @@ bool UInventoryComponent::CraftItem(UItemDataAsset* TargetWeapon)
 	AddItem(TargetWeapon, 1);
 
 	return true;
+}
+
+void UInventoryComponent::AddAllItemsCheat(int32 AmountPerItem)
+{
+	if (AmountPerItem <= 0) return;
+
+	// 1. ItemDataAsset 클래스를 가진 에셋들을 찾아낼 오브젝트 라이브러리 생성
+	UObjectLibrary* ObjectLibrary = UObjectLibrary::CreateLibrary(UItemDataAsset::StaticClass(), false, GIsEditor);
+	
+	// 2. 프로젝트의 Content(/Game) 폴더 전체를 뒤져서 해당 에셋 목록을 로드
+	ObjectLibrary->LoadAssetDataFromPath(TEXT("/Game"));
+	
+	// 3. 발견된 에셋 데이터들을 배열로 가져오기
+	TArray<FAssetData> AssetDataList;
+	ObjectLibrary->GetAssetDataList(AssetDataList);
+	
+	// 4. 반복문을 돌며 가방에 하나씩 착착 추가하기
+	for (const FAssetData& AssetData : AssetDataList)
+	{
+		// 메모리에 로드되지 않은 에셋이 있다면 안전하게 로드하여 가져옵니다.
+		UItemDataAsset* FoundItemAsset = Cast<UItemDataAsset>(AssetData.GetAsset());
+		
+		if (FoundItemAsset)
+		{
+			// 기존에 만들어두신 겹치기/신규 생성 로직이 담긴 AddItem을 그대로 활용합니다!
+			AddItem(FoundItemAsset, AmountPerItem);
+		}
+	}
 }

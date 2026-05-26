@@ -23,6 +23,7 @@ class UItemDataAsset;
 template<> BLACKSMITH_API UScriptStruct* StaticStruct<struct FInventoryItem>();
 
 #define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execAddAllItemsCheat); \
 	DECLARE_FUNCTION(execCraftItem); \
 	DECLARE_FUNCTION(execGetItemCount); \
 	DECLARE_FUNCTION(execRemoveItem); \

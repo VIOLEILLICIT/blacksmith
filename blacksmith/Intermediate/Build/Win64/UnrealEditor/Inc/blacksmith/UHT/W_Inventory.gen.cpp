@@ -27,6 +27,7 @@ struct Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics
 	struct W_Inventory_eventRefreshInventory_Parms
 	{
 		UInventoryComponent* InventoryComp;
+		bool bShowWeapons;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -34,6 +35,7 @@ struct Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// \xec\x9d\xb8\xeb\xb2\xa4\xed\x86\xa0\xeb\xa6\xac\xeb\xa5\xbc \xeb\x8b\xa4\xec\x8b\x9c \xea\xb7\xb8\xeb\xa6\xac\xeb\x8a\x94 \xed\x95\xa8\xec\x88\x98\n" },
 #endif
+		{ "CPP_Default_bShowWeapons", "false" },
 		{ "ModuleRelativePath", "W_Inventory.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "\xec\x9d\xb8\xeb\xb2\xa4\xed\x86\xa0\xeb\xa6\xac\xeb\xa5\xbc \xeb\x8b\xa4\xec\x8b\x9c \xea\xb7\xb8\xeb\xa6\xac\xeb\x8a\x94 \xed\x95\xa8\xec\x88\x98" },
@@ -44,12 +46,20 @@ struct Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InventoryComp;
+	static void NewProp_bShowWeapons_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bShowWeapons;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::NewProp_InventoryComp = { "InventoryComp", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(W_Inventory_eventRefreshInventory_Parms, InventoryComp), Z_Construct_UClass_UInventoryComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InventoryComp_MetaData), NewProp_InventoryComp_MetaData) };
+void Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::NewProp_bShowWeapons_SetBit(void* Obj)
+{
+	((W_Inventory_eventRefreshInventory_Parms*)Obj)->bShowWeapons = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::NewProp_bShowWeapons = { "bShowWeapons", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(W_Inventory_eventRefreshInventory_Parms), &Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::NewProp_bShowWeapons_SetBit, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::NewProp_InventoryComp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::NewProp_bShowWeapons,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UW_Inventory, nullptr, "RefreshInventory", nullptr, nullptr, Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::PropPointers), sizeof(Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::W_Inventory_eventRefreshInventory_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::Function_MetaDataParams), Z_Construct_UFunction_UW_Inventory_RefreshInventory_Statics::Function_MetaDataParams) };
@@ -66,9 +76,10 @@ UFunction* Z_Construct_UFunction_UW_Inventory_RefreshInventory()
 DEFINE_FUNCTION(UW_Inventory::execRefreshInventory)
 {
 	P_GET_OBJECT(UInventoryComponent,Z_Param_InventoryComp);
+	P_GET_UBOOL(Z_Param_bShowWeapons);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->RefreshInventory(Z_Param_InventoryComp);
+	P_THIS->RefreshInventory(Z_Param_InventoryComp,Z_Param_bShowWeapons);
 	P_NATIVE_END;
 }
 // End Class UW_Inventory Function RefreshInventory
@@ -169,7 +180,7 @@ struct Z_Construct_UClass_UW_Inventory_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UW_Inventory_RefreshInventory, "RefreshInventory" }, // 3895705266
+		{ &Z_Construct_UFunction_UW_Inventory_RefreshInventory, "RefreshInventory" }, // 2589412392
 		{ &Z_Construct_UFunction_UW_Inventory_UpdateDetailView, "UpdateDetailView" }, // 1876802426
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -226,10 +237,10 @@ UW_Inventory::~UW_Inventory() {}
 struct Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UW_Inventory, UW_Inventory::StaticClass, TEXT("UW_Inventory"), &Z_Registration_Info_UClass_UW_Inventory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UW_Inventory), 3801099622U) },
+		{ Z_Construct_UClass_UW_Inventory, UW_Inventory::StaticClass, TEXT("UW_Inventory"), &Z_Registration_Info_UClass_UW_Inventory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UW_Inventory), 4171544179U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_2657375646(TEXT("/Script/blacksmith"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_2136059973(TEXT("/Script/blacksmith"),
 	Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_W_Inventory_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
