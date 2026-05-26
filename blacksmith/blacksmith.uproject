@@ -21,6 +21,14 @@
 			"TargetAllowList": [
 				"Editor"
 			]
+		},
+		{
+			"Name": "VisualStudioTools",
+			"Enabled": false
+		},
+		{
+			"Name": "VisualStudioBlueprintDebuggerHelper",
+			"Enabled": false
 		}
 	]
 }

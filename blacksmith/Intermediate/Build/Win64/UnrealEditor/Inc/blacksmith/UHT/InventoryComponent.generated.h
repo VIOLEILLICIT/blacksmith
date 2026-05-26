@@ -15,19 +15,19 @@ class UItemDataAsset;
 #endif
 #define BLACKSMITH_InventoryComponent_generated_h
 
-#define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_12_GENERATED_BODY \
+#define FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_12_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FInventoryItem_Statics; \
 	BLACKSMITH_API static class UScriptStruct* StaticStruct();
 
 
 template<> BLACKSMITH_API UScriptStruct* StaticStruct<struct FInventoryItem>();
 
-#define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execRemoveItem); \
 	DECLARE_FUNCTION(execAddItem);
 
 
-#define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_INCLASS_NO_PURE_DECLS \
+#define FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUInventoryComponent(); \
 	friend struct Z_Construct_UClass_UInventoryComponent_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(UInventoryComponent)
 
 
-#define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_ENHANCED_CONSTRUCTORS \
+#define FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UInventoryComponent(UInventoryComponent&&); \
@@ -48,13 +48,13 @@ public: \
 	NO_API virtual ~UInventoryComponent();
 
 
-#define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_27_PROLOG
-#define FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_GENERATED_BODY \
+#define FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_27_PROLOG
+#define FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_INCLASS_NO_PURE_DECLS \
-	FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_ENHANCED_CONSTRUCTORS \
+	FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_INCLASS_NO_PURE_DECLS \
+	FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h_30_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -62,7 +62,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> BLACKSMITH_API UClass* StaticClass<class UInventoryComponent>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h
+#define CURRENT_FILE_ID FID_Users_1_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_InventoryComponent_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
