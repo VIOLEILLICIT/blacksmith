@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\basenpc.cpp",
+        "Source": "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\basenpc.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\blacksmitheditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "PCH": "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\blacksmitheditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
         "Includes": [
-            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blacksmith\\definitions.blacksmith.h",
-            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\basenpc.h",
+            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blacksmith\\definitions.blacksmith.h",
+            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\basenpc.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
@@ -16,15 +16,15 @@
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
-            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\interactableinterface.h",
-            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\interactableinterface.generated.h",
-            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\sharedtypes.h",
-            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\sharedtypes.generated.h",
-            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\basenpc.generated.h",
-            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\npccomponent.h",
-            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\itemdataasset.h",
-            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\itemdataasset.generated.h",
-            "c:\\users\\1\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\npccomponent.generated.h"
+            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\interactableinterface.h",
+            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\interactableinterface.generated.h",
+            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\sharedtypes.h",
+            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\sharedtypes.generated.h",
+            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\basenpc.generated.h",
+            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\npccomponent.h",
+            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\itemdataasset.h",
+            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\itemdataasset.generated.h",
+            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\npccomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

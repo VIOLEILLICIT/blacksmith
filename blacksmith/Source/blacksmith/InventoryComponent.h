@@ -43,4 +43,10 @@ public:
 	// 아이템 사용/판매/제거
 	UFUNCTION(BlueprintCallable, Category = "Inventory")
 	bool RemoveItem(UItemDataAsset* ItemToRemove, int32 AmountToRemove);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Inventory")
+	int32 GetItemCount(UItemDataAsset* ItemToCheck) const;
+
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+	bool CraftItem(UItemDataAsset* TargetWeapon);
 };

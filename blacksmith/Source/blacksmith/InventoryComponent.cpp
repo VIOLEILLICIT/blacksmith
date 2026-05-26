@@ -57,3 +57,46 @@ bool UInventoryComponent::RemoveItem(UItemDataAsset* ItemToRemove, int32 AmountT
 	}
 	return false; // 아예 안 가지고 있으면 실패
 }
+
+int32 UInventoryComponent::GetItemCount(UItemDataAsset* ItemToCheck) const
+{
+	if (!ItemToCheck) return 0;
+
+	// 기존 Inventory 배열 이름을 그대로 사용하여 개수를 파악합니다.
+	for (const FInventoryItem& Slot : Inventory)
+	{
+		if (Slot.ItemAsset == ItemToCheck)
+		{
+			return Slot.Quantity;
+		}
+	}
+	return 0;
+}
+
+bool UInventoryComponent::CraftItem(UItemDataAsset* TargetWeapon)
+{
+	if (!TargetWeapon) return false;
+
+	// 1. [검사] 필요한 재료가 가방에 전부 충분히 있는지 확인
+	for (const TPair<UItemDataAsset*, int32>& MaterialPair : TargetWeapon->CraftingMaterials)
+	{
+		UItemDataAsset* RequiredItem = MaterialPair.Key;
+		int32 RequiredAmount = MaterialPair.Value;
+
+		if (GetItemCount(RequiredItem) < RequiredAmount)
+		{
+			return false; // 하나라도 부족하면 제작 실패
+		}
+	}
+
+	// 2. [차감] 검사를 통과했다면 가방에서 재료를 소모
+	for (const TPair<UItemDataAsset*, int32>& MaterialPair : TargetWeapon->CraftingMaterials)
+	{
+		RemoveItem(MaterialPair.Key, MaterialPair.Value);
+	}
+
+	// 3. [지급] 완성된 무기 아이템을 1개 추가
+	AddItem(TargetWeapon, 1);
+
+	return true;
+}
