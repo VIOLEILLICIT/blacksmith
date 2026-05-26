@@ -2190,3 +2190,1590 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.05.26-13.31.25:837][911]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2026.05.26-13.31.25:837][911]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2026.05.26-13.31.25:842][911]AssetCheck: /Game/WBP/Menu/WBP_MenuRoot 에셋 유효성 검사 중
+[2026.05.26-13.34.31:316][886]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5468.499023
+[2026.05.26-13.34.32:649][890]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-13.34.32:649][890]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5469.499512, Update Interval: 325.448761
+[2026.05.26-13.35.58:097][585]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-13.35.58:105][585]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-13.35.58:105][585]LogStreaming: Display: FlushAsyncLoading(634): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-13.35.58:106][585]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-13.35.58:208][585]LogPlayLevel: PIE: StaticDuplicateObject took: (0.102348s)
+[2026.05.26-13.35.58:208][585]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.102386s)
+[2026.05.26-13.35.58:228][585]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2026.05.26-13.35.58:230][585]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-13.35.58:231][585]LogPlayLevel: PIE: World Init took: (0.001465s)
+[2026.05.26-13.35.58:232][585]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2026.05.26-13.35.58:232][585]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-13.35.58:232][585]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-13.35.58:232][585]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-13.35.58:232][585]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-13.35.58:232][585]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-13.35.58:232][585]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-13.35.58:232][585]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-13.35.58:232][585]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-13.35.58:232][585]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-13.35.58:232][585]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-13.35.58:232][585]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-13.35.58:233][585]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-13.35.58:253][585]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-13.35.58:253][585]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-13.35.58:253][585]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-13.35.58:254][585]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-13.35.58:254][585]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=10
+[2026.05.26-13.35.58:254][585]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=10
+[2026.05.26-13.35.58:257][585]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=10
+[2026.05.26-13.35.58:257][585]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=10
+[2026.05.26-13.35.58:257][585]LogInit: FAudioDevice initialized with ID 10.
+[2026.05.26-13.35.58:257][585]LogAudio: Display: Audio Device (ID: 10) registered with world 'map_ingame'.
+[2026.05.26-13.35.58:257][585]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 10
+[2026.05.26-13.35.58:259][585]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-13.35.58:317][585]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.26-22.35.58
+[2026.05.26-13.35.58:319][585]LogWorld: Bringing up level for play took: 0.060085
+[2026.05.26-13.35.58:321][585]LogOnline: OSS: Created online subsystem instance for: :Context_15
+[2026.05.26-13.35.58:329][585]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-13.35.58:329][585]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-13.35.58:329][585]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-13.35.58:330][585]PIE: 서버가 로그인했습니다.
+[2026.05.26-13.35.58:331][585]PIE: 에디터에서 플레이 총 시작 시간 0.225초입니다.
+[2026.05.26-13.36.01:830][983]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-13.37.39:988][419]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-13.37.41:924][651]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-13.40.51:858][689]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5849.104980
+[2026.05.26-13.40.52:118][720]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-13.40.52:118][720]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5849.355957, Update Interval: 350.395813
+[2026.05.26-13.46.25:326][311]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-13.46.26:528][455]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-13.46.32:050][116]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-13.46.39:010][950]LogBlueprintUserMessages: [BP_FarmArea_C_1] 농사 아이템 획득
+[2026.05.26-13.46.45:355][710]LogBlueprintUserMessages: [BP_FarmArea_C_0] 농사 아이템 획득
+[2026.05.26-13.46.48:434][ 76]LogBlueprintUserMessages: [BP_FarmArea_C_3] 농사 아이템 획득
+[2026.05.26-13.46.57:568][587]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-13.46.58:925][678]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-13.47.03:115][962]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-13.47.03:964][  2]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-13.47.08:052][228]LogBlueprintUserMessages: [BP_FarmArea_C_3] 농사 아이템 획득
+[2026.05.26-13.47.11:747][666]LogBlueprintUserMessages: [BP_FarmArea_C_0] 농사 아이템 획득
+[2026.05.26-13.47.17:437][345]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 6234.670898
+[2026.05.26-13.47.17:679][374]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-13.47.17:679][374]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 6234.903809, Update Interval: 310.955536
+[2026.05.26-13.49.17:977][745]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-13.49.17:977][745]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-13.49.17:978][745]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-13.49.18:002][745]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-13.49.18:007][745]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-13.49.18:014][745]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-13.49.18:043][745]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-13.49.18:043][745]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 10
+[2026.05.26-13.49.18:043][745]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2026.05.26-13.49.18:045][745]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2026.05.26-13.49.18:049][745]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-13.49.18:067][745]LogUObjectHash: Compacting FUObjectHashTables data took   1.43ms
+[2026.05.26-13.49.18:135][746]LogPlayLevel: Display: Destroying online subsystem :Context_15
+[2026.05.26-13.53.07:176][869]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 6584.436035
+[2026.05.26-13.53.07:444][901]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-13.53.07:444][901]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 6584.696289, Update Interval: 315.463715
+[2026.05.26-13.57.57:527][479]LogAudioMixer: Warning: FMixerPlatformXAudio2: Changing default audio render device to new device: Role=Console, DeviceName=BenQ GW2480(NVIDIA High Definition Audio), InstanceID=1
+[2026.05.26-13.57.57:531][480]LogAudioMixer: Display: StartRunningNullDevice() called, InstanceID=1
+[2026.05.26-13.57.57:531][480]LogAudioMixer: Display: FMixerNullCallback: Simulating a h/w device callback at [21ms], ThreadID=9092
+[2026.05.26-13.57.57:567][484]LogAudioMixer: Display: StopRunningNullDevice() called, InstanceID=1
+[2026.05.26-13.57.57:570][484]LogAudioMixer: Display: Successful Swap new Device is (NumChannels=2, SampleRate=48000, DeviceID={0.0.0.00000000}.{e06a6c81-4a2a-47a8-bb65-af09483d8432}, Name=BenQ GW2480(NVIDIA High Definition Audio)), Reason=FMixerPlatformXAudio2::OnDefaultRenderDeviceChanged, InstanceID=1, DurationMS=29.29
+[2026.05.26-13.57.57:570][484]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=1
+[2026.05.26-13.57.57:573][484]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=1
+[2026.05.26-13.57.58:472][581]LogAudioMixer: Warning: FMixerPlatformXAudio2: Changing default audio render device to new device: Role=Console, DeviceName=스피커(3- COX CH43), InstanceID=1
+[2026.05.26-13.57.58:474][581]LogAudioMixer: Display: StartRunningNullDevice() called, InstanceID=1
+[2026.05.26-13.57.58:474][581]LogAudioMixer: Display: FMixerNullCallback: Simulating a h/w device callback at [21ms], ThreadID=9092
+[2026.05.26-13.57.58:555][587]LogAudioMixer: Display: StopRunningNullDevice() called, InstanceID=1
+[2026.05.26-13.57.58:558][587]LogAudioMixer: Display: Successful Swap new Device is (NumChannels=2, SampleRate=48000, DeviceID={0.0.0.00000000}.{a849b48a-ea18-496c-a6e3-a87d820f7ede}, Name=스피커(3- COX CH43)), Reason=FMixerPlatformXAudio2::OnDefaultRenderDeviceChanged, InstanceID=1, DurationMS=75.53
+[2026.05.26-13.57.58:558][587]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=1
+[2026.05.26-13.57.58:559][587]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=1
+[2026.05.26-13.58.40:742][357]LogStreaming: Display: FlushAsyncLoading(635): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-13.58.40:744][357]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/jungbum/NPC/BP_TestNPC.BP_TestNPC
+[2026.05.26-13.58.40:745][357]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_13
+[2026.05.26-13.58.40:995][357]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_14
+[2026.05.26-13.58.41:220][360]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_15
+[2026.05.26-13.58.59:650][897]LogSlate: Window 'BP_TestNPC' being destroyed
+[2026.05.26-13.58.59:659][897]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-13.58.59:659][897]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-13.58.59:744][897]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2026.05.26-13.59.03:159][246]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/jungbum/NPC/BP_TestNPC.BP_TestNPC
+[2026.05.26-13.59.03:160][246]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_16
+[2026.05.26-13.59.06:671][505]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 6943.924805
+[2026.05.26-13.59.06:890][526]LogSlate: Window 'BP_TestNPC' being destroyed
+[2026.05.26-13.59.06:901][526]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-13.59.06:901][526]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-13.59.06:919][526]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/jungbum/NPC/BP_TestNPC.BP_TestNPC
+[2026.05.26-13.59.06:920][526]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_17
+[2026.05.26-13.59.07:202][526]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2026.05.26-13.59.07:314][527]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-13.59.07:314][527]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 6944.526855, Update Interval: 328.861969
+[2026.05.26-14.04.17:336][851]LogSlate: Window 'BP_TestNPC' being destroyed
+[2026.05.26-14.04.17:348][851]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-14.04.17:348][851]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-14.04.17:412][851]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2026.05.26-14.05.14:619][549]LogDerivedDataCache: C:/Users/wjdqj/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2026.05.26-14.05.29:915][594]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 7327.180664
+[2026.05.26-14.05.30:915][597]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-14.05.30:915][597]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 7327.847656, Update Interval: 304.506348
+[2026.05.26-14.08.12:736][446]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/jungbum/NPC/BP_TestNPC.BP_TestNPC
+[2026.05.26-14.08.12:737][446]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_18
+[2026.05.26-14.11.26:950][818]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 7684.227051
+[2026.05.26-14.11.27:951][821]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-14.11.27:951][821]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 7684.894043, Update Interval: 337.411407
+[2026.05.26-14.17.44:915][998]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 8062.190918
+[2026.05.26-14.17.45:915][  1]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-14.17.45:915][  1]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 8062.856934, Update Interval: 350.696136
+[2026.05.26-14.24.11:965][159]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 8449.237305
+[2026.05.26-14.24.12:966][162]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-14.24.12:966][162]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 8449.905273, Update Interval: 339.883423
+[2026.05.26-14.30.50:688][355]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 8847.966797
+[2026.05.26-14.30.51:688][358]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-14.30.51:688][358]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 8848.633789, Update Interval: 346.242859
+[2026.05.26-14.37.17:417][515]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 9234.681641
+[2026.05.26-14.37.18:749][519]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-14.37.18:749][519]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 9235.680664, Update Interval: 350.621063
+[2026.05.26-14.42.52:132][519]LogSlate: Window 'BP_TestNPC' being destroyed
+[2026.05.26-14.42.52:144][519]LogWorld: UWorld::CleanupWorld for World_18, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-14.42.52:144][519]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-14.42.52:266][519]LogUObjectHash: Compacting FUObjectHashTables data took   1.89ms
+[2026.05.26-14.43.04:161][965]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-14.43.04:180][965]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-14.43.04:181][965]LogStreaming: Display: FlushAsyncLoading(636): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-14.43.04:181][965]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-14.43.04:294][965]LogPlayLevel: PIE: StaticDuplicateObject took: (0.113212s)
+[2026.05.26-14.43.04:294][965]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.113286s)
+[2026.05.26-14.43.04:312][965]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2026.05.26-14.43.04:314][965]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-14.43.04:316][965]LogPlayLevel: PIE: World Init took: (0.001907s)
+[2026.05.26-14.43.04:316][965]LogAudio: Display: Creating Audio Device:                 Id: 11, Scope: Unique, Realtime: True
+[2026.05.26-14.43.04:317][965]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-14.43.04:317][965]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-14.43.04:317][965]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-14.43.04:317][965]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-14.43.04:317][965]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-14.43.04:317][965]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-14.43.04:317][965]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-14.43.04:317][965]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-14.43.04:317][965]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-14.43.04:317][965]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-14.43.04:317][965]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-14.43.04:319][965]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-14.43.04:339][965]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-14.43.04:339][965]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-14.43.04:339][965]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-14.43.04:339][965]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-14.43.04:341][965]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=11
+[2026.05.26-14.43.04:341][965]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=11
+[2026.05.26-14.43.04:343][965]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=11
+[2026.05.26-14.43.04:343][965]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=11
+[2026.05.26-14.43.04:343][965]LogInit: FAudioDevice initialized with ID 11.
+[2026.05.26-14.43.04:343][965]LogAudio: Display: Audio Device (ID: 11) registered with world 'map_ingame'.
+[2026.05.26-14.43.04:343][965]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 11
+[2026.05.26-14.43.04:349][965]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-14.43.04:419][965]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.26-23.43.04
+[2026.05.26-14.43.04:421][965]LogWorld: Bringing up level for play took: 0.072754
+[2026.05.26-14.43.04:424][965]LogOnline: OSS: Created online subsystem instance for: :Context_22
+[2026.05.26-14.43.04:434][965]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-14.43.04:434][965]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-14.43.04:434][965]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-14.43.04:435][965]PIE: 서버가 로그인했습니다.
+[2026.05.26-14.43.04:436][965]PIE: 에디터에서 플레이 총 시작 시간 0.256초입니다.
+[2026.05.26-14.43.24:885][265]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-14.43.24:885][265]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-14.43.24:886][265]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-14.43.24:912][265]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-14.43.24:916][265]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-14.43.24:923][265]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-14.43.24:946][265]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-14.43.24:953][265]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 11
+[2026.05.26-14.43.24:953][265]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2026.05.26-14.43.24:957][265]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2026.05.26-14.43.24:982][265]LogUObjectHash: Compacting FUObjectHashTables data took   1.53ms
+[2026.05.26-14.43.25:043][266]LogPlayLevel: Display: Destroying online subsystem :Context_22
+[2026.05.26-14.44.00:607][911]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 9637.845703
+[2026.05.26-14.44.01:606][914]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-14.44.01:606][914]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 9638.511719, Update Interval: 328.028809
+[2026.05.26-14.47.50:739][602]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_19
+[2026.05.26-14.47.59:639][481]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-14.47.59:646][481]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-14.47.59:646][481]LogStreaming: Display: FlushAsyncLoading(637): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-14.47.59:646][481]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-14.47.59:750][481]LogPlayLevel: PIE: StaticDuplicateObject took: (0.104041s)
+[2026.05.26-14.47.59:750][481]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.104086s)
+[2026.05.26-14.47.59:769][481]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2026.05.26-14.47.59:776][481]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-14.47.59:778][481]LogPlayLevel: PIE: World Init took: (0.001750s)
+[2026.05.26-14.47.59:779][481]LogAudio: Display: Creating Audio Device:                 Id: 12, Scope: Unique, Realtime: True
+[2026.05.26-14.47.59:779][481]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-14.47.59:779][481]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-14.47.59:779][481]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-14.47.59:779][481]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-14.47.59:779][481]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-14.47.59:779][481]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-14.47.59:779][481]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-14.47.59:779][481]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-14.47.59:779][481]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-14.47.59:779][481]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-14.47.59:779][481]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-14.47.59:781][481]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-14.47.59:801][481]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-14.47.59:801][481]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-14.47.59:801][481]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-14.47.59:801][481]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-14.47.59:801][481]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=12
+[2026.05.26-14.47.59:801][481]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=12
+[2026.05.26-14.47.59:804][481]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=12
+[2026.05.26-14.47.59:804][481]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=12
+[2026.05.26-14.47.59:804][481]LogInit: FAudioDevice initialized with ID 12.
+[2026.05.26-14.47.59:804][481]LogAudio: Display: Audio Device (ID: 12) registered with world 'map_ingame'.
+[2026.05.26-14.47.59:804][481]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 12
+[2026.05.26-14.47.59:807][481]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-14.47.59:869][481]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.26-23.47.59
+[2026.05.26-14.47.59:871][481]LogWorld: Bringing up level for play took: 0.064563
+[2026.05.26-14.47.59:874][481]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2026.05.26-14.47.59:881][481]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-14.47.59:881][481]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-14.47.59:881][481]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-14.47.59:883][481]PIE: 서버가 로그인했습니다.
+[2026.05.26-14.47.59:884][481]PIE: 에디터에서 플레이 총 시작 시간 0.238초입니다.
+[2026.05.26-14.48.04:325][962]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-14.48.07:202][288]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-14.48.08:542][446]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-14.48.25:075][343]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-14.48.26:220][470]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-14.48.26:220][470]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-14.48.26:221][470]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-14.48.26:246][470]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-14.48.26:250][470]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-14.48.26:258][470]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-14.48.26:282][470]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-14.48.26:290][470]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 12
+[2026.05.26-14.48.26:291][470]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=12
+[2026.05.26-14.48.26:292][470]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=12
+[2026.05.26-14.48.26:318][470]LogUObjectHash: Compacting FUObjectHashTables data took   1.68ms
+[2026.05.26-14.48.26:387][471]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2026.05.26-14.48.33:191][110]LogAssetEditorSubsystem: Opening Asset editor for ItemDataAsset /Game/jungbum/Items/무기/63목철검_1.63목철검_1
+[2026.05.26-14.48.39:659][652]LogSlate: Window '63목철검_1' being destroyed
+[2026.05.26-14.50.19:571][172]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 10016.734375
+[2026.05.26-14.50.20:571][175]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-14.50.20:571][175]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 10017.400391, Update Interval: 326.091492
+[2026.05.26-14.51.27:024][562]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/smith/smithing/SmithArea.SmithArea
+[2026.05.26-14.51.27:024][562]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_20
+[2026.05.26-14.51.31:408][850]LogSlate: Window 'SmithArea' being destroyed
+[2026.05.26-14.51.31:420][850]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-14.51.31:420][850]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-14.51.31:508][850]LogUObjectHash: Compacting FUObjectHashTables data took   1.22ms
+[2026.05.26-14.51.42:083][862]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/smith/smithing/SmithArea.SmithArea_C
+[2026.05.26-14.51.42:083][862]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/smith/smithing/SmithArea.SmithArea_C
+[2026.05.26-14.51.42:086][862]LogActorFactory: Actor Factory spawned Blueprint /Game/smith/smithing/SmithArea.SmithArea as actor: SmithArea_C /Game/Jinuk/map_ingame.map_ingame:PersistentLevel.SmithArea_C_0
+[2026.05.26-14.51.42:088][862]LogActorFactory: Actor Factory spawned Blueprint /Game/smith/smithing/SmithArea.SmithArea as actor: SmithArea_C /Game/Jinuk/map_ingame.map_ingame:PersistentLevel.SmithArea_C_0
+[2026.05.26-14.51.42:432][886]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2026.05.26-14.51.42:434][886]LogEditorActor: Deleted 0 Actors (0.020 secs)
+[2026.05.26-14.51.42:441][886]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/smith/smithing/SmithArea.SmithArea_C
+[2026.05.26-14.51.42:442][886]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/smith/smithing/SmithArea.SmithArea_C
+[2026.05.26-14.51.42:445][886]LogActorFactory: Actor Factory spawned Blueprint /Game/smith/smithing/SmithArea.SmithArea as actor: SmithArea_C /Game/Jinuk/map_ingame.map_ingame:PersistentLevel.SmithArea_C_1
+[2026.05.26-14.51.42:447][886]LogActorFactory: Actor Factory spawned Blueprint /Game/smith/smithing/SmithArea.SmithArea as actor: SmithArea_C /Game/Jinuk/map_ingame.map_ingame:PersistentLevel.SmithArea_C_1
+[2026.05.26-14.51.43:623][  3]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-14.51.43:629][  3]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-14.51.43:629][  3]LogStreaming: Display: FlushAsyncLoading(638): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-14.51.43:629][  3]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-14.51.43:737][  3]LogPlayLevel: PIE: StaticDuplicateObject took: (0.107481s)
+[2026.05.26-14.51.43:737][  3]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.107525s)
+[2026.05.26-14.51.43:755][  3]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2026.05.26-14.51.43:759][  3]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-14.51.43:761][  3]LogPlayLevel: PIE: World Init took: (0.001634s)
+[2026.05.26-14.51.43:761][  3]LogAudio: Display: Creating Audio Device:                 Id: 13, Scope: Unique, Realtime: True
+[2026.05.26-14.51.43:762][  3]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-14.51.43:762][  3]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-14.51.43:762][  3]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-14.51.43:762][  3]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-14.51.43:762][  3]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-14.51.43:762][  3]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-14.51.43:762][  3]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-14.51.43:762][  3]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-14.51.43:762][  3]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-14.51.43:762][  3]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-14.51.43:762][  3]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-14.51.43:764][  3]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-14.51.43:783][  3]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-14.51.43:783][  3]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-14.51.43:783][  3]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-14.51.43:783][  3]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-14.51.43:783][  3]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=13
+[2026.05.26-14.51.43:783][  3]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=13
+[2026.05.26-14.51.43:786][  3]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=13
+[2026.05.26-14.51.43:786][  3]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=13
+[2026.05.26-14.51.43:786][  3]LogInit: FAudioDevice initialized with ID 13.
+[2026.05.26-14.51.43:786][  3]LogAudio: Display: Audio Device (ID: 13) registered with world 'map_ingame'.
+[2026.05.26-14.51.43:786][  3]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 13
+[2026.05.26-14.51.43:788][  3]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-14.51.43:849][  3]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.26-23.51.43
+[2026.05.26-14.51.43:852][  3]LogWorld: Bringing up level for play took: 0.062699
+[2026.05.26-14.51.43:854][  3]LogOnline: OSS: Created online subsystem instance for: :Context_26
+[2026.05.26-14.51.43:862][  3]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-14.51.43:862][  3]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-14.51.43:862][  3]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-14.51.43:862][  3]PIE: 서버가 로그인했습니다.
+[2026.05.26-14.51.43:863][  3]PIE: 에디터에서 플레이 총 시작 시간 0.234초입니다.
+[2026.05.26-14.51.47:142][354]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-14.51.47:466][390]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-14.51.48:881][549]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-14.51.48:881][549]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-14.51.51:281][828]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-14.51.51:281][828]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-14.51.54:026][154]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-14.51.54:026][154]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-14.51.56:465][446]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-14.51.56:465][446]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-14.51.56:465][446]LogBlueprintUserMessages: [WBP_Smith_C_0] 50
+[2026.05.26-14.51.57:634][586]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-14.51.57:634][586]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-14.51.57:634][586]LogBlueprintUserMessages: [WBP_Smith_C_0] 100
+[2026.05.26-14.51.57:634][586]LogBlueprintUserMessages: [WBP_Smith_C_0] 성공
+[2026.05.26-14.51.57:634][586]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-14.51.57:634][586]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-14.52.01:602][ 56]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-14.52.01:602][ 56]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-14.52.01:604][ 56]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-14.52.01:631][ 56]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-14.52.01:635][ 56]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-14.52.01:642][ 56]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-14.52.01:666][ 56]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-14.52.01:674][ 56]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 13
+[2026.05.26-14.52.01:674][ 56]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=13
+[2026.05.26-14.52.01:676][ 56]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=13
+[2026.05.26-14.52.01:701][ 56]LogUObjectHash: Compacting FUObjectHashTables data took   1.59ms
+[2026.05.26-14.52.01:749][ 57]LogPlayLevel: Display: Destroying online subsystem :Context_26
+[2026.05.26-14.52.10:862][915]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/smith/smithing/SmithArea.SmithArea
+[2026.05.26-14.52.10:862][915]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_21
+[2026.05.26-14.53.03:380][632]LogSlate: Window 'SmithArea' being destroyed
+[2026.05.26-14.53.03:398][632]LogWorld: UWorld::CleanupWorld for World_21, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-14.53.03:398][632]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-14.53.03:466][632]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2026.05.26-14.53.05:399][821]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith
+[2026.05.26-14.53.05:399][821]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_22
+[2026.05.26-14.53.05:405][821]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_23
+[2026.05.26-14.53.47:792][631]LogSlate: Window 'WBP_Smith' being destroyed
+[2026.05.26-14.56.20:815][888]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 10377.930664
+[2026.05.26-14.56.21:071][919]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-14.56.21:071][920]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 10378.176758, Update Interval: 354.017761
+[2026.05.26-15.02.38:323][854]LogBlueprint: Warning: [AssetLog] C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Content\smith\smithing\WBP_Smith.uasset: [Compiler] 플레이어 컨트롤러로부터 BP Third Person Character 상속되지 않습니다( Cast To BP_ThirdPersonCharacter 는 반드시 실패할 것입니다).
+[2026.05.26-15.02.38:323][854]LogBlueprint: Warning: [AssetLog] C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Content\smith\smithing\WBP_Smith.uasset: [Compiler] 플레이어 컨트롤러로부터 BP Third Person Character 상속되지 않습니다( Cast To BP_ThirdPersonCharacter 는 반드시 실패할 것입니다).
+[2026.05.26-15.02.38:395][854]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2026.05.26-15.03.01:930][602]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 10778.940430
+[2026.05.26-15.03.02:214][636]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-15.03.02:214][636]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 10779.215820, Update Interval: 334.498108
+[2026.05.26-15.03.30:838][824]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2026.05.26-15.03.31:571][893]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.03.31:597][893]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.03.31:600][893]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.03.31:600][893]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.03.31:600][893]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.03.31:617][893]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.03.31:618][893]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_Smith56806E5F4B6DDED5BB438D80F7D2EB66.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.03.31:627][893]LogFileHelpers: InternalPromptForCheckoutAndSave took 56.120 ms (total: 1.28 sec)
+[2026.05.26-15.03.31:658][893]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.03.31:658][893]LogContentValidation: Enabled validators:
+[2026.05.26-15.03.31:658][893]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.03.31:658][893]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.03.31:658][893]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.03.31:658][893]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.03.31:658][893]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.03.31:658][893]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.03.31:659][893]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.04.25:113][463]LogAssetEditorSubsystem: Opening Asset editor for ItemDataAsset /Game/jungbum/Items/무기/63목철검_1.63목철검_1
+[2026.05.26-15.04.45:928][536]LogAssetEditorSubsystem: Opening Asset editor for ItemDataAsset /Game/jungbum/Items/무기/63목철검_1.63목철검_1
+[2026.05.26-15.05.14:619][950]LogDerivedDataCache: C:/Users/wjdqj/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2026.05.26-15.06.01:307][986]LogAssetEditorSubsystem: Opening Asset editor for ItemDataAsset /Game/jungbum/Items/무기/87피안의만가_3.87피안의만가_3
+[2026.05.26-15.06.11:927][238]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.06.11:957][238]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/무기/63목철검_1] ([1] browsable assets)...
+[2026.05.26-15.06.11:957][238]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/무기/63목철검_1]
+[2026.05.26-15.06.11:957][238]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/무기/63목철검_1" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/무기/63목철검_1.uasset" SILENT=true
+[2026.05.26-15.06.11:958][238]LogSavePackage: Moving output files for package: /Game/jungbum/Items/무기/63목철검_1
+[2026.05.26-15.06.11:958][238]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/63목철검_130343A924A0B50A775F1588C3C96E14E.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/무기/63목철검_1.uasset'
+[2026.05.26-15.06.11:965][238]LogFileHelpers: InternalPromptForCheckoutAndSave took 38.076 ms (total: 1.31 sec)
+[2026.05.26-15.06.11:999][238]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.06.11:999][238]LogContentValidation: Enabled validators:
+[2026.05.26-15.06.11:999][238]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.06.11:999][238]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.06.11:999][238]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.06.11:999][238]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.06.11:999][238]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.06.11:999][238]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.06.11:999][238]AssetCheck: /Game/jungbum/Items/무기/63목철검_1 에셋 유효성 검사 중
+[2026.05.26-15.06.29:154][878]LogAssetEditorSubsystem: Opening Asset editor for ItemDataAsset /Game/jungbum/Items/무기/64강철장검_2.64강철장검_2
+[2026.05.26-15.06.32:554][227]LogAssetEditorSubsystem: Opening Asset editor for ItemDataAsset /Game/jungbum/Items/무기/65백은대검_3.65백은대검_3
+[2026.05.26-15.06.36:583][638]LogAssetEditorSubsystem: Opening Asset editor for ItemDataAsset /Game/jungbum/Items/무기/66흑철검_4.66흑철검_4
+[2026.05.26-15.06.41:166][ 80]LogAssetEditorSubsystem: Opening Asset editor for ItemDataAsset /Game/jungbum/Items/무기/85탐식망치_5.85탐식망치_5
+[2026.05.26-15.08.16:115][694]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.08.16:149][694]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jinuk/map_ingame" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/Jinuk/map_ingame.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2026.05.26-15.08.16:344][694]LogUObjectHash: Compacting FUObjectHashTables data took   1.15ms
+[2026.05.26-15.08.16:919][694]LogSavePackage: Moving output files for package: /Game/Jinuk/map_ingame
+[2026.05.26-15.08.16:919][694]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/map_ingameBDE9E5814302CFC1427D97BEC155E0A6.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/Jinuk/map_ingame.umap'
+[2026.05.26-15.08.16:951][694]LogFileHelpers: Saving map 'map_ingame' took 0.804
+[2026.05.26-15.08.16:959][694]LogFileHelpers: InternalPromptForCheckoutAndSave took 843.340 ms (total: 2.16 sec)
+[2026.05.26-15.08.16:996][694]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.08.16:996][694]LogContentValidation: Enabled validators:
+[2026.05.26-15.08.16:996][694]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.08.16:996][694]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.08.16:996][694]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.08.16:996][694]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.08.16:996][694]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.08.16:996][694]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.08.16:996][694]AssetCheck: /Game/Jinuk/map_ingame 에셋 유효성 검사 중
+[2026.05.26-15.08.17:338][728]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-15.08.17:356][728]LogPlayLevel: [PlayLevel] Compiling BP_ThirdPersonCharacter before play...
+[2026.05.26-15.08.17:557][728]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2026.05.26-15.08.17:571][728]LogPlayLevel: PlayLevel: Blueprint regeneration took 224 ms (1 blueprints)
+[2026.05.26-15.08.17:571][728]LogStreaming: Display: FlushAsyncLoading(639): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-15.08.17:571][728]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.08.17:674][728]LogPlayLevel: PIE: StaticDuplicateObject took: (0.103923s)
+[2026.05.26-15.08.17:675][728]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.103971s)
+[2026.05.26-15.08.17:692][728]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2026.05.26-15.08.17:694][728]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-15.08.17:697][728]LogPlayLevel: PIE: World Init took: (0.001589s)
+[2026.05.26-15.08.17:697][728]LogAudio: Display: Creating Audio Device:                 Id: 14, Scope: Unique, Realtime: True
+[2026.05.26-15.08.17:697][728]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-15.08.17:697][728]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-15.08.17:697][728]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-15.08.17:697][728]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-15.08.17:697][728]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-15.08.17:697][728]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-15.08.17:697][728]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-15.08.17:697][728]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-15.08.17:697][728]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-15.08.17:697][728]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-15.08.17:697][728]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-15.08.17:699][728]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-15.08.17:722][728]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-15.08.17:722][728]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-15.08.17:722][728]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-15.08.17:722][728]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-15.08.17:722][728]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=14
+[2026.05.26-15.08.17:722][728]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=14
+[2026.05.26-15.08.17:725][728]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=14
+[2026.05.26-15.08.17:725][728]LogInit: FAudioDevice initialized with ID 14.
+[2026.05.26-15.08.17:725][728]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=14
+[2026.05.26-15.08.17:725][728]LogAudio: Display: Audio Device (ID: 14) registered with world 'map_ingame'.
+[2026.05.26-15.08.17:725][728]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 14
+[2026.05.26-15.08.17:727][728]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-15.08.17:787][728]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.27-00.08.17
+[2026.05.26-15.08.17:789][728]LogWorld: Bringing up level for play took: 0.062221
+[2026.05.26-15.08.17:792][728]LogOnline: OSS: Created online subsystem instance for: :Context_30
+[2026.05.26-15.08.17:799][728]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.08.17:799][728]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-15.08.17:799][728]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-15.08.17:799][728]PIE: 서버가 로그인했습니다.
+[2026.05.26-15.08.17:801][728]PIE: 에디터에서 플레이 총 시작 시간 0.455초입니다.
+[2026.05.26-15.08.21:499][124]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.08.21:957][176]LogBlueprintUserMessages: [WBP_Smith_C_0] 재료부족
+[2026.05.26-15.08.21:957][176]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.08.27:068][762]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.08.27:068][762]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.08.27:068][762]LogBlueprintUserMessages: [WBP_Smith_C_0] -25
+[2026.05.26-15.08.27:068][762]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.08.27:068][762]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.08.30:097][117]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.08.30:097][117]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.08.30:098][117]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-15.08.30:125][117]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.08.30:129][117]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-15.08.30:137][117]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.08.30:162][117]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.08.30:170][117]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 14
+[2026.05.26-15.08.30:170][117]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=14
+[2026.05.26-15.08.30:171][117]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=14
+[2026.05.26-15.08.30:194][117]LogUObjectHash: Compacting FUObjectHashTables data took   1.74ms
+[2026.05.26-15.08.30:251][118]LogPlayLevel: Display: Destroying online subsystem :Context_30
+[2026.05.26-15.09.24:257][967]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 11161.155273
+[2026.05.26-15.09.24:528][994]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-15.09.24:528][994]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 11161.415039, Update Interval: 358.747528
+[2026.05.26-15.09.39:533][461]LogEditorTransaction: Undo 핀 링크 생성
+[2026.05.26-15.09.45:104][  3]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2026.05.26-15.09.45:952][ 67]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.09.45:979][ 67]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.09.45:981][ 67]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.09.45:981][ 67]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.09.45:981][ 67]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.09.45:998][ 67]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.09.45:999][ 67]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_Smith4DD6809848B68FDC953053B991B7EDE8.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.09.46:008][ 67]LogFileHelpers: InternalPromptForCheckoutAndSave took 56.551 ms (total: 2.21 sec)
+[2026.05.26-15.09.46:046][ 67]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.09.46:046][ 67]LogContentValidation: Enabled validators:
+[2026.05.26-15.09.46:046][ 67]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.09.46:046][ 67]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.09.46:046][ 67]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.09.46:046][ 67]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.09.46:046][ 67]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.09.46:046][ 67]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.09.46:046][ 67]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.09.47:684][212]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-15.09.47:690][212]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-15.09.47:717][212]LogStreaming: Display: FlushAsyncLoading(640): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-15.09.47:717][212]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.09.47:819][212]LogPlayLevel: PIE: StaticDuplicateObject took: (0.101638s)
+[2026.05.26-15.09.47:819][212]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.101681s)
+[2026.05.26-15.09.47:839][212]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2026.05.26-15.09.47:849][212]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-15.09.47:851][212]LogPlayLevel: PIE: World Init took: (0.001671s)
+[2026.05.26-15.09.47:851][212]LogAudio: Display: Creating Audio Device:                 Id: 15, Scope: Unique, Realtime: True
+[2026.05.26-15.09.47:851][212]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-15.09.47:851][212]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-15.09.47:851][212]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-15.09.47:851][212]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-15.09.47:851][212]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-15.09.47:851][212]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-15.09.47:851][212]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-15.09.47:851][212]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-15.09.47:851][212]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-15.09.47:851][212]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-15.09.47:851][212]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-15.09.47:853][212]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-15.09.47:874][212]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-15.09.47:874][212]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-15.09.47:874][212]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-15.09.47:874][212]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-15.09.47:875][212]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=15
+[2026.05.26-15.09.47:875][212]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=15
+[2026.05.26-15.09.47:877][212]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=15
+[2026.05.26-15.09.47:877][212]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=15
+[2026.05.26-15.09.47:877][212]LogInit: FAudioDevice initialized with ID 15.
+[2026.05.26-15.09.47:877][212]LogAudio: Display: Audio Device (ID: 15) registered with world 'map_ingame'.
+[2026.05.26-15.09.47:877][212]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 15
+[2026.05.26-15.09.47:880][212]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-15.09.47:942][212]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.27-00.09.47
+[2026.05.26-15.09.47:945][212]LogWorld: Bringing up level for play took: 0.064852
+[2026.05.26-15.09.47:947][212]LogOnline: OSS: Created online subsystem instance for: :Context_31
+[2026.05.26-15.09.47:955][212]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.09.47:955][212]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-15.09.47:955][212]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-15.09.47:955][212]PIE: 서버가 로그인했습니다.
+[2026.05.26-15.09.47:957][212]PIE: 에디터에서 플레이 총 시작 시간 0.266초입니다.
+[2026.05.26-15.09.50:158][439]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.09.51:477][587]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.09.51:602][601]LogBlueprintUserMessages: [WBP_Smith_C_0] 재료부족
+[2026.05.26-15.09.51:602][601]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.09.53:241][780]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.09.53:241][780]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.09.53:241][780]LogBlueprintUserMessages: [WBP_Smith_C_0] 10
+[2026.05.26-15.09.54:665][940]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.09.54:665][940]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.09.54:665][940]LogBlueprintUserMessages: [WBP_Smith_C_0] 60
+[2026.05.26-15.09.55:256][  8]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.09.55:256][  8]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.09.55:256][  8]LogBlueprintUserMessages: [WBP_Smith_C_0] 85
+[2026.05.26-15.09.57:186][232]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.09.57:186][232]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.09.57:186][232]LogBlueprintUserMessages: [WBP_Smith_C_0] 135
+[2026.05.26-15.09.57:186][232]LogBlueprintUserMessages: [WBP_Smith_C_0] 성공
+[2026.05.26-15.09.57:186][232]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.09.57:186][232]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.09.58:478][382]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.09.58:478][382]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.09.58:480][382]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-15.09.58:504][382]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.09.58:510][382]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-15.09.58:518][382]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.09.58:548][382]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-15.09.58:548][382]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 15
+[2026.05.26-15.09.58:548][382]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=15
+[2026.05.26-15.09.58:550][382]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=15
+[2026.05.26-15.09.58:555][382]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.09.58:576][382]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2026.05.26-15.09.58:634][383]LogPlayLevel: Display: Destroying online subsystem :Context_31
+[2026.05.26-15.10.14:333][976]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2026.05.26-15.10.14:815][  3]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.10.14:842][  3]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.10.14:844][  3]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.10.14:844][  3]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.10.14:844][  3]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.10.14:862][  3]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.10.14:863][  3]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_SmithF84A86EA4FCB43F5F7A239A729E77386.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.10.14:871][  3]LogFileHelpers: InternalPromptForCheckoutAndSave took 55.336 ms (total: 2.27 sec)
+[2026.05.26-15.10.14:907][  3]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.10.14:907][  3]LogContentValidation: Enabled validators:
+[2026.05.26-15.10.14:907][  3]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.10.14:907][  3]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.10.14:907][  3]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.10.14:907][  3]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.10.14:907][  3]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.10.14:907][  3]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.10.14:908][  3]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.10.16:052][ 98]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-15.10.16:060][ 98]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-15.10.16:098][ 98]LogStreaming: Display: FlushAsyncLoading(641): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-15.10.16:098][ 98]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.10.16:201][ 98]LogPlayLevel: PIE: StaticDuplicateObject took: (0.102669s)
+[2026.05.26-15.10.16:201][ 98]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.102715s)
+[2026.05.26-15.10.16:220][ 98]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2026.05.26-15.10.16:229][ 98]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-15.10.16:231][ 98]LogPlayLevel: PIE: World Init took: (0.001688s)
+[2026.05.26-15.10.16:231][ 98]LogAudio: Display: Creating Audio Device:                 Id: 16, Scope: Unique, Realtime: True
+[2026.05.26-15.10.16:231][ 98]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-15.10.16:231][ 98]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-15.10.16:231][ 98]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-15.10.16:231][ 98]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-15.10.16:231][ 98]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-15.10.16:231][ 98]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-15.10.16:231][ 98]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-15.10.16:231][ 98]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-15.10.16:231][ 98]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-15.10.16:231][ 98]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-15.10.16:231][ 98]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-15.10.16:234][ 98]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-15.10.16:254][ 98]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-15.10.16:254][ 98]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-15.10.16:254][ 98]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-15.10.16:254][ 98]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-15.10.16:254][ 98]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=16
+[2026.05.26-15.10.16:254][ 98]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=16
+[2026.05.26-15.10.16:257][ 98]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=16
+[2026.05.26-15.10.16:257][ 98]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=16
+[2026.05.26-15.10.16:257][ 98]LogInit: FAudioDevice initialized with ID 16.
+[2026.05.26-15.10.16:257][ 98]LogAudio: Display: Audio Device (ID: 16) registered with world 'map_ingame'.
+[2026.05.26-15.10.16:257][ 98]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 16
+[2026.05.26-15.10.16:259][ 98]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-15.10.16:320][ 98]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.27-00.10.16
+[2026.05.26-15.10.16:324][ 98]LogWorld: Bringing up level for play took: 0.063286
+[2026.05.26-15.10.16:326][ 98]LogOnline: OSS: Created online subsystem instance for: :Context_32
+[2026.05.26-15.10.16:333][ 98]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.10.16:333][ 98]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-15.10.16:333][ 98]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-15.10.16:334][ 98]PIE: 서버가 로그인했습니다.
+[2026.05.26-15.10.16:335][ 98]PIE: 에디터에서 플레이 총 시작 시간 0.274초입니다.
+[2026.05.26-15.10.18:173][283]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.10.19:329][410]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.10.19:495][428]LogBlueprintUserMessages: [WBP_Smith_C_0] 재료부족
+[2026.05.26-15.10.19:495][428]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.10.21:171][608]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.10.21:171][608]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.10.21:199][608]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.10.21:199][608]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.10.21:201][608]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-15.10.21:225][608]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.10.21:228][608]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-15.10.21:236][608]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.10.21:268][608]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-15.10.21:268][608]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 16
+[2026.05.26-15.10.21:268][608]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=16
+[2026.05.26-15.10.21:270][608]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=16
+[2026.05.26-15.10.21:273][608]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.10.21:294][608]LogUObjectHash: Compacting FUObjectHashTables data took   1.78ms
+[2026.05.26-15.10.21:353][609]LogPlayLevel: Display: Destroying online subsystem :Context_32
+[2026.05.26-15.10.26:667][170]LogEditorTransaction: Undo 노드 이동
+[2026.05.26-15.10.27:168][185]LogEditorTransaction: Undo 핀 링크 생성
+[2026.05.26-15.10.27:655][220]LogEditorTransaction: Undo 현재 선택된 부분을 삭제합니다.
+[2026.05.26-15.10.29:073][356]LogEditorTransaction: Undo 노드 이동
+[2026.05.26-15.10.29:658][402]LogEditorTransaction: Undo 노드 이동
+[2026.05.26-15.10.30:281][455]LogEditorTransaction: Undo 노드 이동
+[2026.05.26-15.10.30:972][491]LogEditorTransaction: Undo 노드 이동
+[2026.05.26-15.10.31:511][537]LogEditorTransaction: Undo 노드 추가
+[2026.05.26-15.11.15:676][887]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2026.05.26-15.11.16:211][919]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.11.16:239][919]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.11.16:244][919]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.11.16:244][919]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.11.16:244][919]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.11.16:262][919]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.11.16:262][919]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_SmithFB15AD3F4E151257D913EE89A7B63B38.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.11.16:270][919]LogFileHelpers: InternalPromptForCheckoutAndSave took 60.315 ms (total: 2.33 sec)
+[2026.05.26-15.11.16:312][919]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.11.16:312][919]LogContentValidation: Enabled validators:
+[2026.05.26-15.11.16:312][919]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.11.16:312][919]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.11.16:312][919]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.11.16:312][919]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.11.16:312][919]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.11.16:312][919]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.11.16:313][919]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.11.17:400][999]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-15.11.17:408][999]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-15.11.17:429][999]LogStreaming: Display: FlushAsyncLoading(642): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-15.11.17:429][999]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.11.17:533][999]LogPlayLevel: PIE: StaticDuplicateObject took: (0.103961s)
+[2026.05.26-15.11.17:533][999]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.104001s)
+[2026.05.26-15.11.17:552][999]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2026.05.26-15.11.17:562][999]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-15.11.17:563][999]LogPlayLevel: PIE: World Init took: (0.001658s)
+[2026.05.26-15.11.17:564][999]LogAudio: Display: Creating Audio Device:                 Id: 17, Scope: Unique, Realtime: True
+[2026.05.26-15.11.17:564][999]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-15.11.17:564][999]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-15.11.17:564][999]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-15.11.17:564][999]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-15.11.17:564][999]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-15.11.17:564][999]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-15.11.17:564][999]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-15.11.17:564][999]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-15.11.17:564][999]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-15.11.17:564][999]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-15.11.17:564][999]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-15.11.17:566][999]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-15.11.17:587][999]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-15.11.17:587][999]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-15.11.17:587][999]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-15.11.17:587][999]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-15.11.17:587][999]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=17
+[2026.05.26-15.11.17:587][999]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=17
+[2026.05.26-15.11.17:590][999]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=17
+[2026.05.26-15.11.17:590][999]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=17
+[2026.05.26-15.11.17:590][999]LogInit: FAudioDevice initialized with ID 17.
+[2026.05.26-15.11.17:590][999]LogAudio: Display: Audio Device (ID: 17) registered with world 'map_ingame'.
+[2026.05.26-15.11.17:590][999]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 17
+[2026.05.26-15.11.17:593][999]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-15.11.17:654][999]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.27-00.11.17
+[2026.05.26-15.11.17:656][999]LogWorld: Bringing up level for play took: 0.063574
+[2026.05.26-15.11.17:658][999]LogOnline: OSS: Created online subsystem instance for: :Context_33
+[2026.05.26-15.11.17:666][999]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.11.17:666][999]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-15.11.17:666][999]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-15.11.17:667][999]PIE: 서버가 로그인했습니다.
+[2026.05.26-15.11.17:667][999]PIE: 에디터에서 플레이 총 시작 시간 0.26초입니다.
+[2026.05.26-15.11.19:998][240]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.11.20:332][278]LogBlueprintUserMessages: [WBP_Smith_C_0] 재료부족
+[2026.05.26-15.11.20:332][278]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.11.21:421][395]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.11.21:421][395]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.11.21:421][395]LogBlueprintUserMessages: [WBP_Smith_C_0] -26
+[2026.05.26-15.11.21:421][395]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.11.21:421][395]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.11.22:520][519]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.11.22:520][519]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.11.23:900][674]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-15.11.41:100][769]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.11.41:100][769]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.11.41:101][769]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-15.11.41:127][769]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.11.41:130][769]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-15.11.41:139][769]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.11.41:169][769]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-15.11.41:169][769]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 17
+[2026.05.26-15.11.41:169][769]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2026.05.26-15.11.41:171][769]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2026.05.26-15.11.41:176][769]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.11.41:196][769]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2026.05.26-15.11.41:239][770]LogPlayLevel: Display: Destroying online subsystem :Context_33
+[2026.05.26-15.12.33:111][510]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2026.05.26-15.12.33:633][543]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.12.33:664][543]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.12.33:666][543]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.12.33:666][543]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.12.33:666][543]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.12.33:683][543]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.12.33:683][543]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_Smith1D70E0F841CB27DADF0ABFAE0469B869.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.12.33:692][543]LogFileHelpers: InternalPromptForCheckoutAndSave took 58.184 ms (total: 2.39 sec)
+[2026.05.26-15.12.33:725][543]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.12.33:725][543]LogContentValidation: Enabled validators:
+[2026.05.26-15.12.33:725][543]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.12.33:725][543]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.12.33:725][543]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.12.33:725][543]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.12.33:725][543]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.12.33:725][543]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.12.33:726][543]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.12.34:685][608]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-15.12.34:702][608]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-15.12.34:740][608]LogStreaming: Display: FlushAsyncLoading(643): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-15.12.34:740][608]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.12.34:845][608]LogPlayLevel: PIE: StaticDuplicateObject took: (0.104755s)
+[2026.05.26-15.12.34:845][608]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.104807s)
+[2026.05.26-15.12.34:865][608]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2026.05.26-15.12.34:873][608]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-15.12.34:876][608]LogPlayLevel: PIE: World Init took: (0.001978s)
+[2026.05.26-15.12.34:877][608]LogAudio: Display: Creating Audio Device:                 Id: 18, Scope: Unique, Realtime: True
+[2026.05.26-15.12.34:877][608]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-15.12.34:877][608]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-15.12.34:877][608]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-15.12.34:877][608]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-15.12.34:877][608]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-15.12.34:877][608]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-15.12.34:877][608]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-15.12.34:877][608]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-15.12.34:877][608]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-15.12.34:877][608]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-15.12.34:877][608]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-15.12.34:879][608]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-15.12.34:900][608]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-15.12.34:900][608]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-15.12.34:900][608]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-15.12.34:900][608]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-15.12.34:900][608]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=18
+[2026.05.26-15.12.34:900][608]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=18
+[2026.05.26-15.12.34:902][608]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=18
+[2026.05.26-15.12.34:902][608]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=18
+[2026.05.26-15.12.34:902][608]LogInit: FAudioDevice initialized with ID 18.
+[2026.05.26-15.12.34:902][608]LogAudio: Display: Audio Device (ID: 18) registered with world 'map_ingame'.
+[2026.05.26-15.12.34:902][608]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 18
+[2026.05.26-15.12.34:905][608]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-15.12.34:966][608]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.27-00.12.34
+[2026.05.26-15.12.34:968][608]LogWorld: Bringing up level for play took: 0.062844
+[2026.05.26-15.12.34:970][608]LogOnline: OSS: Created online subsystem instance for: :Context_34
+[2026.05.26-15.12.34:978][608]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.12.34:978][608]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-15.12.34:978][608]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-15.12.34:978][608]PIE: 서버가 로그인했습니다.
+[2026.05.26-15.12.34:979][608]PIE: 에디터에서 플레이 총 시작 시간 0.278초입니다.
+[2026.05.26-15.12.36:981][812]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.12.37:279][846]LogBlueprintUserMessages: [WBP_Smith_C_0] 재료부족
+[2026.05.26-15.12.37:279][846]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.12.37:279][846]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> CapturePermanently
+[2026.05.26-15.12.37:279][846]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.12.37:279][846]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.12.39:470][ 89]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.12.39:470][ 89]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.12.40:660][226]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.12.40:660][226]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.12.41:127][280]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.12.41:127][280]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.12.41:456][318]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.12.41:456][318]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.12.41:651][341]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.12.41:652][341]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.12.41:936][375]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.12.41:936][375]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.12.42:140][399]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.12.42:140][399]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.12.42:140][399]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.12.42:140][399]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.12.42:299][418]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.12.42:299][418]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.12.42:474][439]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.12.42:474][439]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.12.42:474][439]LogBlueprintUserMessages: [WBP_Smith_C_0] -25
+[2026.05.26-15.12.42:474][439]PIE: /Engine/Transient.UnrealEdEngine_0:GameInstanceSmith_C_16.WBP_Smith_C_0'에서 호출된 UWidget::RemoveFromParent()에 UMG 부모가 없습니다 (TakeWidget()을 통해 네이티브 슬레이트 위젯에 바로 추가된 경우 RemoveFromParent()를 통해서가 아니라 명시적으로 바로 제거해 줘야 합니다.)
+[2026.05.26-15.12.42:474][439]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.12.42:474][439]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.12.43:493][556]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.12.44:348][651]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.12.45:284][759]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.12.45:284][759]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.12.46:208][863]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-15.12.47:020][951]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.12.47:021][951]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.12.47:022][951]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-15.12.47:047][951]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.12.47:051][951]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-15.12.47:059][951]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.12.47:090][951]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-15.12.47:090][951]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 18
+[2026.05.26-15.12.47:090][951]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=18
+[2026.05.26-15.12.47:092][951]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=18
+[2026.05.26-15.12.47:096][951]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.12.47:117][951]LogUObjectHash: Compacting FUObjectHashTables data took   1.87ms
+[2026.05.26-15.12.47:165][952]LogPlayLevel: Display: Destroying online subsystem :Context_34
+[2026.05.26-15.13.24:760][402]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2026.05.26-15.13.30:012][858]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2026.05.26-15.13.30:494][886]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.13.30:521][886]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.13.30:523][886]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.13.30:523][886]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.13.30:523][886]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.13.30:541][886]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.13.30:541][886]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_Smith67D335B847F5D8F8E48C80AC7BFD96DF.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.13.30:549][886]LogFileHelpers: InternalPromptForCheckoutAndSave took 55.688 ms (total: 2.44 sec)
+[2026.05.26-15.13.30:582][886]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.13.30:582][886]LogContentValidation: Enabled validators:
+[2026.05.26-15.13.30:582][886]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.13.30:582][886]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.13.30:582][886]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.13.30:582][886]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.13.30:582][886]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.13.30:582][886]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.13.30:582][886]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.13.32:219][ 18]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-15.13.32:238][ 18]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-15.13.32:260][ 18]LogStreaming: Display: FlushAsyncLoading(644): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-15.13.32:260][ 18]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.13.32:364][ 18]LogPlayLevel: PIE: StaticDuplicateObject took: (0.103241s)
+[2026.05.26-15.13.32:364][ 18]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.103287s)
+[2026.05.26-15.13.32:383][ 18]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2026.05.26-15.13.32:392][ 18]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-15.13.32:394][ 18]LogPlayLevel: PIE: World Init took: (0.001629s)
+[2026.05.26-15.13.32:394][ 18]LogAudio: Display: Creating Audio Device:                 Id: 19, Scope: Unique, Realtime: True
+[2026.05.26-15.13.32:394][ 18]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-15.13.32:394][ 18]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-15.13.32:394][ 18]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-15.13.32:394][ 18]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-15.13.32:394][ 18]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-15.13.32:394][ 18]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-15.13.32:394][ 18]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-15.13.32:394][ 18]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-15.13.32:394][ 18]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-15.13.32:394][ 18]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-15.13.32:394][ 18]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-15.13.32:396][ 18]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-15.13.32:418][ 18]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-15.13.32:418][ 18]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-15.13.32:418][ 18]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-15.13.32:418][ 18]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-15.13.32:418][ 18]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=19
+[2026.05.26-15.13.32:418][ 18]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=19
+[2026.05.26-15.13.32:420][ 18]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=19
+[2026.05.26-15.13.32:420][ 18]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=19
+[2026.05.26-15.13.32:420][ 18]LogInit: FAudioDevice initialized with ID 19.
+[2026.05.26-15.13.32:420][ 18]LogAudio: Display: Audio Device (ID: 19) registered with world 'map_ingame'.
+[2026.05.26-15.13.32:421][ 18]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 19
+[2026.05.26-15.13.32:423][ 18]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-15.13.32:484][ 18]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.27-00.13.32
+[2026.05.26-15.13.32:486][ 18]LogWorld: Bringing up level for play took: 0.063888
+[2026.05.26-15.13.32:488][ 18]LogOnline: OSS: Created online subsystem instance for: :Context_35
+[2026.05.26-15.13.32:496][ 18]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.13.32:496][ 18]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-15.13.32:496][ 18]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-15.13.32:497][ 18]PIE: 서버가 로그인했습니다.
+[2026.05.26-15.13.32:498][ 18]PIE: 에디터에서 플레이 총 시작 시간 0.26초입니다.
+[2026.05.26-15.13.34:424][214]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.13.34:754][251]LogBlueprintUserMessages: [WBP_Smith_C_0] 재료부족
+[2026.05.26-15.13.34:756][251]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.13.36:023][393]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.36:023][393]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.13.36:061][393]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.13.36:061][393]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.13.36:063][393]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-15.13.36:089][393]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.13.36:092][393]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-15.13.36:102][393]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.13.36:133][393]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-15.13.36:133][393]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 19
+[2026.05.26-15.13.36:133][393]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=19
+[2026.05.26-15.13.36:135][393]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=19
+[2026.05.26-15.13.36:139][393]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.13.36:160][393]LogUObjectHash: Compacting FUObjectHashTables data took   1.93ms
+[2026.05.26-15.13.36:220][394]LogPlayLevel: Display: Destroying online subsystem :Context_35
+[2026.05.26-15.13.40:270][818]LogEditorTransaction: Undo 현재 선택된 부분을 삭제합니다.
+[2026.05.26-15.13.41:794][925]LogEditorTransaction: Undo 현재 선택된 부분을 삭제합니다.
+[2026.05.26-15.13.42:522][978]LogEditorTransaction: Undo 현재 선택된 부분을 삭제합니다.
+[2026.05.26-15.13.45:229][203]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2026.05.26-15.13.45:799][238]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.13.45:833][238]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.13.45:834][238]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.13.45:834][238]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.13.45:834][238]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.13.45:852][238]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.13.45:852][238]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_Smith69A7EF9C4D20D0A05D9A678FE9C60F27.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.13.45:861][238]LogFileHelpers: InternalPromptForCheckoutAndSave took 61.516 ms (total: 2.50 sec)
+[2026.05.26-15.13.45:894][238]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.13.45:894][238]LogContentValidation: Enabled validators:
+[2026.05.26-15.13.45:894][238]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.13.45:894][238]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.13.45:894][238]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.13.45:894][238]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.13.45:894][238]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.13.45:894][238]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.13.45:894][238]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.13.47:179][326]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-15.13.47:187][326]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-15.13.47:211][326]LogStreaming: Display: FlushAsyncLoading(645): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-15.13.47:212][326]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.13.47:316][326]LogPlayLevel: PIE: StaticDuplicateObject took: (0.104440s)
+[2026.05.26-15.13.47:316][326]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.104487s)
+[2026.05.26-15.13.47:335][326]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2026.05.26-15.13.47:344][326]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-15.13.47:347][326]LogPlayLevel: PIE: World Init took: (0.001753s)
+[2026.05.26-15.13.47:348][326]LogAudio: Display: Creating Audio Device:                 Id: 20, Scope: Unique, Realtime: True
+[2026.05.26-15.13.47:348][326]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-15.13.47:348][326]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-15.13.47:348][326]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-15.13.47:348][326]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-15.13.47:348][326]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-15.13.47:348][326]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-15.13.47:348][326]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-15.13.47:348][326]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-15.13.47:348][326]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-15.13.47:348][326]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-15.13.47:348][326]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-15.13.47:350][326]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-15.13.47:370][326]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-15.13.47:370][326]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-15.13.47:370][326]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-15.13.47:370][326]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-15.13.47:370][326]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=20
+[2026.05.26-15.13.47:370][326]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=20
+[2026.05.26-15.13.47:372][326]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=20
+[2026.05.26-15.13.47:372][326]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=20
+[2026.05.26-15.13.47:372][326]LogInit: FAudioDevice initialized with ID 20.
+[2026.05.26-15.13.47:372][326]LogAudio: Display: Audio Device (ID: 20) registered with world 'map_ingame'.
+[2026.05.26-15.13.47:372][326]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 20
+[2026.05.26-15.13.47:375][326]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-15.13.47:437][326]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.27-00.13.47
+[2026.05.26-15.13.47:439][326]LogWorld: Bringing up level for play took: 0.063750
+[2026.05.26-15.13.47:441][326]LogOnline: OSS: Created online subsystem instance for: :Context_36
+[2026.05.26-15.13.47:449][326]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.13.47:449][326]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-15.13.47:449][326]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-15.13.47:450][326]PIE: 서버가 로그인했습니다.
+[2026.05.26-15.13.47:451][326]PIE: 에디터에서 플레이 총 시작 시간 0.265초입니다.
+[2026.05.26-15.13.49:179][499]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.13.49:830][571]LogBlueprintUserMessages: [WBP_Smith_C_0] 재료부족
+[2026.05.26-15.13.49:830][571]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.13.49:830][571]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> CapturePermanently
+[2026.05.26-15.13.49:830][571]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.13.49:830][571]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.13.50:809][679]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.50:809][679]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.13.50:984][698]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.50:984][698]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.13.51:111][712]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.51:111][712]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.13.51:247][726]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.51:247][726]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.13.51:716][777]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.51:716][777]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.13.51:769][783]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.51:769][783]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.13.52:143][826]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.52:143][826]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.13.52:433][860]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.52:433][860]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.13.52:433][860]LogBlueprintUserMessages: [WBP_Smith_C_0] 10
+[2026.05.26-15.13.53:012][926]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.53:012][926]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.13.53:012][926]LogBlueprintUserMessages: [WBP_Smith_C_0] 20
+[2026.05.26-15.13.54:007][ 42]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.54:007][ 42]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.13.54:007][ 42]LogBlueprintUserMessages: [WBP_Smith_C_0] 30
+[2026.05.26-15.13.54:346][ 82]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.13.54:346][ 82]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 거짓
+[2026.05.26-15.13.54:372][ 82]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.13.54:372][ 82]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.13.54:373][ 82]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-15.13.54:398][ 82]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.13.54:402][ 82]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-15.13.54:409][ 82]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.13.54:442][ 82]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-15.13.54:442][ 82]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 20
+[2026.05.26-15.13.54:442][ 82]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=20
+[2026.05.26-15.13.54:443][ 82]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=20
+[2026.05.26-15.13.54:447][ 82]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.13.54:467][ 82]LogUObjectHash: Compacting FUObjectHashTables data took   1.63ms
+[2026.05.26-15.13.54:517][ 83]LogPlayLevel: Display: Destroying online subsystem :Context_36
+[2026.05.26-15.14.31:027][289]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2026.05.26-15.14.31:761][340]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.14.31:788][340]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.14.31:790][340]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.14.31:790][340]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.14.31:790][340]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.14.31:807][340]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.14.31:808][340]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_SmithD78C8C904A83F4D09E05938B8209D7B8.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.14.31:817][340]LogFileHelpers: InternalPromptForCheckoutAndSave took 56.422 ms (total: 2.56 sec)
+[2026.05.26-15.14.31:845][340]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.14.31:845][340]LogContentValidation: Enabled validators:
+[2026.05.26-15.14.31:845][340]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.14.31:845][340]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.14.31:845][340]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.14.31:845][340]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.14.31:845][340]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.14.31:845][340]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.14.31:845][340]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.14.33:044][443]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-15.14.33:052][443]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-15.14.33:082][443]LogStreaming: Display: FlushAsyncLoading(646): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-15.14.33:082][443]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.14.33:195][443]LogPlayLevel: PIE: StaticDuplicateObject took: (0.113084s)
+[2026.05.26-15.14.33:195][443]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.113122s)
+[2026.05.26-15.14.33:216][443]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2026.05.26-15.14.33:226][443]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-15.14.33:228][443]LogPlayLevel: PIE: World Init took: (0.001878s)
+[2026.05.26-15.14.33:229][443]LogAudio: Display: Creating Audio Device:                 Id: 21, Scope: Unique, Realtime: True
+[2026.05.26-15.14.33:229][443]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-15.14.33:229][443]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-15.14.33:229][443]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-15.14.33:229][443]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-15.14.33:229][443]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-15.14.33:229][443]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-15.14.33:229][443]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-15.14.33:229][443]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-15.14.33:229][443]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-15.14.33:229][443]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-15.14.33:229][443]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-15.14.33:232][443]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-15.14.33:256][443]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-15.14.33:256][443]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-15.14.33:256][443]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-15.14.33:256][443]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-15.14.33:257][443]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=21
+[2026.05.26-15.14.33:257][443]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=21
+[2026.05.26-15.14.33:259][443]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=21
+[2026.05.26-15.14.33:260][443]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=21
+[2026.05.26-15.14.33:260][443]LogInit: FAudioDevice initialized with ID 21.
+[2026.05.26-15.14.33:260][443]LogAudio: Display: Audio Device (ID: 21) registered with world 'map_ingame'.
+[2026.05.26-15.14.33:260][443]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 21
+[2026.05.26-15.14.33:263][443]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-15.14.33:324][443]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.27-00.14.33
+[2026.05.26-15.14.33:326][443]LogWorld: Bringing up level for play took: 0.063725
+[2026.05.26-15.14.33:329][443]LogOnline: OSS: Created online subsystem instance for: :Context_37
+[2026.05.26-15.14.33:336][443]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.33:336][443]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-15.14.33:336][443]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-15.14.33:337][443]PIE: 서버가 로그인했습니다.
+[2026.05.26-15.14.33:338][443]PIE: 에디터에서 플레이 총 시작 시간 0.287초입니다.
+[2026.05.26-15.14.35:100][620]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.14.35:357][649]LogBlueprintUserMessages: [WBP_Smith_C_0] 재료부족
+[2026.05.26-15.14.35:357][649]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.14.35:362][649]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.35:362][649]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.39:812][154]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.14.40:235][202]LogBlueprintUserMessages: [WBP_Smith_C_1] 재료부족
+[2026.05.26-15.14.40:235][202]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.40:235][202]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.40:242][202]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.40:242][202]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.41:215][312]LogBlueprintUserMessages: [WBP_Smith_C_2] 재료부족
+[2026.05.26-15.14.41:215][312]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.41:215][312]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.41:222][312]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.41:222][312]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.43:315][547]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.43:315][547]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.43:954][620]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-15.14.45:265][768]LogBlueprintUserMessages: [WBP_Smith_C_3] 재료부족
+[2026.05.26-15.14.45:266][768]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.14.45:274][768]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.45:274][768]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.46:034][854]LogBlueprintUserMessages: [WBP_Smith_C_4] 재료부족
+[2026.05.26-15.14.46:035][854]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.46:035][854]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.46:040][854]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.46:040][854]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.46:664][924]LogBlueprintUserMessages: [WBP_Smith_C_5] 재료부족
+[2026.05.26-15.14.46:664][924]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.46:664][924]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.46:671][924]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.46:671][924]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.47:158][979]LogBlueprintUserMessages: [WBP_Smith_C_6] 재료부족
+[2026.05.26-15.14.47:158][979]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.47:158][979]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.47:165][979]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.47:165][979]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.47:593][ 28]LogBlueprintUserMessages: [WBP_Smith_C_7] 재료부족
+[2026.05.26-15.14.47:593][ 28]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.47:593][ 28]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.47:600][ 28]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.47:600][ 28]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.47:980][ 71]LogBlueprintUserMessages: [WBP_Smith_C_8] 재료부족
+[2026.05.26-15.14.47:980][ 71]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.47:980][ 71]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.47:986][ 71]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.47:986][ 71]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.48:365][114]LogBlueprintUserMessages: [WBP_Smith_C_9] 재료부족
+[2026.05.26-15.14.48:365][114]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.48:365][114]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.48:372][114]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.48:372][114]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.48:819][165]LogBlueprintUserMessages: [WBP_Smith_C_10] 재료부족
+[2026.05.26-15.14.48:819][165]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.48:819][165]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.48:825][165]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.48:825][165]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.49:340][223]LogBlueprintUserMessages: [WBP_Smith_C_11] 재료부족
+[2026.05.26-15.14.49:340][223]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.49:340][223]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.49:347][223]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.49:347][223]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.49:942][291]LogBlueprintUserMessages: [WBP_Smith_C_12] 재료부족
+[2026.05.26-15.14.49:942][291]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.49:942][291]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.49:948][291]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.49:948][291]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.50:285][330]LogBlueprintUserMessages: [WBP_Smith_C_13] 재료부족
+[2026.05.26-15.14.50:285][330]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.50:285][330]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.50:291][330]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.50:292][330]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.50:454][349]LogBlueprintUserMessages: [WBP_Smith_C_14] 재료부족
+[2026.05.26-15.14.50:454][349]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.50:454][349]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.50:460][349]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.50:460][349]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.50:649][371]LogBlueprintUserMessages: [WBP_Smith_C_15] 재료부족
+[2026.05.26-15.14.50:649][371]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.50:649][371]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.50:656][371]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.50:656][371]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.50:826][390]LogBlueprintUserMessages: [WBP_Smith_C_16] 재료부족
+[2026.05.26-15.14.50:826][390]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.50:826][390]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.50:835][390]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.50:835][390]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.14.51:004][410]LogBlueprintUserMessages: [WBP_Smith_C_17] 재료부족
+[2026.05.26-15.14.51:004][410]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.14.51:004][410]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.14.51:009][410]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.14.51:010][410]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.15.00:753][551]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.15.00:753][551]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.15.01:905][681]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-15.15.05:743][128]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.15.12:264][868]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-15.15.13:592][ 22]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.15.14:670][109]LogBlueprintUserMessages: [WBP_Smith_C_18] onkeydown 시작
+[2026.05.26-15.15.14:670][109]LogBlueprintUserMessages: [WBP_Smith_C_18] onkeydown 참
+[2026.05.26-15.15.14:670][109]LogBlueprintUserMessages: [WBP_Smith_C_18] 25
+[2026.05.26-15.15.15:177][133]LogBlueprintUserMessages: [WBP_Smith_C_18] onkeydown 시작
+[2026.05.26-15.15.15:177][133]LogBlueprintUserMessages: [WBP_Smith_C_18] onkeydown 참
+[2026.05.26-15.15.15:177][133]LogBlueprintUserMessages: [WBP_Smith_C_18] 0
+[2026.05.26-15.15.16:779][200]LogBlueprintUserMessages: [WBP_Smith_C_18] onkeydown 시작
+[2026.05.26-15.15.16:779][200]LogBlueprintUserMessages: [WBP_Smith_C_18] onkeydown 참
+[2026.05.26-15.15.16:779][200]LogBlueprintUserMessages: [WBP_Smith_C_18] 25
+[2026.05.26-15.15.18:945][299]LogBlueprintUserMessages: [WBP_Smith_C_18] onkeydown 시작
+[2026.05.26-15.15.18:945][299]LogBlueprintUserMessages: [WBP_Smith_C_18] onkeydown 참
+[2026.05.26-15.15.18:945][299]LogBlueprintUserMessages: [WBP_Smith_C_18] 50
+[2026.05.26-15.15.19:983][346]LogBlueprintUserMessages: [WBP_Smith_C_18] onkeydown 시작
+[2026.05.26-15.15.19:983][346]LogBlueprintUserMessages: [WBP_Smith_C_18] onkeydown 참
+[2026.05.26-15.15.19:983][346]LogBlueprintUserMessages: [WBP_Smith_C_18] 100
+[2026.05.26-15.15.19:983][346]LogBlueprintUserMessages: [WBP_Smith_C_18] 성공
+[2026.05.26-15.15.19:983][346]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.15.19:983][346]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.15.20:866][386]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.15.20:866][386]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.15.29:551][315]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-15.15.39:583][148]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.15.39:584][148]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.15.39:585][148]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-15.15.39:613][148]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.15.39:617][148]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-15.15.39:626][148]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.15.39:662][148]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-15.15.39:662][148]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 21
+[2026.05.26-15.15.39:662][148]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2026.05.26-15.15.39:664][148]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2026.05.26-15.15.39:669][148]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.15.39:695][148]LogUObjectHash: Compacting FUObjectHashTables data took   2.10ms
+[2026.05.26-15.15.39:737][149]LogPlayLevel: Display: Destroying online subsystem :Context_37
+[2026.05.26-15.15.50:879][356]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2026.05.26-15.15.51:446][384]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.15.51:477][384]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.15.51:479][384]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.15.51:479][384]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.15.51:479][384]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.15.51:496][384]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.15.51:497][384]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_Smith01FF86B341F5B2987189288392CB8C66.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.15.51:505][384]LogFileHelpers: InternalPromptForCheckoutAndSave took 58.605 ms (total: 2.62 sec)
+[2026.05.26-15.15.51:536][384]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.15.51:536][384]LogContentValidation: Enabled validators:
+[2026.05.26-15.15.51:536][384]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.15.51:536][384]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.15.51:536][384]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.15.51:536][384]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.15.51:536][384]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.15.51:536][384]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.15.51:536][384]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.15.52:788][475]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-15.15.52:795][475]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-15.15.52:823][475]LogStreaming: Display: FlushAsyncLoading(647): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-15.15.52:823][475]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.15.52:928][475]LogPlayLevel: PIE: StaticDuplicateObject took: (0.105403s)
+[2026.05.26-15.15.52:928][475]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.105447s)
+[2026.05.26-15.15.52:947][475]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2026.05.26-15.15.52:959][475]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-15.15.52:961][475]LogPlayLevel: PIE: World Init took: (0.001888s)
+[2026.05.26-15.15.52:961][475]LogAudio: Display: Creating Audio Device:                 Id: 22, Scope: Unique, Realtime: True
+[2026.05.26-15.15.52:961][475]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-15.15.52:961][475]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-15.15.52:961][475]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-15.15.52:961][475]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-15.15.52:961][475]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-15.15.52:961][475]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-15.15.52:961][475]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-15.15.52:961][475]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-15.15.52:961][475]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-15.15.52:961][475]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-15.15.52:961][475]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-15.15.52:964][475]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-15.15.52:986][475]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-15.15.52:986][475]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-15.15.52:986][475]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-15.15.52:986][475]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-15.15.52:986][475]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=22
+[2026.05.26-15.15.52:986][475]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=22
+[2026.05.26-15.15.52:990][475]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=22
+[2026.05.26-15.15.52:990][475]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=22
+[2026.05.26-15.15.52:990][475]LogInit: FAudioDevice initialized with ID 22.
+[2026.05.26-15.15.52:990][475]LogAudio: Display: Audio Device (ID: 22) registered with world 'map_ingame'.
+[2026.05.26-15.15.52:991][475]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 22
+[2026.05.26-15.15.52:993][475]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-15.15.53:057][475]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.27-00.15.53
+[2026.05.26-15.15.53:060][475]LogWorld: Bringing up level for play took: 0.066275
+[2026.05.26-15.15.53:062][475]LogOnline: OSS: Created online subsystem instance for: :Context_38
+[2026.05.26-15.15.53:069][475]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.15.53:069][475]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-15.15.53:069][475]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-15.15.53:070][475]PIE: 서버가 로그인했습니다.
+[2026.05.26-15.15.53:071][475]PIE: 에디터에서 플레이 총 시작 시간 0.276초입니다.
+[2026.05.26-15.15.55:195][693]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.15.59:226][146]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-15.15.59:954][227]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 11556.770508
+[2026.05.26-15.16.00:125][247]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.16.00:196][254]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.26-15.16.00:196][254]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 11557.000977, Update Interval: 354.664154
+[2026.05.26-15.16.00:688][309]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.16.02:072][412]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.16.02:072][412]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.16.02:072][412]LogBlueprintUserMessages: [WBP_Smith_C_0] -25
+[2026.05.26-15.16.02:072][412]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.16.02:072][412]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.16.03:481][473]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.16.03:481][473]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.16.09:692][119]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-15.16.11:674][338]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.16.11:674][338]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.16.11:676][338]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-15.16.11:700][338]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.16.11:704][338]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-15.16.11:713][338]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.16.11:746][338]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-15.16.11:746][338]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 22
+[2026.05.26-15.16.11:746][338]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=22
+[2026.05.26-15.16.11:748][338]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=22
+[2026.05.26-15.16.11:753][338]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.16.11:774][338]LogUObjectHash: Compacting FUObjectHashTables data took   1.98ms
+[2026.05.26-15.16.11:834][339]LogPlayLevel: Display: Destroying online subsystem :Context_38
+[2026.05.26-15.16.26:288][964]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2026.05.26-15.16.27:214][ 53]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.16.27:250][ 53]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.16.27:252][ 53]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.16.27:253][ 53]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.16.27:253][ 53]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.16.27:280][ 53]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.16.27:281][ 53]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_Smith7221100D4A95D18846CCD7AA1F04C01E.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.16.27:290][ 53]LogFileHelpers: InternalPromptForCheckoutAndSave took 75.734 ms (total: 2.69 sec)
+[2026.05.26-15.16.27:322][ 53]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.16.27:322][ 53]LogContentValidation: Enabled validators:
+[2026.05.26-15.16.27:322][ 53]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.16.27:322][ 53]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.16.27:322][ 53]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.16.27:322][ 53]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.16.27:322][ 53]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.16.27:322][ 53]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.16.27:323][ 53]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.16.28:498][150]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-15.16.28:505][150]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-15.16.28:506][150]LogStreaming: Display: FlushAsyncLoading(648): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-15.16.28:506][150]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.16.28:609][150]LogPlayLevel: PIE: StaticDuplicateObject took: (0.103658s)
+[2026.05.26-15.16.28:609][150]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.103698s)
+[2026.05.26-15.16.28:628][150]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2026.05.26-15.16.28:638][150]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-15.16.28:639][150]LogPlayLevel: PIE: World Init took: (0.001629s)
+[2026.05.26-15.16.28:640][150]LogAudio: Display: Creating Audio Device:                 Id: 23, Scope: Unique, Realtime: True
+[2026.05.26-15.16.28:640][150]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-15.16.28:640][150]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-15.16.28:640][150]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-15.16.28:640][150]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-15.16.28:640][150]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-15.16.28:640][150]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-15.16.28:640][150]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-15.16.28:640][150]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-15.16.28:640][150]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-15.16.28:640][150]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-15.16.28:640][150]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-15.16.28:643][150]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-15.16.28:664][150]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-15.16.28:664][150]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-15.16.28:664][150]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-15.16.28:664][150]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-15.16.28:664][150]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=23
+[2026.05.26-15.16.28:664][150]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=23
+[2026.05.26-15.16.28:667][150]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=23
+[2026.05.26-15.16.28:667][150]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=23
+[2026.05.26-15.16.28:667][150]LogInit: FAudioDevice initialized with ID 23.
+[2026.05.26-15.16.28:667][150]LogAudio: Display: Audio Device (ID: 23) registered with world 'map_ingame'.
+[2026.05.26-15.16.28:667][150]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 23
+[2026.05.26-15.16.28:669][150]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-15.16.28:731][150]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.27-00.16.28
+[2026.05.26-15.16.28:734][150]LogWorld: Bringing up level for play took: 0.064952
+[2026.05.26-15.16.28:736][150]LogOnline: OSS: Created online subsystem instance for: :Context_39
+[2026.05.26-15.16.28:744][150]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.16.28:744][150]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-15.16.28:744][150]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-15.16.28:745][150]PIE: 서버가 로그인했습니다.
+[2026.05.26-15.16.28:746][150]PIE: 에디터에서 플레이 총 시작 시간 0.241초입니다.
+[2026.05.26-15.16.32:339][532]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.16.33:468][663]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.16.35:982][944]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-15.16.37:033][ 58]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.16.37:551][109]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 시작
+[2026.05.26-15.16.37:551][109]LogBlueprintUserMessages: [WBP_Smith_C_0] onkeydown 참
+[2026.05.26-15.16.37:551][109]LogBlueprintUserMessages: [WBP_Smith_C_0] -25
+[2026.05.26-15.16.37:551][109]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.16.37:551][109]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.16.38:844][182]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.16.38:844][182]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.16.42:660][545]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CaptureDuringMouseDown
+[2026.05.26-15.16.44:094][702]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.16.44:094][702]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.16.44:095][702]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-15.16.44:120][702]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.16.44:124][702]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-15.16.44:132][702]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.16.44:166][702]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-15.16.44:166][702]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 23
+[2026.05.26-15.16.44:166][702]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=23
+[2026.05.26-15.16.44:167][702]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=23
+[2026.05.26-15.16.44:172][702]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.16.44:194][702]LogUObjectHash: Compacting FUObjectHashTables data took   1.84ms
+[2026.05.26-15.16.44:245][703]LogPlayLevel: Display: Destroying online subsystem :Context_39
+[2026.05.26-15.17.08:060][846]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/smith/smithing/SmithArea.SmithArea
+[2026.05.26-15.17.08:060][846]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_34
+[2026.05.26-15.17.45:316][161]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2026.05.26-15.17.46:033][235]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.17.46:062][235]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/smith/smithing/SmithArea] ([2] browsable assets)...
+[2026.05.26-15.17.46:062][235]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/SmithArea]
+[2026.05.26-15.17.46:062][235]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/SmithArea" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/SmithArea.uasset" SILENT=true
+[2026.05.26-15.17.46:067][235]LogSavePackage: Moving output files for package: /Game/smith/smithing/SmithArea
+[2026.05.26-15.17.46:068][235]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/SmithArea5568832B4859092EDBE486B7BACC358D.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/SmithArea.uasset'
+[2026.05.26-15.17.46:078][235]LogFileHelpers: InternalPromptForCheckoutAndSave took 44.085 ms (total: 2.74 sec)
+[2026.05.26-15.17.46:106][235]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.17.46:106][235]LogContentValidation: Enabled validators:
+[2026.05.26-15.17.46:106][235]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.17.46:106][235]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.17.46:106][235]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.17.46:106][235]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.17.46:106][235]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.17.46:106][235]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.17.46:106][235]AssetCheck: /Game/smith/smithing/SmithArea 에셋 유효성 검사 중
+[2026.05.26-15.20.03:141][118]LogUObjectHash: Compacting FUObjectHashTables data took   1.29ms
+[2026.05.26-15.20.03:628][140]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.20.03:664][140]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.20.03:666][140]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.20.03:666][140]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.20.03:666][140]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.20.03:684][140]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.20.03:684][140]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_Smith302E458243D5B50F1843618F112B88D5.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.20.03:695][140]LogFileHelpers: InternalPromptForCheckoutAndSave took 67.788 ms (total: 2.81 sec)
+[2026.05.26-15.20.03:724][140]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.20.03:724][140]LogContentValidation: Enabled validators:
+[2026.05.26-15.20.03:724][140]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.20.03:724][140]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.20.03:724][140]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.20.03:724][140]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.20.03:724][140]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.20.03:724][140]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.20.03:725][140]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.20.04:998][242]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2026.05.26-15.20.05:005][242]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.26-15.20.05:005][242]LogStreaming: Display: FlushAsyncLoading(649): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.26-15.20.05:005][242]LogPlayLevel: Creating play world package: /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.20.05:116][242]LogPlayLevel: PIE: StaticDuplicateObject took: (0.110374s)
+[2026.05.26-15.20.05:117][242]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jinuk/map_ingame.map_ingame to /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame (0.110423s)
+[2026.05.26-15.20.05:137][242]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2026.05.26-15.20.05:146][242]LogChaosDD: Creating Chaos Debug Draw Scene for world map_ingame
+[2026.05.26-15.20.05:149][242]LogPlayLevel: PIE: World Init took: (0.002902s)
+[2026.05.26-15.20.05:151][242]LogAudio: Display: Creating Audio Device:                 Id: 24, Scope: Unique, Realtime: True
+[2026.05.26-15.20.05:151][242]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.26-15.20.05:151][242]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.26-15.20.05:151][242]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.26-15.20.05:151][242]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.26-15.20.05:151][242]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2026.05.26-15.20.05:151][242]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.26-15.20.05:151][242]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2026.05.26-15.20.05:151][242]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.26-15.20.05:151][242]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.26-15.20.05:151][242]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.26-15.20.05:151][242]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.26-15.20.05:153][242]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.26-15.20.05:174][242]LogAudioMixer: Display: Using Audio Hardware Device 스피커(3- COX CH43)
+[2026.05.26-15.20.05:174][242]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.26-15.20.05:174][242]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.26-15.20.05:174][242]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.26-15.20.05:174][242]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=24
+[2026.05.26-15.20.05:174][242]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=24
+[2026.05.26-15.20.05:176][242]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=24
+[2026.05.26-15.20.05:176][242]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=24
+[2026.05.26-15.20.05:176][242]LogInit: FAudioDevice initialized with ID 24.
+[2026.05.26-15.20.05:176][242]LogAudio: Display: Audio Device (ID: 24) registered with world 'map_ingame'.
+[2026.05.26-15.20.05:176][242]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 24
+[2026.05.26-15.20.05:179][242]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2026.05.26-15.20.05:241][242]LogWorld: Bringing World /Game/Jinuk/UEDPIE_0_map_ingame.map_ingame up for play (max tick rate 0) at 2026.05.27-00.20.05
+[2026.05.26-15.20.05:243][242]LogWorld: Bringing up level for play took: 0.063366
+[2026.05.26-15.20.05:245][242]LogOnline: OSS: Created online subsystem instance for: :Context_41
+[2026.05.26-15.20.05:253][242]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.20.05:253][242]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2026.05.26-15.20.05:253][242]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+[2026.05.26-15.20.05:254][242]PIE: 서버가 로그인했습니다.
+[2026.05.26-15.20.05:255][242]PIE: 에디터에서 플레이 총 시작 시간 0.25초입니다.
+[2026.05.26-15.20.07:385][458]LogBlueprintUserMessages: [SmithArea_C_1] 겹침 감지
+[2026.05.26-15.20.07:721][495]LogBlueprintUserMessages: [WBP_Smith_C_0] 재료부족
+[2026.05.26-15.20.07:721][495]LogViewport: Display: Viewport MouseCaptureMode Changed, CaptureDuringMouseDown -> NoCapture
+[2026.05.26-15.20.07:725][495]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.20.07:726][495]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.20.08:329][563]LogBlueprintUserMessages: [WBP_Smith_C_1] 재료부족
+[2026.05.26-15.20.08:329][563]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.20.08:329][563]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.20.08:335][563]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.20.08:335][563]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.20.08:839][620]LogBlueprintUserMessages: [WBP_Smith_C_2] 재료부족
+[2026.05.26-15.20.08:839][620]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.20.08:839][620]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.20.08:844][620]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2026.05.26-15.20.08:844][620]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2026.05.26-15.20.10:132][764]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2026.05.26-15.20.10:132][764]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2026.05.26-15.20.11:298][886]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.20.11:298][886]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-15.20.11:300][886]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-15.20.11:325][886]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.20.11:330][886]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-15.20.11:338][886]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-15.20.11:368][886]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-15.20.11:368][886]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 24
+[2026.05.26-15.20.11:368][886]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2026.05.26-15.20.11:370][886]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2026.05.26-15.20.11:372][886]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-15.20.11:393][886]LogUObjectHash: Compacting FUObjectHashTables data took   1.91ms
+[2026.05.26-15.20.11:443][887]LogPlayLevel: Display: Destroying online subsystem :Context_41
+[2026.05.26-15.21.15:901][880]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2026.05.26-15.21.16:415][910]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.21.16:445][910]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.21.16:448][910]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.21.16:448][910]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.21.16:448][910]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.21.16:465][910]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.21.16:465][910]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_Smith2BCAFA244971D2D8BBC7F586B25E0F36.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.21.16:472][910]LogFileHelpers: InternalPromptForCheckoutAndSave took 57.254 ms (total: 2.86 sec)
+[2026.05.26-15.21.16:502][910]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.21.16:502][910]LogContentValidation: Enabled validators:
+[2026.05.26-15.21.16:502][910]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.21.16:502][910]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.21.16:502][910]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.21.16:502][910]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.21.16:502][910]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.21.16:502][910]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.21.16:503][910]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.21.53:627][793]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2026.05.26-15.21.54:029][811]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.21.54:063][811]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/smith/smithing/WBP_Smith] ([2] browsable assets)...
+[2026.05.26-15.21.54:065][811]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/smith/smithing/WBP_Smith.WBP_Smith]
+[2026.05.26-15.21.54:065][811]OBJ SavePackage: Finished generating thumbnails for package [/Game/smith/smithing/WBP_Smith]
+[2026.05.26-15.21.54:065][811]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/smith/smithing/WBP_Smith" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset" SILENT=true
+[2026.05.26-15.21.54:083][811]LogSavePackage: Moving output files for package: /Game/smith/smithing/WBP_Smith
+[2026.05.26-15.21.54:084][811]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/WBP_Smith1B9BB2514A80BB3F7F707DA77F974CC1.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/smith/smithing/WBP_Smith.uasset'
+[2026.05.26-15.21.54:094][811]LogFileHelpers: InternalPromptForCheckoutAndSave took 64.884 ms (total: 2.93 sec)
+[2026.05.26-15.21.54:125][811]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.21.54:125][811]LogContentValidation: Enabled validators:
+[2026.05.26-15.21.54:125][811]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.21.54:125][811]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.21.54:126][811]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.21.54:126][811]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.21.54:126][811]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.21.54:126][811]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.21.54:126][811]AssetCheck: /Game/smith/smithing/WBP_Smith 에셋 유효성 검사 중
+[2026.05.26-15.21.55:124][879]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-15.21.55:153][879]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jinuk/map_ingame" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/Jinuk/map_ingame.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2026.05.26-15.21.55:201][879]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2026.05.26-15.21.55:787][879]LogSavePackage: Moving output files for package: /Game/Jinuk/map_ingame
+[2026.05.26-15.21.55:787][879]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/map_ingameABC4A2FC434F72128B44EAB602B7C466.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/Jinuk/map_ingame.umap'
+[2026.05.26-15.21.55:805][879]LogFileHelpers: Saving map 'map_ingame' took 0.654
+[2026.05.26-15.21.55:816][879]LogFileHelpers: InternalPromptForCheckoutAndSave took 692.367 ms (total: 3.62 sec)
+[2026.05.26-15.21.55:857][879]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-15.21.55:857][879]LogContentValidation: Enabled validators:
+[2026.05.26-15.21.55:857][879]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-15.21.55:857][879]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-15.21.55:857][879]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-15.21.55:857][879]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-15.21.55:857][879]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-15.21.55:857][879]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-15.21.55:858][879]AssetCheck: /Game/Jinuk/map_ingame 에셋 유효성 검사 중
+[2026.05.26-15.21.58:024][ 96]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.05.26-15.22.05:047][728]LogLiveCoding: Display:    C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Binaries\Win64\UnrealEditor-blacksmith.patch_2.lib 라이브러리 및 C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Binaries\Win64\UnrealEditor-blacksmith.patch_2.exp 개체를 생성하고 있습니다.
+[2026.05.26-15.22.05:341][734]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2026.05.26-15.22.05:765][735]Display: Reload/Re-instancing Complete: 1 package changed, 2 classes unchanged, 1 scriptstruct unchanged, 6 functions remapped, 2 scriptstructs remapped
+[2026.05.26-15.22.05:765][735]LogLiveCoding: Display: Live coding succeeded
