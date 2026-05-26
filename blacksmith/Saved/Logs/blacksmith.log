@@ -5628,3 +5628,604 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.05.26-12.00.52:498][119]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 11468.485352
 [2026.05.26-12.00.52:757][150]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
 [2026.05.26-12.00.52:757][150]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 11468.734375, Update Interval: 316.853546
+[2026.05.26-12.01.33:892][457]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-12.01.33:892][457]LogWorld: BeginTearingDown for /Game/Jinuk/UEDPIE_0_map_ingame
+[2026.05.26-12.01.33:893][457]LogWorld: UWorld::CleanupWorld for map_ingame, bSessionEnded=true, bCleanupResources=true
+[2026.05.26-12.01.33:917][457]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-12.01.33:921][457]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.26-12.01.33:930][457]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.26-12.01.33:983][457]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.26-12.01.33:984][457]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 16
+[2026.05.26-12.01.33:984][457]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=16
+[2026.05.26-12.01.33:986][457]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=16
+[2026.05.26-12.01.33:991][457]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.26-12.01.34:010][457]LogUObjectHash: Compacting FUObjectHashTables data took   1.75ms
+[2026.05.26-12.01.34:075][458]LogPlayLevel: Display: Destroying online subsystem :Context_20
+[2026.05.26-12.01.35:216][588]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-12.01.35:259][588]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jinuk/map_ingame" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/Jinuk/map_ingame.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2026.05.26-12.01.35:311][588]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2026.05.26-12.01.35:883][588]LogSavePackage: Moving output files for package: /Game/Jinuk/map_ingame
+[2026.05.26-12.01.35:883][588]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/map_ingame9C8096464691FCB29626F0A81B4FAD9D.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/Jinuk/map_ingame.umap'
+[2026.05.26-12.01.35:903][588]LogFileHelpers: Saving map 'map_ingame' took 0.646
+[2026.05.26-12.01.35:909][588]LogFileHelpers: InternalPromptForCheckoutAndSave took 694.305 ms (total: 5.14 sec)
+[2026.05.26-12.01.35:953][588]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-12.01.35:954][588]LogContentValidation: Enabled validators:
+[2026.05.26-12.01.35:954][588]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-12.01.35:954][588]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-12.01.35:954][588]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-12.01.35:954][588]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-12.01.35:954][588]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-12.01.35:954][588]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-12.01.35:954][588]AssetCheck: /Game/Jinuk/map_ingame 에셋 유효성 검사 중
+[2026.05.26-12.02.10:868][636]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-12.02.10:891][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/가시덩굴] ([1] browsable assets)...
+[2026.05.26-12.02.10:891][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/가시덩굴]
+[2026.05.26-12.02.10:891][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/가시덩굴" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/가시덩굴.uasset" SILENT=true
+[2026.05.26-12.02.10:893][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/가시덩굴
+[2026.05.26-12.02.10:893][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/가시덩굴3EF2D22540402F7E1DF0A68B9E7B2257.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/가시덩굴.uasset'
+[2026.05.26-12.02.10:895][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/가죽끈] ([1] browsable assets)...
+[2026.05.26-12.02.10:895][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/가죽끈]
+[2026.05.26-12.02.10:895][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/가죽끈" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/가죽끈.uasset" SILENT=true
+[2026.05.26-12.02.10:897][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/가죽끈
+[2026.05.26-12.02.10:897][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/가죽끈64EB33194F0C3180A0C694ABD5CFAF49.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/가죽끈.uasset'
+[2026.05.26-12.02.10:898][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/강철장검] ([1] browsable assets)...
+[2026.05.26-12.02.10:898][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/강철장검]
+[2026.05.26-12.02.10:898][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/강철장검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/강철장검.uasset" SILENT=true
+[2026.05.26-12.02.10:899][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/강철장검
+[2026.05.26-12.02.10:899][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/강철장검DF88EC3D4CF60041799DBD9A91346BFB.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/강철장검.uasset'
+[2026.05.26-12.02.10:900][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/거인의뼈] ([1] browsable assets)...
+[2026.05.26-12.02.10:901][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/거인의뼈]
+[2026.05.26-12.02.10:901][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/거인의뼈" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/거인의뼈.uasset" SILENT=true
+[2026.05.26-12.02.10:902][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/거인의뼈
+[2026.05.26-12.02.10:902][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/거인의뼈2B0237AA4D37CA2D264E9899C15F20E1.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/거인의뼈.uasset'
+[2026.05.26-12.02.10:903][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/거인의뼛가루] ([1] browsable assets)...
+[2026.05.26-12.02.10:903][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/거인의뼛가루]
+[2026.05.26-12.02.10:903][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/거인의뼛가루" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/거인의뼛가루.uasset" SILENT=true
+[2026.05.26-12.02.10:905][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/거인의뼛가루
+[2026.05.26-12.02.10:905][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/거인의뼛가루F1B25845470EFF8AC86ECA8BED176D75.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/거인의뼛가루.uasset'
+[2026.05.26-12.02.10:906][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/검은수액] ([1] browsable assets)...
+[2026.05.26-12.02.10:906][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/검은수액]
+[2026.05.26-12.02.10:906][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/검은수액" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/검은수액.uasset" SILENT=true
+[2026.05.26-12.02.10:907][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/검은수액
+[2026.05.26-12.02.10:907][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/검은수액B0EEBB444E3B20FFB3B427881C1A42C3.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/검은수액.uasset'
+[2026.05.26-12.02.10:908][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/검은피] ([1] browsable assets)...
+[2026.05.26-12.02.10:908][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/검은피]
+[2026.05.26-12.02.10:908][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/검은피" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/검은피.uasset" SILENT=true
+[2026.05.26-12.02.10:909][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/검은피
+[2026.05.26-12.02.10:909][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/검은피B4F71A5940D1D0F9B7F54EA089882758.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/검은피.uasset'
+[2026.05.26-12.02.10:910][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/귀일검] ([1] browsable assets)...
+[2026.05.26-12.02.10:910][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/귀일검]
+[2026.05.26-12.02.10:910][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/귀일검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/귀일검.uasset" SILENT=true
+[2026.05.26-12.02.10:911][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/귀일검
+[2026.05.26-12.02.10:911][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/귀일검BE5DC8D448ABAFB941300BADF5122834.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/귀일검.uasset'
+[2026.05.26-12.02.10:912][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/꺼지지않는불꽃] ([1] browsable assets)...
+[2026.05.26-12.02.10:912][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/꺼지지않는불꽃]
+[2026.05.26-12.02.10:912][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/꺼지지않는불꽃" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/꺼지지않는불꽃.uasset" SILENT=true
+[2026.05.26-12.02.10:913][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/꺼지지않는불꽃
+[2026.05.26-12.02.10:913][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/꺼지지않는불꽃6167EB84400EADBE02A3C0851D028E38.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/꺼지지않는불꽃.uasset'
+[2026.05.26-12.02.10:914][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/단단한나무] ([1] browsable assets)...
+[2026.05.26-12.02.10:914][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/단단한나무]
+[2026.05.26-12.02.10:914][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/단단한나무" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/단단한나무.uasset" SILENT=true
+[2026.05.26-12.02.10:915][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/단단한나무
+[2026.05.26-12.02.10:916][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/단단한나무5B8D1B5C46B7D577CB9AD88890DBD8B1.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/단단한나무.uasset'
+[2026.05.26-12.02.10:916][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/레비아탄의뿔] ([1] browsable assets)...
+[2026.05.26-12.02.10:916][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/레비아탄의뿔]
+[2026.05.26-12.02.10:916][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/레비아탄의뿔" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/레비아탄의뿔.uasset" SILENT=true
+[2026.05.26-12.02.10:918][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/레비아탄의뿔
+[2026.05.26-12.02.10:918][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/레비아탄의뿔BA86E03E49E41EE26A6A1DBD811F4883.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/레비아탄의뿔.uasset'
+[2026.05.26-12.02.10:918][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/리프검] ([1] browsable assets)...
+[2026.05.26-12.02.10:918][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/리프검]
+[2026.05.26-12.02.10:919][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/리프검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/리프검.uasset" SILENT=true
+[2026.05.26-12.02.10:920][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/리프검
+[2026.05.26-12.02.10:920][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/리프검3FD832784F26B489A5BA599433F9439A.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/리프검.uasset'
+[2026.05.26-12.02.10:920][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/마수의송곳니목걸이] ([1] browsable assets)...
+[2026.05.26-12.02.10:920][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/마수의송곳니목걸이]
+[2026.05.26-12.02.10:920][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/마수의송곳니목걸이" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/마수의송곳니목걸이.uasset" SILENT=true
+[2026.05.26-12.02.10:922][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/마수의송곳니목걸이
+[2026.05.26-12.02.10:922][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/마수의송곳니목걸이1DA719EA4203BB6187C8F3A4CC32089E.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/마수의송곳니목걸이.uasset'
+[2026.05.26-12.02.10:922][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/마인의시체] ([1] browsable assets)...
+[2026.05.26-12.02.10:922][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/마인의시체]
+[2026.05.26-12.02.10:922][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/마인의시체" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/마인의시체.uasset" SILENT=true
+[2026.05.26-12.02.10:924][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/마인의시체
+[2026.05.26-12.02.10:924][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/마인의시체13F72D684100CF1762702CB050D1BA74.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/마인의시체.uasset'
+[2026.05.26-12.02.10:925][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/마인의피] ([1] browsable assets)...
+[2026.05.26-12.02.10:925][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/마인의피]
+[2026.05.26-12.02.10:925][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/마인의피" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/마인의피.uasset" SILENT=true
+[2026.05.26-12.02.10:926][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/마인의피
+[2026.05.26-12.02.10:926][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/마인의피0FC2BCBA4E42D686B02108886E693BD3.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/마인의피.uasset'
+[2026.05.26-12.02.10:927][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/마족의뼈] ([1] browsable assets)...
+[2026.05.26-12.02.10:927][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/마족의뼈]
+[2026.05.26-12.02.10:927][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/마족의뼈" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/마족의뼈.uasset" SILENT=true
+[2026.05.26-12.02.10:929][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/마족의뼈
+[2026.05.26-12.02.10:929][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/마족의뼈734770DE4446DC7EB78380A9690D4C66.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/마족의뼈.uasset'
+[2026.05.26-12.02.10:929][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/마족의핵] ([1] browsable assets)...
+[2026.05.26-12.02.10:929][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/마족의핵]
+[2026.05.26-12.02.10:929][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/마족의핵" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/마족의핵.uasset" SILENT=true
+[2026.05.26-12.02.10:933][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/마족의핵
+[2026.05.26-12.02.10:933][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/마족의핵A6C81A4B4035451CC201788C1994A013.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/마족의핵.uasset'
+[2026.05.26-12.02.10:934][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/맑은샘물] ([1] browsable assets)...
+[2026.05.26-12.02.10:934][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/맑은샘물]
+[2026.05.26-12.02.10:934][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/맑은샘물" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/맑은샘물.uasset" SILENT=true
+[2026.05.26-12.02.10:935][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/맑은샘물
+[2026.05.26-12.02.10:935][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/맑은샘물6EB745AA4FB427664630F5B836F6A525.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/맑은샘물.uasset'
+[2026.05.26-12.02.10:936][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/망목도끼] ([1] browsable assets)...
+[2026.05.26-12.02.10:936][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/망목도끼]
+[2026.05.26-12.02.10:936][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/망목도끼" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/망목도끼.uasset" SILENT=true
+[2026.05.26-12.02.10:937][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/망목도끼
+[2026.05.26-12.02.10:937][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/망목도끼EC3A91A8429A34C28DA8BE9E985884D4.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/망목도끼.uasset'
+[2026.05.26-12.02.10:938][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/멸마] ([1] browsable assets)...
+[2026.05.26-12.02.10:938][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/멸마]
+[2026.05.26-12.02.10:938][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/멸마" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/멸마.uasset" SILENT=true
+[2026.05.26-12.02.10:940][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/멸마
+[2026.05.26-12.02.10:940][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/멸마31D715D342E54E0B812D7C865DA1BDD9.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/멸마.uasset'
+[2026.05.26-12.02.10:941][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/멸염대도] ([1] browsable assets)...
+[2026.05.26-12.02.10:941][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/멸염대도]
+[2026.05.26-12.02.10:941][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/멸염대도" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/멸염대도.uasset" SILENT=true
+[2026.05.26-12.02.10:942][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/멸염대도
+[2026.05.26-12.02.10:942][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/멸염대도754EEC684CCC940BAFD4A683963270B7.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/멸염대도.uasset'
+[2026.05.26-12.02.10:943][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/명화대도] ([1] browsable assets)...
+[2026.05.26-12.02.10:943][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/명화대도]
+[2026.05.26-12.02.10:943][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/명화대도" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/명화대도.uasset" SILENT=true
+[2026.05.26-12.02.10:944][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/명화대도
+[2026.05.26-12.02.10:944][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/명화대도36A51FF844EE5520D3E8668345FC7D87.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/명화대도.uasset'
+[2026.05.26-12.02.10:945][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/목철검] ([1] browsable assets)...
+[2026.05.26-12.02.10:945][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/목철검]
+[2026.05.26-12.02.10:945][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/목철검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/목철검.uasset" SILENT=true
+[2026.05.26-12.02.10:946][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/목철검
+[2026.05.26-12.02.10:946][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/목철검A66E660346F723E8AF9F0AB067DCA204.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/목철검.uasset'
+[2026.05.26-12.02.10:947][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/무언가의뼈] ([1] browsable assets)...
+[2026.05.26-12.02.10:947][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/무언가의뼈]
+[2026.05.26-12.02.10:947][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/무언가의뼈" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/무언가의뼈.uasset" SILENT=true
+[2026.05.26-12.02.10:948][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/무언가의뼈
+[2026.05.26-12.02.10:948][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/무언가의뼈676C26AE405F14DD76A9D584A4C1111B.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/무언가의뼈.uasset'
+[2026.05.26-12.02.10:949][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/물결창] ([1] browsable assets)...
+[2026.05.26-12.02.10:949][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/물결창]
+[2026.05.26-12.02.10:949][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/물결창" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/물결창.uasset" SILENT=true
+[2026.05.26-12.02.10:951][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/물결창
+[2026.05.26-12.02.10:951][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/물결창9B8DD1F5475C147D324553A771FA88E5.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/물결창.uasset'
+[2026.05.26-12.02.10:952][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/미스릴블레이드] ([1] browsable assets)...
+[2026.05.26-12.02.10:952][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/미스릴블레이드]
+[2026.05.26-12.02.10:952][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/미스릴블레이드" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/미스릴블레이드.uasset" SILENT=true
+[2026.05.26-12.02.10:953][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/미스릴블레이드
+[2026.05.26-12.02.10:953][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/미스릴블레이드31F9CDC5421CC8217B6178B8F1D23984.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/미스릴블레이드.uasset'
+[2026.05.26-12.02.10:954][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/바인채찍] ([1] browsable assets)...
+[2026.05.26-12.02.10:954][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/바인채찍]
+[2026.05.26-12.02.10:954][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/바인채찍" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/바인채찍.uasset" SILENT=true
+[2026.05.26-12.02.10:955][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/바인채찍
+[2026.05.26-12.02.10:955][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/바인채찍9A684EFB4CB102F0F496A5BC34C41812.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/바인채찍.uasset'
+[2026.05.26-12.02.10:956][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/발광석] ([1] browsable assets)...
+[2026.05.26-12.02.10:956][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/발광석]
+[2026.05.26-12.02.10:956][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/발광석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/발광석.uasset" SILENT=true
+[2026.05.26-12.02.10:957][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/발광석
+[2026.05.26-12.02.10:957][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/발광석4194985E49280F333AECCEA19E0DFAF2.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/발광석.uasset'
+[2026.05.26-12.02.10:958][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/백금석] ([1] browsable assets)...
+[2026.05.26-12.02.10:958][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/백금석]
+[2026.05.26-12.02.10:958][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/백금석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/백금석.uasset" SILENT=true
+[2026.05.26-12.02.10:960][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/백금석
+[2026.05.26-12.02.10:960][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/백금석1D118298447B736301642DA9E79ED366.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/백금석.uasset'
+[2026.05.26-12.02.10:961][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/백은대검] ([1] browsable assets)...
+[2026.05.26-12.02.10:961][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/백은대검]
+[2026.05.26-12.02.10:961][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/백은대검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/백은대검.uasset" SILENT=true
+[2026.05.26-12.02.10:962][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/백은대검
+[2026.05.26-12.02.10:962][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/백은대검4DAFA6A24C33D434229CF080DDA263DE.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/백은대검.uasset'
+[2026.05.26-12.02.10:963][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/부서진기사단장의쌍검] ([1] browsable assets)...
+[2026.05.26-12.02.10:963][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/부서진기사단장의쌍검]
+[2026.05.26-12.02.10:963][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/부서진기사단장의쌍검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/부서진기사단장의쌍검.uasset" SILENT=true
+[2026.05.26-12.02.10:964][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/부서진기사단장의쌍검
+[2026.05.26-12.02.10:964][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/부서진기사단장의쌍검833EE15D41DAA221600FDDB918F03D76.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/부서진기사단장의쌍검.uasset'
+[2026.05.26-12.02.10:965][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/부서진딸의백은대검] ([1] browsable assets)...
+[2026.05.26-12.02.10:965][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/부서진딸의백은대검]
+[2026.05.26-12.02.10:965][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/부서진딸의백은대검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/부서진딸의백은대검.uasset" SILENT=true
+[2026.05.26-12.02.10:966][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/부서진딸의백은대검
+[2026.05.26-12.02.10:966][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/부서진딸의백은대검3646F43A453822065C3DE4ACC95A86BF.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/부서진딸의백은대검.uasset'
+[2026.05.26-12.02.10:967][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/부패한살덩이] ([1] browsable assets)...
+[2026.05.26-12.02.10:967][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/부패한살덩이]
+[2026.05.26-12.02.10:967][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/부패한살덩이" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/부패한살덩이.uasset" SILENT=true
+[2026.05.26-12.02.10:969][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/부패한살덩이
+[2026.05.26-12.02.10:969][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/부패한살덩이B0B29B85475D58DB6B64AFAD57381C29.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/부패한살덩이.uasset'
+[2026.05.26-12.02.10:969][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/불씨검] ([1] browsable assets)...
+[2026.05.26-12.02.10:969][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/불씨검]
+[2026.05.26-12.02.10:969][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/불씨검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/불씨검.uasset" SILENT=true
+[2026.05.26-12.02.10:971][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/불씨검
+[2026.05.26-12.02.10:971][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/불씨검4DA1AA63457596CC5679F281FD457B08.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/불씨검.uasset'
+[2026.05.26-12.02.10:972][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/뼈] ([1] browsable assets)...
+[2026.05.26-12.02.10:972][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/뼈]
+[2026.05.26-12.02.10:972][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/뼈" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/뼈.uasset" SILENT=true
+[2026.05.26-12.02.10:973][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/뼈
+[2026.05.26-12.02.10:973][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/뼈AEB4300C4031367A127DC38D43A0A0E9.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/뼈.uasset'
+[2026.05.26-12.02.10:974][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/성운광석] ([1] browsable assets)...
+[2026.05.26-12.02.10:974][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/성운광석]
+[2026.05.26-12.02.10:974][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/성운광석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/성운광석.uasset" SILENT=true
+[2026.05.26-12.02.10:975][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/성운광석
+[2026.05.26-12.02.10:975][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/성운광석295F72FC4DA3ADDFEDA0F3BBE1D08E84.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/성운광석.uasset'
+[2026.05.26-12.02.10:976][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/순백의성핵] ([1] browsable assets)...
+[2026.05.26-12.02.10:976][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/순백의성핵]
+[2026.05.26-12.02.10:976][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/순백의성핵" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/순백의성핵.uasset" SILENT=true
+[2026.05.26-12.02.10:978][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/순백의성핵
+[2026.05.26-12.02.10:978][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/순백의성핵071E529645A4F673876EEA82F86355C3.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/순백의성핵.uasset'
+[2026.05.26-12.02.10:979][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/숯] ([1] browsable assets)...
+[2026.05.26-12.02.10:979][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/숯]
+[2026.05.26-12.02.10:979][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/숯" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/숯.uasset" SILENT=true
+[2026.05.26-12.02.10:980][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/숯
+[2026.05.26-12.02.10:980][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/숯5249D98441FDBEB1AD4590BFAC77BD48.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/숯.uasset'
+[2026.05.26-12.02.10:981][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/식인어이빨] ([1] browsable assets)...
+[2026.05.26-12.02.10:981][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/식인어이빨]
+[2026.05.26-12.02.10:981][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/식인어이빨" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/식인어이빨.uasset" SILENT=true
+[2026.05.26-12.02.10:982][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/식인어이빨
+[2026.05.26-12.02.10:982][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/식인어이빨F60D98B84BC982D86EAB10BDADB5210C.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/식인어이빨.uasset'
+[2026.05.26-12.02.10:983][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/심해창] ([1] browsable assets)...
+[2026.05.26-12.02.10:983][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/심해창]
+[2026.05.26-12.02.10:983][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/심해창" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/심해창.uasset" SILENT=true
+[2026.05.26-12.02.10:984][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/심해창
+[2026.05.26-12.02.10:984][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/심해창AB7DDA034DCC7079CF00F59518192232.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/심해창.uasset'
+[2026.05.26-12.02.10:985][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/썩은덩굴] ([1] browsable assets)...
+[2026.05.26-12.02.10:985][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/썩은덩굴]
+[2026.05.26-12.02.10:985][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/썩은덩굴" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/썩은덩굴.uasset" SILENT=true
+[2026.05.26-12.02.10:986][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/썩은덩굴
+[2026.05.26-12.02.10:986][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/썩은덩굴4AA254D844AE6A850885CAA5ACB62BD7.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/썩은덩굴.uasset'
+[2026.05.26-12.02.10:987][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/약속의평화] ([1] browsable assets)...
+[2026.05.26-12.02.10:987][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/약속의평화]
+[2026.05.26-12.02.10:988][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/약속의평화" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/약속의평화.uasset" SILENT=true
+[2026.05.26-12.02.10:989][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/약속의평화
+[2026.05.26-12.02.10:989][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/약속의평화E418256E4C85E6BE13D6B69700C63C9E.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/약속의평화.uasset'
+[2026.05.26-12.02.10:990][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/업화대검] ([1] browsable assets)...
+[2026.05.26-12.02.10:990][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/업화대검]
+[2026.05.26-12.02.10:990][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/업화대검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/업화대검.uasset" SILENT=true
+[2026.05.26-12.02.10:991][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/업화대검
+[2026.05.26-12.02.10:991][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/업화대검9922364A4012A7E66BEB0B95A495ADC8.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/업화대검.uasset'
+[2026.05.26-12.02.10:992][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/오리하르콘검] ([1] browsable assets)...
+[2026.05.26-12.02.10:992][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/오리하르콘검]
+[2026.05.26-12.02.10:992][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/오리하르콘검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/오리하르콘검.uasset" SILENT=true
+[2026.05.26-12.02.10:993][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/오리하르콘검
+[2026.05.26-12.02.10:993][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/오리하르콘검E7FA170B4C8CC4B9D235FFA1FE3692A0.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/오리하르콘검.uasset'
+[2026.05.26-12.02.10:994][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/오리하르콘광석] ([1] browsable assets)...
+[2026.05.26-12.02.10:994][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/오리하르콘광석]
+[2026.05.26-12.02.10:994][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/오리하르콘광석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/오리하르콘광석.uasset" SILENT=true
+[2026.05.26-12.02.10:995][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/오리하르콘광석
+[2026.05.26-12.02.10:995][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/오리하르콘광석7C85F69D4789157488EB42949843FBD9.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/오리하르콘광석.uasset'
+[2026.05.26-12.02.10:996][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/오염된물] ([1] browsable assets)...
+[2026.05.26-12.02.10:996][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/오염된물]
+[2026.05.26-12.02.10:996][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/오염된물" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/오염된물.uasset" SILENT=true
+[2026.05.26-12.02.10:998][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/오염된물
+[2026.05.26-12.02.10:998][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/오염된물F5C739E04975F834FA25F88D4CB22ED1.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/오염된물.uasset'
+[2026.05.26-12.02.10:998][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/은] ([1] browsable assets)...
+[2026.05.26-12.02.10:998][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/은]
+[2026.05.26-12.02.10:998][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/은" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/은.uasset" SILENT=true
+[2026.05.26-12.02.10:999][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/은
+[2026.05.26-12.02.10:999][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/은D7BCB09E47078451A7496792DD0FD7C0.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/은.uasset'
+[2026.05.26-12.02.11:001][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/은광석] ([1] browsable assets)...
+[2026.05.26-12.02.11:001][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/은광석]
+[2026.05.26-12.02.11:001][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/은광석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/은광석.uasset" SILENT=true
+[2026.05.26-12.02.11:003][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/은광석
+[2026.05.26-12.02.11:003][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/은광석C22885064BA97DE5BC073CBD5CBF38D4.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/은광석.uasset'
+[2026.05.26-12.02.11:004][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/이슬창] ([1] browsable assets)...
+[2026.05.26-12.02.11:004][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/이슬창]
+[2026.05.26-12.02.11:004][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/이슬창" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/이슬창.uasset" SILENT=true
+[2026.05.26-12.02.11:005][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/이슬창
+[2026.05.26-12.02.11:005][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/이슬창99DE35A44B0F58C9D71EE89805180BE8.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/이슬창.uasset'
+[2026.05.26-12.02.11:006][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/일반룬] ([1] browsable assets)...
+[2026.05.26-12.02.11:006][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/일반룬]
+[2026.05.26-12.02.11:006][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/일반룬" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/일반룬.uasset" SILENT=true
+[2026.05.26-12.02.11:007][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/일반룬
+[2026.05.26-12.02.11:007][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/일반룬5AB75F5A4A19882D28806EA7E8D124FD.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/일반룬.uasset'
+[2026.05.26-12.02.11:008][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/잎사귀즙] ([1] browsable assets)...
+[2026.05.26-12.02.11:008][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/잎사귀즙]
+[2026.05.26-12.02.11:008][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/잎사귀즙" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/잎사귀즙.uasset" SILENT=true
+[2026.05.26-12.02.11:010][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/잎사귀즙
+[2026.05.26-12.02.11:010][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/잎사귀즙73101FE040C7EA917BC621B734607E5E.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/잎사귀즙.uasset'
+[2026.05.26-12.02.11:010][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/장수나무손잡이] ([1] browsable assets)...
+[2026.05.26-12.02.11:010][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/장수나무손잡이]
+[2026.05.26-12.02.11:010][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/장수나무손잡이" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/장수나무손잡이.uasset" SILENT=true
+[2026.05.26-12.02.11:011][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/장수나무손잡이
+[2026.05.26-12.02.11:011][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/장수나무손잡이B05BCC294215D8639C22FE92B2AE576A.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/장수나무손잡이.uasset'
+[2026.05.26-12.02.11:012][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/잿불수정] ([1] browsable assets)...
+[2026.05.26-12.02.11:012][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/잿불수정]
+[2026.05.26-12.02.11:012][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/잿불수정" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/잿불수정.uasset" SILENT=true
+[2026.05.26-12.02.11:013][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/잿불수정
+[2026.05.26-12.02.11:014][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/잿불수정DEAF5BA1439928CBD6CAA6B2743F3440.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/잿불수정.uasset'
+[2026.05.26-12.02.11:014][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/적류수] ([1] browsable assets)...
+[2026.05.26-12.02.11:014][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/적류수]
+[2026.05.26-12.02.11:014][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/적류수" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/적류수.uasset" SILENT=true
+[2026.05.26-12.02.11:016][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/적류수
+[2026.05.26-12.02.11:016][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/적류수29E3C7B84D577A6DE870C5A73595B967.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/적류수.uasset'
+[2026.05.26-12.02.11:016][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/적류창] ([1] browsable assets)...
+[2026.05.26-12.02.11:016][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/적류창]
+[2026.05.26-12.02.11:016][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/적류창" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/적류창.uasset" SILENT=true
+[2026.05.26-12.02.11:019][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/적류창
+[2026.05.26-12.02.11:019][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/적류창183294A84749DDB1E77F9CAF5BC1AF5D.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/적류창.uasset'
+[2026.05.26-12.02.11:021][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/정교한물의룬] ([1] browsable assets)...
+[2026.05.26-12.02.11:021][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/정교한물의룬]
+[2026.05.26-12.02.11:021][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/정교한물의룬" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/정교한물의룬.uasset" SILENT=true
+[2026.05.26-12.02.11:023][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/정교한물의룬
+[2026.05.26-12.02.11:023][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/정교한물의룬1A3EA5644127943DB47F9AB91FD9A7A6.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/정교한물의룬.uasset'
+[2026.05.26-12.02.11:024][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/정교한불의룬] ([1] browsable assets)...
+[2026.05.26-12.02.11:024][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/정교한불의룬]
+[2026.05.26-12.02.11:024][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/정교한불의룬" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/정교한불의룬.uasset" SILENT=true
+[2026.05.26-12.02.11:026][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/정교한불의룬
+[2026.05.26-12.02.11:026][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/정교한불의룬D56E06C54F99E86115634584936BB073.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/정교한불의룬.uasset'
+[2026.05.26-12.02.11:026][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/정교한풀의룬] ([1] browsable assets)...
+[2026.05.26-12.02.11:026][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/정교한풀의룬]
+[2026.05.26-12.02.11:026][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/정교한풀의룬" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/정교한풀의룬.uasset" SILENT=true
+[2026.05.26-12.02.11:028][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/정교한풀의룬
+[2026.05.26-12.02.11:028][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/정교한풀의룬DD8493F74FB6ADC6D6CC10B0691D7434.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/정교한풀의룬.uasset'
+[2026.05.26-12.02.11:029][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/정제된철광석] ([1] browsable assets)...
+[2026.05.26-12.02.11:029][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/정제된철광석]
+[2026.05.26-12.02.11:029][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/정제된철광석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/정제된철광석.uasset" SILENT=true
+[2026.05.26-12.02.11:030][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/정제된철광석
+[2026.05.26-12.02.11:030][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/정제된철광석676E685E48E9F0C986806FABEE3582D3.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/정제된철광석.uasset'
+[2026.05.26-12.02.11:031][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/정화된오리하르콘광석] ([1] browsable assets)...
+[2026.05.26-12.02.11:031][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/정화된오리하르콘광석]
+[2026.05.26-12.02.11:031][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/정화된오리하르콘광석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/정화된오리하르콘광석.uasset" SILENT=true
+[2026.05.26-12.02.11:033][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/정화된오리하르콘광석
+[2026.05.26-12.02.11:033][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/정화된오리하르콘광석C2A6092E4056B91DD54581A28762A39C.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/정화된오리하르콘광석.uasset'
+[2026.05.26-12.02.11:033][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/종말의노래] ([1] browsable assets)...
+[2026.05.26-12.02.11:033][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/종말의노래]
+[2026.05.26-12.02.11:033][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/종말의노래" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/종말의노래.uasset" SILENT=true
+[2026.05.26-12.02.11:035][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/종말의노래
+[2026.05.26-12.02.11:035][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/종말의노래07F633A342FF2CC64C969FB538C5503A.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/종말의노래.uasset'
+[2026.05.26-12.02.11:035][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/죽은고목] ([1] browsable assets)...
+[2026.05.26-12.02.11:035][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/죽은고목]
+[2026.05.26-12.02.11:035][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/죽은고목" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/죽은고목.uasset" SILENT=true
+[2026.05.26-12.02.11:037][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/죽은고목
+[2026.05.26-12.02.11:037][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/죽은고목C707039C47C8DFDAC99217A6659A1693.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/죽은고목.uasset'
+[2026.05.26-12.02.11:037][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/죽은고목의뿌리] ([1] browsable assets)...
+[2026.05.26-12.02.11:037][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/죽은고목의뿌리]
+[2026.05.26-12.02.11:037][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/죽은고목의뿌리" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/죽은고목의뿌리.uasset" SILENT=true
+[2026.05.26-12.02.11:039][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/죽은고목의뿌리
+[2026.05.26-12.02.11:039][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/죽은고목의뿌리CD60F285432F6786439DB7878674F9E2.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/죽은고목의뿌리.uasset'
+[2026.05.26-12.02.11:039][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/짙은흑철석] ([1] browsable assets)...
+[2026.05.26-12.02.11:039][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/짙은흑철석]
+[2026.05.26-12.02.11:039][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/짙은흑철석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/짙은흑철석.uasset" SILENT=true
+[2026.05.26-12.02.11:041][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/짙은흑철석
+[2026.05.26-12.02.11:041][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/짙은흑철석4A31D9B0423624E8B63763BE08F2230A.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/짙은흑철석.uasset'
+[2026.05.26-12.02.11:042][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/찬란했던성운광석] ([1] browsable assets)...
+[2026.05.26-12.02.11:042][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/찬란했던성운광석]
+[2026.05.26-12.02.11:042][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/찬란했던성운광석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/찬란했던성운광석.uasset" SILENT=true
+[2026.05.26-12.02.11:044][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/찬란했던성운광석
+[2026.05.26-12.02.11:044][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/찬란했던성운광석8772B9F04B9BE507DF49CA99304F2754.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/찬란했던성운광석.uasset'
+[2026.05.26-12.02.11:045][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/철광석] ([1] browsable assets)...
+[2026.05.26-12.02.11:045][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/철광석]
+[2026.05.26-12.02.11:045][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/철광석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/철광석.uasset" SILENT=true
+[2026.05.26-12.02.11:046][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/철광석
+[2026.05.26-12.02.11:046][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/철광석CA9E7024497061CD64B4FD964503431C.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/철광석.uasset'
+[2026.05.26-12.02.11:047][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/초급물의룬] ([1] browsable assets)...
+[2026.05.26-12.02.11:047][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/초급물의룬]
+[2026.05.26-12.02.11:047][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/초급물의룬" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/초급물의룬.uasset" SILENT=true
+[2026.05.26-12.02.11:049][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/초급물의룬
+[2026.05.26-12.02.11:049][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/초급물의룬3E6EBC9146BBB00DD1591DB93FE55BA6.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/초급물의룬.uasset'
+[2026.05.26-12.02.11:050][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/초급불의룬] ([1] browsable assets)...
+[2026.05.26-12.02.11:050][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/초급불의룬]
+[2026.05.26-12.02.11:050][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/초급불의룬" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/초급불의룬.uasset" SILENT=true
+[2026.05.26-12.02.11:050][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/초급불의룬
+[2026.05.26-12.02.11:051][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/초급불의룬743586D64824BF5AEF6651B41E0EDFFA.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/초급불의룬.uasset'
+[2026.05.26-12.02.11:051][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/초급풀의룬] ([1] browsable assets)...
+[2026.05.26-12.02.11:051][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/초급풀의룬]
+[2026.05.26-12.02.11:051][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/초급풀의룬" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/초급풀의룬.uasset" SILENT=true
+[2026.05.26-12.02.11:053][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/초급풀의룬
+[2026.05.26-12.02.11:053][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/초급풀의룬11BB3E9940BC01A4064EB4BDAD2D676C.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/초급풀의룬.uasset'
+[2026.05.26-12.02.11:054][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/침수정] ([1] browsable assets)...
+[2026.05.26-12.02.11:054][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/침수정]
+[2026.05.26-12.02.11:054][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/침수정" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/침수정.uasset" SILENT=true
+[2026.05.26-12.02.11:055][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/침수정
+[2026.05.26-12.02.11:055][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/침수정0D777A4D4D7444C5DDAEF48B6A6387BE.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/침수정.uasset'
+[2026.05.26-12.02.11:056][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/침혼창] ([1] browsable assets)...
+[2026.05.26-12.02.11:056][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/침혼창]
+[2026.05.26-12.02.11:056][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/침혼창" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/침혼창.uasset" SILENT=true
+[2026.05.26-12.02.11:057][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/침혼창
+[2026.05.26-12.02.11:058][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/침혼창8425FBC84EFCC01CC95742A8197ECA52.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/침혼창.uasset'
+[2026.05.26-12.02.11:058][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/탐생수의뿌리] ([1] browsable assets)...
+[2026.05.26-12.02.11:058][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/탐생수의뿌리]
+[2026.05.26-12.02.11:058][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/탐생수의뿌리" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/탐생수의뿌리.uasset" SILENT=true
+[2026.05.26-12.02.11:060][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/탐생수의뿌리
+[2026.05.26-12.02.11:060][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/탐생수의뿌리5B18C610446FE69B906C3AB800289C98.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/탐생수의뿌리.uasset'
+[2026.05.26-12.02.11:061][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/탐생수의심핵] ([1] browsable assets)...
+[2026.05.26-12.02.11:061][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/탐생수의심핵]
+[2026.05.26-12.02.11:061][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/탐생수의심핵" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/탐생수의심핵.uasset" SILENT=true
+[2026.05.26-12.02.11:062][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/탐생수의심핵
+[2026.05.26-12.02.11:062][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/탐생수의심핵AAB65DD84C7638EECAC425BF51D26877.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/탐생수의심핵.uasset'
+[2026.05.26-12.02.11:063][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/탐생수의줄기] ([1] browsable assets)...
+[2026.05.26-12.02.11:063][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/탐생수의줄기]
+[2026.05.26-12.02.11:063][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/탐생수의줄기" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/탐생수의줄기.uasset" SILENT=true
+[2026.05.26-12.02.11:064][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/탐생수의줄기
+[2026.05.26-12.02.11:064][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/탐생수의줄기04416DF14035662908E653A94ADB2B24.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/탐생수의줄기.uasset'
+[2026.05.26-12.02.11:065][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/탐식망치] ([1] browsable assets)...
+[2026.05.26-12.02.11:065][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/탐식망치]
+[2026.05.26-12.02.11:065][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/탐식망치" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/탐식망치.uasset" SILENT=true
+[2026.05.26-12.02.11:066][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/탐식망치
+[2026.05.26-12.02.11:066][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/탐식망치6AA444DD4163C40E13313D83EBDE1D8E.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/탐식망치.uasset'
+[2026.05.26-12.02.11:067][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/푸른불꽃] ([1] browsable assets)...
+[2026.05.26-12.02.11:067][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/푸른불꽃]
+[2026.05.26-12.02.11:067][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/푸른불꽃" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/푸른불꽃.uasset" SILENT=true
+[2026.05.26-12.02.11:069][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/푸른불꽃
+[2026.05.26-12.02.11:069][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/푸른불꽃39C2F74A46043D66573389AE40E63684.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/푸른불꽃.uasset'
+[2026.05.26-12.02.11:069][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/피안의만가] ([1] browsable assets)...
+[2026.05.26-12.02.11:069][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/피안의만가]
+[2026.05.26-12.02.11:069][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/피안의만가" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/피안의만가.uasset" SILENT=true
+[2026.05.26-12.02.11:071][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/피안의만가
+[2026.05.26-12.02.11:071][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/피안의만가A514FCDE48483EBCDBEE0A8B1778326D.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/피안의만가.uasset'
+[2026.05.26-12.02.11:072][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/피안화] ([1] browsable assets)...
+[2026.05.26-12.02.11:072][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/피안화]
+[2026.05.26-12.02.11:072][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/피안화" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/피안화.uasset" SILENT=true
+[2026.05.26-12.02.11:074][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/피안화
+[2026.05.26-12.02.11:074][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/피안화FBE46EC7463379168B856EA8D2CBE88F.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/피안화.uasset'
+[2026.05.26-12.02.11:074][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/피안화낫] ([1] browsable assets)...
+[2026.05.26-12.02.11:074][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/피안화낫]
+[2026.05.26-12.02.11:074][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/피안화낫" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/피안화낫.uasset" SILENT=true
+[2026.05.26-12.02.11:076][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/피안화낫
+[2026.05.26-12.02.11:076][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/피안화낫4B9F7FDA478EE2C09AACB29315B2E651.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/피안화낫.uasset'
+[2026.05.26-12.02.11:076][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/해왕창] ([1] browsable assets)...
+[2026.05.26-12.02.11:076][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/해왕창]
+[2026.05.26-12.02.11:076][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/해왕창" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/해왕창.uasset" SILENT=true
+[2026.05.26-12.02.11:078][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/해왕창
+[2026.05.26-12.02.11:078][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/해왕창3FF4E1AF493BC994257D17935C41F297.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/해왕창.uasset'
+[2026.05.26-12.02.11:078][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/호수정] ([1] browsable assets)...
+[2026.05.26-12.02.11:078][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/호수정]
+[2026.05.26-12.02.11:078][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/호수정" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/호수정.uasset" SILENT=true
+[2026.05.26-12.02.11:079][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/호수정
+[2026.05.26-12.02.11:079][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/호수정4DB3C21245791E0B2A2AF693CB3D10E1.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/호수정.uasset'
+[2026.05.26-12.02.11:081][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/홍련검] ([1] browsable assets)...
+[2026.05.26-12.02.11:081][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/홍련검]
+[2026.05.26-12.02.11:081][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/홍련검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/홍련검.uasset" SILENT=true
+[2026.05.26-12.02.11:082][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/홍련검
+[2026.05.26-12.02.11:082][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/홍련검5A25BBAB406F010568FCB68E3E904AD5.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/홍련검.uasset'
+[2026.05.26-12.02.11:083][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/홍련석] ([1] browsable assets)...
+[2026.05.26-12.02.11:083][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/홍련석]
+[2026.05.26-12.02.11:083][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/홍련석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/홍련석.uasset" SILENT=true
+[2026.05.26-12.02.11:084][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/홍련석
+[2026.05.26-12.02.11:084][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/홍련석DF7BC2A74F76D484FEDA1BA2E4D8DAAA.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/홍련석.uasset'
+[2026.05.26-12.02.11:085][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/화려한불의룬] ([1] browsable assets)...
+[2026.05.26-12.02.11:085][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/화려한불의룬]
+[2026.05.26-12.02.11:085][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/화려한불의룬" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/화려한불의룬.uasset" SILENT=true
+[2026.05.26-12.02.11:087][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/화려한불의룬
+[2026.05.26-12.02.11:087][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/화려한불의룬677AE83349A28F44D231BFA9F05D369A.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/화려한불의룬.uasset'
+[2026.05.26-12.02.11:088][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/화려한풀의룬] ([1] browsable assets)...
+[2026.05.26-12.02.11:088][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/화려한풀의룬]
+[2026.05.26-12.02.11:088][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/화려한풀의룬" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/화려한풀의룬.uasset" SILENT=true
+[2026.05.26-12.02.11:089][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/화려한풀의룬
+[2026.05.26-12.02.11:089][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/화려한풀의룬1BD30E8F4565D4E8668456B0AA895F2E.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/화려한풀의룬.uasset'
+[2026.05.26-12.02.11:090][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/화련한물의룬] ([1] browsable assets)...
+[2026.05.26-12.02.11:090][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/화련한물의룬]
+[2026.05.26-12.02.11:090][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/화련한물의룬" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/화련한물의룬.uasset" SILENT=true
+[2026.05.26-12.02.11:093][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/화련한물의룬
+[2026.05.26-12.02.11:093][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/화련한물의룬A95CDB5347D2DEFB9FBB0AB7BAEDFC4C.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/화련한물의룬.uasset'
+[2026.05.26-12.02.11:094][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/화염초검] ([1] browsable assets)...
+[2026.05.26-12.02.11:094][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/화염초검]
+[2026.05.26-12.02.11:094][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/화염초검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/화염초검.uasset" SILENT=true
+[2026.05.26-12.02.11:096][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/화염초검
+[2026.05.26-12.02.11:096][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/화염초검F56CF7F0463E747BA1D02F951209ACBF.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/화염초검.uasset'
+[2026.05.26-12.02.11:097][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/횃불] ([1] browsable assets)...
+[2026.05.26-12.02.11:097][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/횃불]
+[2026.05.26-12.02.11:097][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/횃불" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/횃불.uasset" SILENT=true
+[2026.05.26-12.02.11:098][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/횃불
+[2026.05.26-12.02.11:098][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/횃불652E8D024221978AEA1AAEB1201ADB31.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/횃불.uasset'
+[2026.05.26-12.02.11:099][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/흑조] ([1] browsable assets)...
+[2026.05.26-12.02.11:099][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/흑조]
+[2026.05.26-12.02.11:099][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/흑조" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/흑조.uasset" SILENT=true
+[2026.05.26-12.02.11:101][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/흑조
+[2026.05.26-12.02.11:101][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/흑조0E75EE1D4B6A9470B7FFA1BD271B4EA2.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/흑조.uasset'
+[2026.05.26-12.02.11:101][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/흑철검] ([1] browsable assets)...
+[2026.05.26-12.02.11:101][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/흑철검]
+[2026.05.26-12.02.11:101][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/흑철검" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/흑철검.uasset" SILENT=true
+[2026.05.26-12.02.11:102][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/흑철검
+[2026.05.26-12.02.11:102][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/흑철검A60ADB2A4E535379A2CEBBACC0798990.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/흑철검.uasset'
+[2026.05.26-12.02.11:103][636]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/Items/image/흑철석] ([1] browsable assets)...
+[2026.05.26-12.02.11:103][636]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/Items/image/흑철석]
+[2026.05.26-12.02.11:103][636]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/Items/image/흑철석" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/흑철석.uasset" SILENT=true
+[2026.05.26-12.02.11:105][636]LogSavePackage: Moving output files for package: /Game/jungbum/Items/image/흑철석
+[2026.05.26-12.02.11:105][636]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/흑철석84F7B1FD4FAB82E447DB4182E7136F56.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/Items/image/흑철석.uasset'
+[2026.05.26-12.02.11:114][636]LogFileHelpers: InternalPromptForCheckoutAndSave took 246.252 ms (total: 5.39 sec)
+[2026.05.26-12.02.11:143][636]LogContentValidation: Display: Starting to validate 91 assets
+[2026.05.26-12.02.11:143][636]LogContentValidation: Enabled validators:
+[2026.05.26-12.02.11:143][636]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-12.02.11:143][636]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-12.02.11:143][636]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-12.02.11:143][636]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-12.02.11:143][636]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-12.02.11:143][636]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/가시덩굴 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/가죽끈 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/강철장검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/거인의뼈 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/거인의뼛가루 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/검은수액 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/검은피 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/귀일검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/꺼지지않는불꽃 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/단단한나무 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/레비아탄의뿔 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/리프검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/마수의송곳니목걸이 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/마인의시체 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/마인의피 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/마족의뼈 에셋 유효성 검사 중
+[2026.05.26-12.02.11:143][636]AssetCheck: /Game/jungbum/Items/image/마족의핵 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/맑은샘물 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/망목도끼 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/멸마 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/멸염대도 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/명화대도 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/목철검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/무언가의뼈 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/물결창 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/미스릴블레이드 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/바인채찍 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/발광석 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/백금석 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/백은대검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/부서진기사단장의쌍검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/부서진딸의백은대검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/부패한살덩이 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/불씨검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/뼈 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/성운광석 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/순백의성핵 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/숯 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/식인어이빨 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/심해창 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/썩은덩굴 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/약속의평화 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/업화대검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/오리하르콘검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/오리하르콘광석 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/오염된물 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/은 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/은광석 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/이슬창 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/일반룬 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/잎사귀즙 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/장수나무손잡이 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/잿불수정 에셋 유효성 검사 중
+[2026.05.26-12.02.11:144][636]AssetCheck: /Game/jungbum/Items/image/적류수 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/적류창 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/정교한물의룬 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/정교한불의룬 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/정교한풀의룬 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/정제된철광석 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/정화된오리하르콘광석 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/종말의노래 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/죽은고목 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/죽은고목의뿌리 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/짙은흑철석 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/찬란했던성운광석 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/철광석 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/초급물의룬 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/초급불의룬 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/초급풀의룬 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/침수정 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/침혼창 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/탐생수의뿌리 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/탐생수의심핵 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/탐생수의줄기 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/탐식망치 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/푸른불꽃 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/피안의만가 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/피안화 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/피안화낫 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/해왕창 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/호수정 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/홍련검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/홍련석 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/화려한불의룬 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/화려한풀의룬 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/화련한물의룬 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/화염초검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/횃불 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/흑조 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/흑철검 에셋 유효성 검사 중
+[2026.05.26-12.02.11:145][636]AssetCheck: /Game/jungbum/Items/image/흑철석 에셋 유효성 검사 중
+[2026.05.26-12.02.14:734][979]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.26-12.02.14:756][979]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jinuk/map_ingame" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/Jinuk/map_ingame.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2026.05.26-12.02.14:827][979]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2026.05.26-12.02.15:387][979]LogSavePackage: Moving output files for package: /Game/Jinuk/map_ingame
+[2026.05.26-12.02.15:388][979]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/map_ingame5873CBFE4F870F7E650DC18B69EC7DE8.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/Jinuk/map_ingame.umap'
+[2026.05.26-12.02.15:418][979]LogFileHelpers: Saving map 'map_ingame' took 0.663
+[2026.05.26-12.02.15:426][979]LogFileHelpers: InternalPromptForCheckoutAndSave took 691.644 ms (total: 6.08 sec)
+[2026.05.26-12.02.15:470][979]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.26-12.02.15:470][979]LogContentValidation: Enabled validators:
+[2026.05.26-12.02.15:470][979]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.26-12.02.15:470][979]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.26-12.02.15:470][979]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.26-12.02.15:470][979]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.26-12.02.15:470][979]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.26-12.02.15:470][979]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.26-12.02.15:471][979]AssetCheck: /Game/Jinuk/map_ingame 에셋 유효성 검사 중
