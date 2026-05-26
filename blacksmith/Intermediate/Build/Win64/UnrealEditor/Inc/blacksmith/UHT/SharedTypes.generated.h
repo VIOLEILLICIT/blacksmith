@@ -16,7 +16,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define BLACKSMITH_SharedTypes_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_SharedTypes_h
+#define CURRENT_FILE_ID FID_UnrealProjects_blacksmith_blacksmith_Source_blacksmith_SharedTypes_h
 
 
 #define FOREACH_ENUM_ENPCJOB(op) \

@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\waterruneupgradesystem.cpp",
+        "Source": "c:\\unrealprojects\\blacksmith\\blacksmith\\source\\blacksmith\\waterruneupgradesystem.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\blacksmitheditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "PCH": "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\blacksmitheditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
         "Includes": [
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blacksmith\\definitions.blacksmith.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\waterruneupgradesystem.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\waterruneupgradesystem.generated.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blacksmith\\definitions.blacksmith.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\source\\blacksmith\\waterruneupgradesystem.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\waterruneupgradesystem.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl"

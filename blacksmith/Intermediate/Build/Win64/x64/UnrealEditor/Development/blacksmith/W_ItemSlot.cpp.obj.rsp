@@ -1,12 +1,12 @@
-"C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Source\blacksmith\W_ItemSlot.cpp"
-/FI"C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Intermediate\Build\Win64\x64\blacksmithEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h"
-/FI"C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\Definitions.blacksmith.h"
-/Yu"C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Intermediate\Build\Win64\x64\blacksmithEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h"
-/Fp"C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Intermediate\Build\Win64\x64\blacksmithEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.pch"
-/Fo"C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\W_ItemSlot.cpp.obj"
-/experimental:log "C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\W_ItemSlot.cpp.sarif"
-/sourceDependencies "C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\W_ItemSlot.cpp.dep.json"
-@"C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\blacksmith.Shared.rsp"
+"C:\UnrealProjects\blacksmith\blacksmith\Source\blacksmith\W_ItemSlot.cpp"
+/FI"C:\UnrealProjects\blacksmith\blacksmith\Intermediate\Build\Win64\x64\blacksmithEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h"
+/FI"C:\UnrealProjects\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\Definitions.blacksmith.h"
+/Yu"C:\UnrealProjects\blacksmith\blacksmith\Intermediate\Build\Win64\x64\blacksmithEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h"
+/Fp"C:\UnrealProjects\blacksmith\blacksmith\Intermediate\Build\Win64\x64\blacksmithEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.pch"
+/Fo"C:\UnrealProjects\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\W_ItemSlot.cpp.obj"
+/experimental:log "C:\UnrealProjects\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\W_ItemSlot.cpp.sarif"
+/sourceDependencies "C:\UnrealProjects\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\W_ItemSlot.cpp.dep.json"
+@"C:\UnrealProjects\blacksmith\blacksmith\Intermediate\Build\Win64\x64\UnrealEditor\Development\blacksmith\blacksmith.Shared.rsp"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo

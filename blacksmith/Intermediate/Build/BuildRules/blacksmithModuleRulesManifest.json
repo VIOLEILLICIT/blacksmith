@@ -1,10 +1,10 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith\\blacksmith.Build.cs",
-		"C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Plugins\\VisualStudioTools\\Source\\VisualStudioBlueprintDebuggerHelper\\VisualStudioBlueprintDebuggerHelper.Build.cs",
-		"C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Plugins\\VisualStudioTools\\Source\\VisualStudioTools\\VisualStudioTools.Build.cs",
-		"C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmith.Target.cs",
-		"C:\\Users\\wjdqj\\Documents\\GitHub\\blacksmith\\blacksmith\\Source\\blacksmithEditor.Target.cs"
+		"C:\\UnrealProjects\\blacksmith\\blacksmith\\Source\\blacksmith\\blacksmith.Build.cs",
+		"C:\\UnrealProjects\\blacksmith\\blacksmith\\Plugins\\VisualStudioTools\\Source\\VisualStudioBlueprintDebuggerHelper\\VisualStudioBlueprintDebuggerHelper.Build.cs",
+		"C:\\UnrealProjects\\blacksmith\\blacksmith\\Plugins\\VisualStudioTools\\Source\\VisualStudioTools\\VisualStudioTools.Build.cs",
+		"C:\\UnrealProjects\\blacksmith\\blacksmith\\Source\\blacksmith.Target.cs",
+		"C:\\UnrealProjects\\blacksmith\\blacksmith\\Source\\blacksmithEditor.Target.cs"
 	],
 	"EngineVersion": "5.5.4"
 }

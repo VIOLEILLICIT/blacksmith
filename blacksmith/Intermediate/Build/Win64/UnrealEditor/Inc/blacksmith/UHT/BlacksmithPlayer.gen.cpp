@@ -126,14 +126,14 @@ ABlacksmithPlayer::~ABlacksmithPlayer() {}
 // End Class ABlacksmithPlayer
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_BlacksmithPlayer_h_Statics
+struct Z_CompiledInDeferFile_FID_UnrealProjects_blacksmith_blacksmith_Source_blacksmith_BlacksmithPlayer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ABlacksmithPlayer, ABlacksmithPlayer::StaticClass, TEXT("ABlacksmithPlayer"), &Z_Registration_Info_UClass_ABlacksmithPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlacksmithPlayer), 3662681782U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_BlacksmithPlayer_h_3619669424(TEXT("/Script/blacksmith"),
-	Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_BlacksmithPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_wjdqj_Documents_GitHub_blacksmith_blacksmith_Source_blacksmith_BlacksmithPlayer_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_blacksmith_blacksmith_Source_blacksmith_BlacksmithPlayer_h_3619669424(TEXT("/Script/blacksmith"),
+	Z_CompiledInDeferFile_FID_UnrealProjects_blacksmith_blacksmith_Source_blacksmith_BlacksmithPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_blacksmith_blacksmith_Source_blacksmith_BlacksmithPlayer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

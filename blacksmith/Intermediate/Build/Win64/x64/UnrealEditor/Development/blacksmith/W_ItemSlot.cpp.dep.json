@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\w_itemslot.cpp",
+        "Source": "c:\\unrealprojects\\blacksmith\\blacksmith\\source\\blacksmith\\w_itemslot.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\blacksmitheditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "PCH": "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\blacksmitheditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
         "Includes": [
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blacksmith\\definitions.blacksmith.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\w_itemslot.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blacksmith\\definitions.blacksmith.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\source\\blacksmith\\w_itemslot.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\blueprint\\userwidget.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\blueprint\\widgetchild.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetchild.generated.h",
@@ -39,22 +39,22 @@
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\animation\\widgetanimationevents.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetanimationevents.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\userwidget.generated.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\w_itemslot.generated.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\w_itemslot.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\image.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\public\\slate\\slatetextureatlasinterface.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\slatetextureatlasinterface.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\engine\\streamablemanager.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\coreuobject\\public\\misc\\packageaccesstracking.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\core\\public\\misc\\sourcelocation.h",
-            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.44.35207\\include\\source_location",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.42.34433\\include\\source_location",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\core\\public\\misc\\sourcelocationutils.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\image.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\textblock.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\textwidgettypes.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textwidgettypes.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textblock.generated.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\itemdataasset.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\itemdataasset.generated.h"
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\source\\blacksmith\\itemdataasset.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\itemdataasset.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

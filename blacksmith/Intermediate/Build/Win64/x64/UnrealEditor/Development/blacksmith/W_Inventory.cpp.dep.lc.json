@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\w_inventory.cpp",
+        "Source": "c:\\unrealprojects\\blacksmith\\blacksmith\\source\\blacksmith\\w_inventory.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\blacksmitheditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "PCH": "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\blacksmitheditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
         "Includes": [
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blacksmith\\definitions.blacksmith.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\w_inventory.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blacksmith\\definitions.blacksmith.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\source\\blacksmith\\w_inventory.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\blueprint\\userwidget.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\blueprint\\widgetchild.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetchild.generated.h",
@@ -39,7 +39,7 @@
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\animation\\widgetanimationevents.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetanimationevents.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\userwidget.generated.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\w_inventory.generated.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\w_inventory.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\wrapbox.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\swrapbox.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\panelwidget.h",
@@ -47,12 +47,12 @@
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\panelslot.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\panelwidget.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\wrapbox.generated.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\w_itemslot.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\w_itemslot.generated.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\inventorycomponent.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\source\\blacksmith\\itemdataasset.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\itemdataasset.generated.h",
-            "c:\\users\\wjdqj\\documents\\github\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\inventorycomponent.generated.h"
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\source\\blacksmith\\w_itemslot.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\w_itemslot.generated.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\source\\blacksmith\\inventorycomponent.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\source\\blacksmith\\itemdataasset.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\itemdataasset.generated.h",
+            "c:\\unrealprojects\\blacksmith\\blacksmith\\intermediate\\build\\win64\\unrealeditor\\inc\\blacksmith\\uht\\inventorycomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
