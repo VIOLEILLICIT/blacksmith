@@ -508,7 +508,7 @@ UItemDataAsset::~UItemDataAsset() {}
 // End Class UItemDataAsset
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_UnrealProjects_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_Statics
+struct Z_CompiledInDeferFile_FID_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EItemCategory_StaticEnum, TEXT("EItemCategory"), &Z_Registration_Info_UEnum_EItemCategory, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3735756338U) },
@@ -517,9 +517,9 @@ struct Z_CompiledInDeferFile_FID_UnrealProjects_blacksmith_blacksmith_Source_bla
 		{ Z_Construct_UClass_UItemDataAsset, UItemDataAsset::StaticClass, TEXT("UItemDataAsset"), &Z_Registration_Info_UClass_UItemDataAsset, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UItemDataAsset), 2339249901U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_1240269447(TEXT("/Script/blacksmith"),
-	Z_CompiledInDeferFile_FID_UnrealProjects_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_1240269447(TEXT("/Script/blacksmith"),
+	Z_CompiledInDeferFile_FID_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_UnrealProjects_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_blacksmith_blacksmith_Source_blacksmith_ItemDataAsset_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
