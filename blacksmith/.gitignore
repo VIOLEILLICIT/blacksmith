@@ -1,0 +1,12 @@
+# 에디터 설정 파일 무시
+/.vscode
+
+# 언리얼 엔진 임시/캐시 폴더 무시 (필수)
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# 빌드 결과물 무시
+*.pdb
+*.exp
