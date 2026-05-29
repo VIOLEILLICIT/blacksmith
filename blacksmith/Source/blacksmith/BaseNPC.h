@@ -22,7 +22,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	// 인터페이스 상속 함수 구현
-	virtual void Interact(AActor* Interactor) override;
+	virtual void Interact_Implementation(AActor* Interactor) override;
 
 	// NPC 두뇌 컴포넌트 장착
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")

@@ -13,7 +13,7 @@ void ABaseNPC::BeginPlay() { Super::BeginPlay(); }
 void ABaseNPC::Tick(float DeltaTime) { Super::Tick(DeltaTime); }
 void ABaseNPC::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) { Super::SetupPlayerInputComponent(PlayerInputComponent); }
 
-void ABaseNPC::Interact(AActor* Interactor)
+void ABaseNPC::Interact_Implementation(AActor* Interactor)
 {
 	// 플레이어가 다가와서 F를 누르면 실행됩니다.
 	FString TargetName = DisplayName.IsEmpty() ? TEXT("이름 없는 NPC") : DisplayName;

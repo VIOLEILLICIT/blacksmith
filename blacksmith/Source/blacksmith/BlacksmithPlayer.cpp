@@ -20,7 +20,7 @@ void ABlacksmithPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	{
 		if (InteractAction)
 		{
-			EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &ABlacksmithPlayer::RequestInteract);
+			EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &ABlacksmithPlayer::RequestInteract);
 		}
 	}
 }
@@ -71,11 +71,7 @@ void ABlacksmithPlayer::RequestInteract()
 
 		if (ClosestNPC)
 		{
-			IInteractableInterface* TargetInterface = Cast<IInteractableInterface>(ClosestNPC);
-			if (TargetInterface)
-			{
-				TargetInterface->Interact(this);
-			}
+			IInteractableInterface::Execute_Interact(ClosestNPC, this);
 		}
 	}
 }
