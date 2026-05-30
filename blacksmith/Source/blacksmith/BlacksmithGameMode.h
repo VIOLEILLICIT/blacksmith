@@ -3,7 +3,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "ItemDataAsset.h"
-#include "Engine/DataTable.h" // 데이터 테이블 필수 헤더
+#include "Engine/DataTable.h" 
 #include "BlacksmithGameMode.generated.h" // ⭐️ 무조건 맨 마지막 줄!
 
 // 1. 기존 의뢰(Quest) 구조체
@@ -58,12 +58,12 @@ struct FDailySchedule
 
 	// [휴식 의자 커스텀 설정]
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="2. RestChair") bool bCanUseRestChair = true;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="2. RestChair") FText ChairDenyMessage; // 못 쓸 때 출력할 대사
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="2. RestChair") FText ChairDenyMessage; 
 
 	// [스토리 이벤트 설정]
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="3. Events") TArray<FGeneralEventData> MorningEvents; // 아침 컷신/이벤트
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="3. Events") TArray<FTimerEventData> TimerEvents;     // 타이머 도중 컷신/이벤트
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="3. Events") TArray<FGeneralEventData> NightEvents;   // 야간 자유시간 컷신/이벤트
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="3. Events") TArray<FGeneralEventData> MorningEvents; 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="3. Events") TArray<FTimerEventData> TimerEvents;     
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="3. Events") TArray<FGeneralEventData> NightEvents;   
 };
 
 UCLASS()
@@ -89,6 +89,18 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Quest")
 	FQuestData CurrentMainQuest;
 
+	// 🟢 [추가] 까방권 발동 시 화면에 출력할 텍스트 (인스펙터에서 작성)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Quest")
+	FText GracePeriodUseText; 
+
+	// 🟢 [추가] 유예 기간 서브 퀘스트를 랜덤으로 뽑기 위한 모든 아이템 DB
+	// (블루프린트 인스펙터에서 게임 내 존재하는 모든 무기 데이터 에셋을 넣어주시면 됩니다)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Quest")
+	TArray<UItemDataAsset*> WeaponDatabase; 
+
+	// 🟢 [추가] 까방권(유예 기간) 발동 함수! (호출 시 화면에 띄울 텍스트를 반환합니다)
+	UFUNCTION(BlueprintCallable, Category = "Game|Quest")
+	FText ActivateGracePeriod();
 	/* =================================================================
 	 * 10분 타이머 & 딸 상태 변수
 	 * ================================================================= */
@@ -100,6 +112,12 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Daughter")
 	bool bIsDaughterFound = false; 
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Daughter")
+	bool bIsDaughterAsleep = false;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Daughter")
+	bool bIsDaughterAwake = false;
 
 	FTimerHandle DailyTimerHandle;
 
@@ -117,22 +135,16 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Game|Time") void WarpTimeTo(float TargetSeconds);
 	UFUNCTION(BlueprintCallable, Category = "Game|Date") void SleepAndNextDay(); 
 
-	// 휴식 의자 사용 가능한지 통합 검사하는 함수
-	UFUNCTION(BlueprintCallable, Category = "Game|Time")
-	bool CheckCanUseRestChair(FText& OutDenyMessage);
+	// 상호작용 가능 여부 판별 함수들
+	UFUNCTION(BlueprintCallable, Category = "Game|Interaction") bool CheckCanUseRestChair(FText& OutDenyMessage);
+	UFUNCTION(BlueprintCallable, Category = "Game|Interaction") bool CheckCanUseBed(FText& OutDenyMessage);
+	UFUNCTION(BlueprintCallable, Category = "Game|Interaction") bool CheckCanUseDoor(FText& OutDenyMessage);
 
 	/* =================================================================
 	 * 블루프린트 이벤트 노드들
 	 * ================================================================= */
-	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events")
-	void OnDaughterHideEvent(); 
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events")
-	void OnTimeToGoHomeEvent(); 
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events")
-	void OnDayOverEvent(); 
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events")
-	void OnTriggerCustomTimeEvent(FName EventID, TSubclassOf<class UUserWidget> WidgetClass);
+	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events") void OnDaughterHideEvent(); 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events") void OnTimeToGoHomeEvent(); 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events") void OnDayOverEvent(); 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events") void OnTriggerCustomTimeEvent(FName EventID, TSubclassOf<class UUserWidget> WidgetClass);
 };
