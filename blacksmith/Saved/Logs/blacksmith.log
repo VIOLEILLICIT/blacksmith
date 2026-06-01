@@ -3042,3 +3042,258 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.06.01-16.20.09:896][570]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2026.06.01-16.20.09:896][570]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2026.06.01-16.20.09:896][570]AssetCheck: /Game/jungbum/BP_GameMode1 에셋 유효성 검사 중
+[2026.06.01-16.23.15:609][653]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2026.06.01-16.26.05:451][264]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 11608.961914
+[2026.06.01-16.26.06:785][268]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-16.26.06:785][268]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 11609.961914, Update Interval: 311.832642
+[2026.06.01-16.31.52:386][718]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 11955.746094
+[2026.06.01-16.31.53:386][721]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-16.31.53:386][721]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 11956.412109, Update Interval: 336.700958
+[2026.06.01-16.36.54:758][182]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+[2026.06.01-16.36.54:759][182]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_23
+[2026.06.01-16.38.18:400][809]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 12341.623047
+[2026.06.01-16.38.19:400][812]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-16.38.19:400][812]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 12342.289062, Update Interval: 303.697021
+[2026.06.01-16.40.11:509][242]LogSlate: Window 'BP_ThirdPersonCharacter' being destroyed
+[2026.06.01-16.40.11:567][242]LogWorld: UWorld::CleanupWorld for World_23, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-16.40.11:567][242]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-16.40.11:635][242]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2026.06.01-16.43.59:350][727]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 12682.424805
+[2026.06.01-16.43.59:599][757]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-16.43.59:599][757]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 12682.666016, Update Interval: 324.386719
+[2026.06.01-16.50.03:357][405]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 13046.196289
+[2026.06.01-16.50.03:632][438]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-16.50.03:632][439]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 13046.462891, Update Interval: 330.971405
+[2026.06.01-16.56.20:838][701]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 13423.310547
+[2026.06.01-16.56.21:089][731]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-16.56.21:089][731]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 13423.553711, Update Interval: 341.359283
+[2026.06.01-17.02.34:293][513]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 13796.392578
+[2026.06.01-17.02.34:560][545]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-17.02.34:560][545]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 13796.649414, Update Interval: 304.669342
+[2026.06.01-17.08.24:048][480]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 14145.875000
+[2026.06.01-17.08.24:315][511]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-17.08.24:315][512]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 14146.132812, Update Interval: 329.323395
+[2026.06.01-17.14.30:492][449]LogDerivedDataCache: C:/Users/wjdqj/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2026.06.01-17.14.43:218][975]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 14524.682617
+[2026.06.01-17.14.43:478][  6]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-17.14.43:478][  6]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 14524.928711, Update Interval: 323.178192
+[2026.06.01-17.20.41:974][ 15]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 14883.228516
+[2026.06.01-17.20.42:242][ 47]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-17.20.42:242][ 47]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 14883.486328, Update Interval: 300.955841
+[2026.06.01-17.26.38:419][786]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 15239.544922
+[2026.06.01-17.26.38:686][818]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-17.26.38:686][818]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 15239.803711, Update Interval: 325.811340
+[2026.06.01-17.29.42:490][759]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2026.06.01-17.29.42:497][759]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/jungbum/inhouse' took 0.023
+[2026.06.01-17.29.42:497][759]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/BP_GameMode1] ([2] browsable assets)...
+[2026.06.01-17.29.42:497][759]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/BP_GameMode1]
+[2026.06.01-17.29.42:500][759]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/jungbum/BP_GameMode1_Auto2
+[2026.06.01-17.29.42:500][759]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/BP_GameMode1_Auto2372C98054119028549A23E86F968932B.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/Autosaves/Game/jungbum/BP_GameMode1_Auto2.uasset'
+[2026.06.01-17.29.42:501][759]LogFileHelpers: Auto-saving content packages took 0.005
+[2026.06.01-17.32.35:311][929]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 15596.028320
+[2026.06.01-17.32.36:311][932]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-17.32.36:312][932]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 15596.695312, Update Interval: 357.059235
+[2026.06.01-17.39.11:431][404]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 15991.356445
+[2026.06.01-17.39.11:673][433]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-17.39.11:673][433]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 15991.589844, Update Interval: 322.139954
+[2026.06.01-17.39.42:386][ 77]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2026.06.01-17.39.42:392][ 77]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/jungbum/inhouse' took 0.023
+[2026.06.01-17.39.42:393][ 77]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/BP_GameMode1] ([2] browsable assets)...
+[2026.06.01-17.39.42:393][ 77]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/BP_GameMode1]
+[2026.06.01-17.39.42:396][ 77]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/jungbum/BP_GameMode1_Auto3
+[2026.06.01-17.39.42:397][ 77]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/BP_GameMode1_Auto39B953D304968A05240A5D6856E63ACA3.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/Autosaves/Game/jungbum/BP_GameMode1_Auto3.uasset'
+[2026.06.01-17.39.42:397][ 77]LogFileHelpers: Auto-saving content packages took 0.005
+[2026.06.01-17.45.21:165][725]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 16360.463867
+[2026.06.01-17.45.21:423][756]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-17.45.21:423][756]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 16360.714844, Update Interval: 305.365143
+[2026.06.01-17.51.17:207][448]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 16704.839844
+[2026.06.01-17.51.17:466][479]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-17.51.17:466][479]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 16705.078125, Update Interval: 336.415283
+[2026.06.01-17.57.28:551][  6]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 17063.031250
+[2026.06.01-17.57.28:793][ 35]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-17.57.28:794][ 35]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 17063.251953, Update Interval: 315.445404
+[2026.06.01-18.03.20:733][267]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 17402.304688
+[2026.06.01-18.03.21:009][300]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-18.03.21:009][300]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 17402.564453, Update Interval: 316.489136
+[2026.06.01-18.09.29:908][567]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 17757.869141
+[2026.06.01-18.09.30:151][596]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-18.09.30:151][597]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 17758.095703, Update Interval: 353.995789
+[2026.06.01-18.14.30:492][637]LogDerivedDataCache: C:/Users/wjdqj/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2026.06.01-18.16.15:160][196]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 18148.244141
+[2026.06.01-18.16.15:411][226]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-18.16.15:411][227]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 18148.474609, Update Interval: 346.618256
+[2026.06.01-18.22.58:074][537]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 18536.072266
+[2026.06.01-18.22.58:342][569]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-18.22.58:342][570]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 18536.322266, Update Interval: 314.960175
+[2026.06.01-18.29.00:412][ 14]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 18885.191406
+[2026.06.01-18.29.00:687][ 47]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-18.29.00:687][ 48]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 18885.447266, Update Interval: 333.478210
+[2026.06.01-18.35.24:539][102]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 19255.509766
+[2026.06.01-18.35.24:814][135]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-18.35.24:814][135]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 19255.763672, Update Interval: 328.832672
+[2026.06.01-18.41.30:050][959]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 19607.744141
+[2026.06.01-18.41.30:316][991]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-18.41.30:316][991]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 19607.998047, Update Interval: 344.831085
+[2026.06.01-18.47.49:524][495]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 19973.285156
+[2026.06.01-18.47.49:756][523]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-18.47.49:756][524]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 19973.501953, Update Interval: 345.499451
+[2026.06.01-18.54.25:015][953]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 20354.519531
+[2026.06.01-18.54.25:273][984]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-18.54.25:273][984]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 20354.759766, Update Interval: 350.152283
+[2026.06.01-19.01.01:126][485]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 20735.923828
+[2026.06.01-19.01.01:417][520]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-19.01.01:417][521]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 20736.197266, Update Interval: 335.010834
+[2026.06.01-19.07.11:474][923]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 21092.835938
+[2026.06.01-19.07.11:724][953]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-19.07.11:724][953]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 21093.070312, Update Interval: 302.651459
+[2026.06.01-19.13.12:580][249]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 21440.386719
+[2026.06.01-19.13.12:821][278]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-19.13.12:821][279]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 21440.613281, Update Interval: 320.676910
+[2026.06.01-19.14.30:493][599]LogDerivedDataCache: C:/Users/wjdqj/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2026.06.01-19.19.26:429][110]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 21801.076172
+[2026.06.01-19.19.26:678][140]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-19.19.26:678][141]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 21801.308594, Update Interval: 332.018799
+[2026.06.01-19.25.39:789][910]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 22161.072266
+[2026.06.01-19.25.40:031][939]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-19.25.40:031][940]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 22161.298828, Update Interval: 328.829010
+[2026.06.01-19.31.45:307][771]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 22513.404297
+[2026.06.01-19.31.45:549][800]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-19.31.45:549][800]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 22513.632812, Update Interval: 307.293304
+[2026.06.01-19.37.45:866][ 32]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 22860.984375
+[2026.06.01-19.37.46:100][ 60]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-19.37.46:100][ 60]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 22861.201172, Update Interval: 309.626160
+[2026.06.01-19.43.41:191][667]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 23203.570312
+[2026.06.01-19.43.41:875][749]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-19.43.41:875][750]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 23204.222656, Update Interval: 339.227875
+[2026.06.01-19.50.10:758][414]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 23579.093750
+[2026.06.01-19.50.10:992][442]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-19.50.10:992][443]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 23579.312500, Update Interval: 353.320099
+[2026.06.01-19.56.46:222][868]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 23960.476562
+[2026.06.01-19.56.46:464][896]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.06.01-19.56.46:464][896]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 23960.701172, Update Interval: 341.505798
+[2026.06.01-20.00.32:249][987]LogSlate: Window '디테일' being destroyed
+[2026.06.01-20.00.33:121][ 89]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.06.01-20.00.33:152][ 89]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/jungbum/BP_GameMode1] ([2] browsable assets)...
+[2026.06.01-20.00.33:152][ 89]OBJ SavePackage: Finished generating thumbnails for package [/Game/jungbum/BP_GameMode1]
+[2026.06.01-20.00.33:152][ 89]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/jungbum/BP_GameMode1" FILE="../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/BP_GameMode1.uasset" SILENT=true
+[2026.06.01-20.00.33:155][ 89]LogSavePackage: Moving output files for package: /Game/jungbum/BP_GameMode1
+[2026.06.01-20.00.33:156][ 89]LogSavePackage: Moving '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Saved/BP_GameMode1E0CF585A422D12AE8E563BB07CA4E5FD.tmp' to '../../../../../../Users/wjdqj/Documents/GitHub/blacksmith/blacksmith/Content/jungbum/BP_GameMode1.uasset'
+[2026.06.01-20.00.33:161][ 89]LogFileHelpers: InternalPromptForCheckoutAndSave took 39.724 ms (total: 1.16 sec)
+[2026.06.01-20.00.33:190][ 89]LogContentValidation: Display: Starting to validate 1 assets
+[2026.06.01-20.00.33:190][ 89]LogContentValidation: Enabled validators:
+[2026.06.01-20.00.33:190][ 89]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.06.01-20.00.33:190][ 89]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.06.01-20.00.33:190][ 89]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.06.01-20.00.33:190][ 89]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.06.01-20.00.33:190][ 89]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.06.01-20.00.33:190][ 89]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.06.01-20.00.33:190][ 89]AssetCheck: /Game/jungbum/BP_GameMode1 에셋 유효성 검사 중
+[2026.06.01-20.00.35:007][292]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2026.06.01-20.00.35:007][292]LogWorld: UWorld::CleanupWorld for World_22, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-20.00.35:007][292]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-20.00.35:057][292]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2026.06.01-20.00.39:595][820]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2026.06.01-20.00.40:893][971]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2026.06.01-20.00.40:923][971]LogStall: Shutdown...
+[2026.06.01-20.00.40:923][971]LogStall: Shutdown complete.
+[2026.06.01-20.00.40:949][971]LogSlate: Window 'blacksmith - 언리얼 에디터' being destroyed
+[2026.06.01-20.00.41:113][971]Cmd: QUIT_EDITOR
+[2026.06.01-20.00.41:113][972]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2026.06.01-20.00.41:116][972]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2026.06.01-20.00.41:116][972]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2026.06.01-20.00.41:116][972]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2026.06.01-20.00.41:116][972]LogWorld: UWorld::CleanupWorld for inhouse, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-20.00.41:116][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-20.00.41:116][972]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/jungbum/inhouse.inhouse
+[2026.06.01-20.00.41:121][972]LogStylusInput: Shutting down StylusInput subsystem.
+[2026.06.01-20.00.41:121][972]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2026.06.01-20.00.41:157][972]LogWorld: UWorld::CleanupWorld for World_14, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-20.00.41:157][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-20.00.41:160][972]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-20.00.41:160][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-20.00.41:162][972]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-20.00.41:162][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-20.00.41:165][972]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-20.00.41:165][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-20.00.41:167][972]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-20.00.41:167][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-20.00.41:169][972]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-20.00.41:169][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-20.00.41:171][972]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-20.00.41:171][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-20.00.41:173][972]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-20.00.41:173][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-20.00.41:174][972]LogWorld: UWorld::CleanupWorld for World_12, bSessionEnded=true, bCleanupResources=true
+[2026.06.01-20.00.41:174][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.06.01-20.00.41:177][972]LogStudioTelemetry: Ended StudioTelemetry Session
+[2026.06.01-20.00.41:182][972]LogAnalytics: Display: [UEEditor.Rocket.Release] Destroying ET Analytics provider
+[2026.06.01-20.00.41:182][972]LogAnalytics: Display: [UEEditor.Rocket.Release] Ended ET Analytics provider session
+[2026.06.01-20.00.41:182][972]LogAnalytics: Display: [UEEditor.Rocket.Release] Destroyed ET Analytics provider
+[2026.06.01-20.00.41:439][972]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2026.06.01-20.00.41:439][972]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2026.06.01-20.00.41:439][972]LogAudio: Display: Audio Device unregistered from world 'inhouse'.
+[2026.06.01-20.00.41:439][972]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2026.06.01-20.00.41:439][972]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2026.06.01-20.00.41:442][972]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2026.06.01-20.00.41:448][972]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2026.06.01-20.00.41:448][972]LogAudio: Display: Audio Device Manager Shutdown
+[2026.06.01-20.00.41:450][972]LogWindowsTextInputMethodSystem: Activated input method: 한국어(대한민국) - Microsoft 입력기 (TSF IME).
+[2026.06.01-20.00.41:452][972]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2026.06.01-20.00.41:452][972]LogExit: Preparing to exit.
+[2026.06.01-20.00.41:478][972]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2026.06.01-20.00.41:506][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:506][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:507][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_null_above_selected_PY.add_null_above_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:507][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:507][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_all' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:507][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_x' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:507][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_y' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:507][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_z' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:507][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:507][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_scale' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:507][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_name_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:507][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:508][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:508][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:508][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:508][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:508][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:508][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:508][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/set_bone_reference_pose_PY.set_bone_reference_pose' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:508][972]LogPython: Display: Object '/ControlRig/Python/ControlRigWorkflows/workflow_fbik_import_ik_rig_PY.import_ik_rig_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.41:508][972]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.ControlOutputFormat' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.06.01-20.00.42:443][972]LogEditorDataStorage: Deinitializing
+[2026.06.01-20.00.42:573][972]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2026.06.01-20.00.42:596][972]LogExit: Editor shut down
+[2026.06.01-20.00.42:600][972]LogExit: Transaction tracking system shut down
+[2026.06.01-20.00.44:133][972]LogWindows: Error: === Critical error: ===
+[2026.06.01-20.00.44:133][972]LogWindows: Error: 
+[2026.06.01-20.00.44:133][972]LogWindows: Error: Fatal error!
+[2026.06.01-20.00.44:133][972]LogWindows: Error: 
+[2026.06.01-20.00.44:133][972]LogWindows: Error: Unhandled Exception: EXCEPTION_ACCESS_VIOLATION writing address 0x00007fff37916f88
+[2026.06.01-20.00.44:133][972]LogWindows: Error: 
+[2026.06.01-20.00.44:133][972]LogWindows: Error: [Callstack] 0x00007fff3e554cc2 UnrealEditor-Core.dll!UnknownFunction []
+[2026.06.01-20.00.44:133][972]LogWindows: Error: [Callstack] 0x00007fff3dea45dc UnrealEditor-Core.dll!UnknownFunction []
+[2026.06.01-20.00.44:133][972]LogWindows: Error: [Callstack] 0x00000203c9e130ae UnrealEditor-blacksmith.patch_10.exe!FDailySchedule::~FDailySchedule() []
+[2026.06.01-20.00.44:133][972]LogWindows: Error: [Callstack] 0x00000203c9e1b223 UnrealEditor-blacksmith.patch_10.exe!ABlacksmithGameMode::~ABlacksmithGameMode() [C:\Users\wjdqj\Documents\GitHub\blacksmith\blacksmith\Intermediate\Build\Win64\UnrealEditor\Inc\blacksmith\UHT\BlacksmithGameMode.gen.cpp:1860]
+[2026.06.01-20.00.44:133][972]LogWindows: Error: [Callstack] 0x00000203c9e13a35 UnrealEditor-blacksmith.patch_10.exe!ABlacksmithGameMode::`vector deleting destructor'() []
+[2026.06.01-20.00.44:133][972]LogWindows: Error: [Callstack] 0x00007fff3d3bf172 UnrealEditor-CoreUObject.dll!UnknownFunction []
+[2026.06.01-20.00.44:133][972]LogWindows: Error: [Callstack] 0x00007fff3d408903 UnrealEditor-CoreUObject.dll!UnknownFunction []
+[2026.06.01-20.00.44:133][972]LogWindows: Error: [Callstack] 0x00007fff3d408d54 UnrealEditor-CoreUObject.dll!UnknownFunction []
+[2026.06.01-20.00.44:133][972]LogWindows: Error: [Callstack] 0x00007fff3d431656 UnrealEditor-CoreUObject.dll!UnknownFunction []
+[2026.06.01-20.00.44:133][972]LogWindows: Error: [Callstack] 0x00007fff3d5866c4 UnrealEditor-CoreUObject.dll!UnknownFunction []
+[2026.06.01-20.00.44:134][972]LogWindows: Error: [Callstack] 0x00007fff3d1bb117 UnrealEditor-CoreUObject.dll!UnknownFunction []
+[2026.06.01-20.00.44:134][972]LogWindows: Error: [Callstack] 0x00007ff7a8b7d6d1 UnrealEditor.exe!UnknownFunction []
+[2026.06.01-20.00.44:134][972]LogWindows: Error: [Callstack] 0x00007ff7a8b7ce12 UnrealEditor.exe!UnknownFunction []
+[2026.06.01-20.00.44:134][972]LogWindows: Error: [Callstack] 0x00007ff7a8b836ea UnrealEditor.exe!UnknownFunction []
+[2026.06.01-20.00.44:134][972]LogWindows: Error: [Callstack] 0x00007ff7a8b8583b UnrealEditor.exe!UnknownFunction []
+[2026.06.01-20.00.44:134][972]LogWindows: Error: [Callstack] 0x00007ff7a8b8589a UnrealEditor.exe!UnknownFunction []
+[2026.06.01-20.00.44:134][972]LogWindows: Error: [Callstack] 0x00007ff7a8b89114 UnrealEditor.exe!UnknownFunction []
+[2026.06.01-20.00.44:134][972]LogWindows: Error: [Callstack] 0x00007ff7a8b9bd04 UnrealEditor.exe!UnknownFunction []
+[2026.06.01-20.00.44:134][972]LogWindows: Error: [Callstack] 0x00007ff7a8b9f0ba UnrealEditor.exe!UnknownFunction []
+[2026.06.01-20.00.44:134][972]LogWindows: Error: [Callstack] 0x00007fffd872e957 KERNEL32.DLL!UnknownFunction []
+[2026.06.01-20.00.44:134][972]LogWindows: Error: 
+[2026.06.01-20.00.44:139][972]LogExit: Executing StaticShutdownAfterError
+[2026.06.01-20.00.44:139][972]LogWindows: FPlatformMisc::RequestExit(1, LaunchWindowsStartup.ExceptionHandler)
+[2026.06.01-20.00.44:139][972]LogWindows: FPlatformMisc::RequestExitWithStatus(1, 3, LaunchWindowsStartup.ExceptionHandler)
+[2026.06.01-20.00.44:139][972]LogCore: Engine exit requested (reason: Win RequestExit; note: exit was already requested)
