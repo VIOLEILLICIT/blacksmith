@@ -333,6 +333,12 @@ void ABlacksmithGameMode::SleepAndNextDay()
 	bIsDaughterFound = false;  // (추가) 다음 날이 되었으니 찾음 상태 초기화
 	bIsDaughterAsleep = false; // (추가) 다음 날이 되었으니 수면 상태 초기화
 
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		GI->bIsDaughterAwake = false;
+		GI->bIsDaughterFound = false;
+	}
+
 	// 🟢 6. 맵에 있는 딸을 찾아서 투명화(수면 상태)를 해제하고 멈춰 세웁니다.
 	if (AActor* DaughterActor = UGameplayStatics::GetActorOfClass(this, ADaughterNPC::StaticClass()))
 	{
@@ -451,6 +457,10 @@ void ABlacksmithGameMode::BeginPlay()
 	UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance());
 	// 🔴 (주의) 블루프린트에서 DaughterClass를 안 넣었으면 여기서 막혀서 스폰 안 됨!
 	if (!GI || !DaughterClass) return; 
+
+	// 🟢 [핵심 추가] 맵이 새로 켜질 때, 지워진 플래그를 GameInstance에서 가져와 복구합니다!
+	this->bIsDaughterAwake = GI->bIsDaughterAwake;
+	this->bIsDaughterFound = GI->bIsDaughterFound;
 
 	FString CurrentLevel = UGameplayStatics::GetCurrentLevelName(this);
 	ADaughterNPC* ExistingDaughter = Cast<ADaughterNPC>(UGameplayStatics::GetActorOfClass(this, ADaughterNPC::StaticClass()));

@@ -11,7 +11,14 @@ void ADaughterNPC::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	// 딸의 성장 단계 및 파병 상태를 0.5초마다 체크
+	// 🟢 [추가] 맵이 시작되자마자, 백업된 대화 횟수와 스케줄을 가져와서 덮어씌움!
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		this->ActiveScheduleDateKey = GI->DaughterSavedDateKey;
+		this->ActiveTimeScheduleIndex = GI->DaughterSavedScheduleIndex;
+		this->NPCComponent->InteractionCount = GI->DaughterInteractionCount;
+	}
+
 	GetWorld()->GetTimerManager().SetTimer(DaughterRoutineTimer, this, &ADaughterNPC::UpdateDaughterRoutine, 0.5f, true);
 }
 
@@ -20,6 +27,14 @@ void ADaughterNPC::UpdateDaughterRoutine()
 {
 	ABlacksmithGameMode* GM = Cast<ABlacksmithGameMode>(UGameplayStatics::GetGameMode(this));
 	if (!GM) return;
+
+	// 🟢 [추가] 0.5초마다 딸의 대화 진행 상태를 GameInstance에 실시간으로 갱신(백업)!
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		GI->DaughterSavedDateKey = this->ActiveScheduleDateKey;
+		GI->DaughterSavedScheduleIndex = this->ActiveTimeScheduleIndex;
+		GI->DaughterInteractionCount = this->NPCComponent->InteractionCount;
+	}
 
 	EDaughterPhase NewPhase;
 	if (GM->CurrentDay >= WarStartDay) NewPhase = EDaughterPhase::War;
@@ -46,21 +61,38 @@ void ADaughterNPC::Interact_Implementation(AActor* Interactor)
 {
 	if (CurrentPhase == EDaughterPhase::War || IsHidden()) return;
 
-	// 1. 대화창 띄우기 신호 발사 (부모 로직)
 	Super::Interact_Implementation(Interactor);
-
-	// 2. 대화가 시작되면 무조건 제자리에 멈춥니다!
 	StopMoving();
 
-	// 3. 플래그(일어남, 찾음) 상태 업데이트
 	ABlacksmithGameMode* GM = Cast<ABlacksmithGameMode>(UGameplayStatics::GetGameMode(this));
+	
+	// 🟢 게임 인스턴스를 가져옵니다.
+	UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()); 
+
 	if (GM && CurrentPhase == EDaughterPhase::Child)
 	{
-		if (!GM->bIsDaughterAwake) GM->bIsDaughterAwake = true;
-
-		if (GM->CurrentTimeOfDay >= 450.0f && !GM->bIsDaughterFound) 
+		if (!GM->bIsDaughterAwake) 
 		{
-			GM->bIsDaughterFound = true;
+			GM->bIsDaughterAwake = true;
+			if (GI) GI->bIsDaughterAwake = true; // 🟢 백업!
+		}
+
+		if (GM->CurrentTimeOfDay < 180.0f)
+		{
+			FollowPlayer(150.0f);
+		}
+		else if (GM->CurrentTimeOfDay >= 180.0f && GM->CurrentTimeOfDay < 450.0f)
+		{
+			StopMoving();
+		}
+		else if (GM->CurrentTimeOfDay >= 450.0f)
+		{
+			if (!GM->bIsDaughterFound) 
+			{
+				GM->bIsDaughterFound = true;
+				if (GI) GI->bIsDaughterFound = true; // 🟢 백업!
+			}
+			FollowPlayer(150.0f);
 		}
 	}
 }

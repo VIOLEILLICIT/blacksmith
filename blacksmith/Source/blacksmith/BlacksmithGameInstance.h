@@ -21,4 +21,21 @@ public:
 	// 3. (혼자 있을 때) 딸이 대기할 장소의 액터 태그 (Tag)
 	UPROPERTY(BlueprintReadWrite, Category="Global State")
 	FName DaughterSavedLocationTag;
+
+	// 🟢 2. [추가] 딸 상태(문 상호작용 등) 백업
+	UPROPERTY(BlueprintReadWrite, Category="Global State")
+	bool bIsDaughterAwake = false;
+
+	UPROPERTY(BlueprintReadWrite, Category="Global State")
+	bool bIsDaughterFound = false;
+
+	// 🟢 3. [추가] 딸 대화 진행도(초기화 방지) 백업
+	UPROPERTY(BlueprintReadWrite, Category="Global State")
+	int32 DaughterSavedDateKey = -999;
+	
+	UPROPERTY(BlueprintReadWrite, Category="Global State")
+	int32 DaughterSavedScheduleIndex = -1;
+
+	UPROPERTY(BlueprintReadWrite, Category="Global State")
+	int32 DaughterInteractionCount = 0;
 };
