@@ -4,6 +4,7 @@
 #include "GameFramework/GameModeBase.h"
 #include "ItemDataAsset.h"
 #include "Engine/DataTable.h" 
+#include "DaughterNPC.h"
 #include "BlacksmithGameMode.generated.h" // ⭐️ 무조건 맨 마지막 줄!
 
 // =====================================================================
@@ -170,6 +171,12 @@ class BLACKSMITH_API ABlacksmithGameMode : public AGameModeBase
 public:
 	ABlacksmithGameMode();
 
+	// 🟢 여기에 쏙 넣어주세요!
+	virtual void BeginPlay() override;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Daughter Spawner")
+	TSubclassOf<class ADaughterNPC> DaughterClass;
+
 	/* =================================================================
 	 * 게임 전체 루프 및 기본 설정 (Global Settings)
 	 * ================================================================= */
@@ -182,6 +189,8 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Settings", meta=(DisplayName="까방권 연장 일수"))
 	int32 GracePeriodDays = 7;
+
+	
 
 	/* =================================================================
 	 * 게임 진행 변수들 (State)
@@ -315,6 +324,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Game|Interaction") bool CheckCanUseRestChair(FText& OutDenyMessage);
 	UFUNCTION(BlueprintCallable, Category = "Game|Interaction") bool CheckCanUseBed(FText& OutDenyMessage);
 	UFUNCTION(BlueprintCallable, Category = "Game|Interaction") bool CheckCanUseDoor(FText& OutDenyMessage);
+	UFUNCTION(BlueprintCallable, Category = "Game|Interaction") bool CheckCanUseDaughterBed(FText& OutDenyMessage);
 
 	/* =================================================================
 	 * 블루프린트 통신용 이벤트 노드들
@@ -324,6 +334,10 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events") void OnFreeTimeStartEvent();
 	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events") void OnDayOverEvent(); 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events") void OnGameOverEvent();
+
+	// 🟢 새로 추가! 다음 날 아침이 밝았을 때 딸의 위치를 초기화하라고 보내는 신호
+	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events") 
+	void OnMorningResetEvent();
 
 	// 인스펙터에 등록해둔 일반 이벤트를 블루프린트에서 ID로 꺼내 쓸 수 있도록 쏴주는 만능 실행 노드
 	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Events") 

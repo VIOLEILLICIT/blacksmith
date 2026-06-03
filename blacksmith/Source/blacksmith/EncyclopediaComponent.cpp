@@ -1,4 +1,5 @@
 #include "EncyclopediaComponent.h"
+#include "Engine/Engine.h"
 
 UEncyclopediaComponent::UEncyclopediaComponent()
 {
@@ -8,17 +9,30 @@ UEncyclopediaComponent::UEncyclopediaComponent()
 
 bool UEncyclopediaComponent::UnlockItem(UItemDataAsset* NewItem)
 {
-	// 비어있는 데이터거나, 이미 도감에 등록된 아이템이면 무시 (false 반환)
 	if (!NewItem || UnlockedItems.Contains(NewItem))
 	{
 		return false;
 	}
 
-	// 도감에 새로 추가!
 	UnlockedItems.Add(NewItem);
-
-	// "새로운 무기가 도감에 등록되었습니다!" 하고 UI 쪽에 신호(이벤트)를 보냄
 	OnItemUnlocked.Broadcast(NewItem);
+
+	// =================================================================
+	// 🟢 [로그 출력] 무기 해금 성공 시 화면과 로그 창에 띄우기
+	// =================================================================
+	
+	// 출력할 메시지 만들기 (예: "✨ 도감 해금 완료: 목철검")
+	FString LogMsg = FString::Printf(TEXT("✨ 도감 해금 완료: %s"), *NewItem->ItemName);
+	
+	// 1. 플레이 화면(좌측 상단)에 청록색(Cyan)으로 5초 동안 띄우기
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Cyan, LogMsg);
+	}
+
+	// 2. 언리얼 에디터의 '출력 로그(Output Log)' 창에 기록 남기기
+	UE_LOG(LogTemp, Log, TEXT("%s"), *LogMsg);
+	// =================================================================
 
 	return true;
 }

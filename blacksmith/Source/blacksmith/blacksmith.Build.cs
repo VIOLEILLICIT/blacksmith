@@ -9,7 +9,7 @@ public class blacksmith : ModuleRules
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
     
         // ⭐️ 충돌을 해결하고 필요한 UMG와 EnhancedInput을 모두 포함시켰습니다!
-        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "UMG" });
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "UMG", "AIModule" });
 
         PrivateDependencyModuleNames.AddRange(new string[] {  });
 
