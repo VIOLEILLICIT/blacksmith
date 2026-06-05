@@ -16,6 +16,12 @@ ABlacksmithGameMode::ABlacksmithGameMode()
  * ================================================================= */
 bool ABlacksmithGameMode::CheckCanUseRestChair(FText& OutDenyMessage)
 {
+	// 🟢 [추가됨] 우편함을 열어 일과(타이머)를 시작했는지 가장 먼저 검사합니다!
+	if (!bIsDailyTimerStarted)
+	{
+		OutDenyMessage = FText::FromString(TEXT("아직 일과를 시작하지 않았다. 먼저 우편함을 확인하자."));
+		return false;
+	}
 	if (CurrentTimeOfDay >= 450.0f)
 	{
 		if (CurrentDay >= 43)
@@ -344,6 +350,7 @@ void ABlacksmithGameMode::SleepAndNextDay()
 
 	// 🟢 5. 아침 상태 및 딸 관련 변수 초기화
 	CurrentTimeOfDay = 0.0f; 
+	bIsDailyTimerStarted = false;
 	bIsDaughterAwake = false; 
 	bIsDaughterFound = false;  // (추가) 다음 날이 되었으니 찾음 상태 초기화
 	bIsDaughterAsleep = false; // (추가) 다음 날이 되었으니 수면 상태 초기화
