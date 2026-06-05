@@ -72,18 +72,22 @@ void ABaseNPC::CheckScheduleAndVisibility()
 
 		if (ActiveScheduleDateKey != NewDateKey || ActiveTimeScheduleIndex != NewSchedIndex)
 		{
+
 			ActiveScheduleDateKey = NewDateKey;
 			ActiveTimeScheduleIndex = NewSchedIndex;
 			NPCComponent->InteractionCount = 0; 
+			
+			GetWorld()->GetTimerManager().ClearTimer(SpeechBubbleTimer);
+			CurrentSpeechIndex = 0; 
 		}
 
 		if (CurrentActiveSchedule.bIsVisible && CurrentActiveSchedule.AutoSpeechBubbles.Num() > 0)
 		{
 			if (!GetWorld()->GetTimerManager().IsTimerActive(SpeechBubbleTimer))
 			{
-				CurrentSpeechIndex = 0; 
+				float SafeInterval = FMath::Max(0.1f, CurrentActiveSchedule.SpeechInterval);
 				UpdateAutoSpeechBubble(); 
-				GetWorld()->GetTimerManager().SetTimer(SpeechBubbleTimer, this, &ABaseNPC::UpdateAutoSpeechBubble, CurrentActiveSchedule.SpeechInterval, true);
+				GetWorld()->GetTimerManager().SetTimer(SpeechBubbleTimer, this, &ABaseNPC::UpdateAutoSpeechBubble, SafeInterval, true);
 			}
 		}
 		else
@@ -92,7 +96,7 @@ void ABaseNPC::CheckScheduleAndVisibility()
 			SpeechBubbleWidget->SetVisibility(false);
 		}
 	}
-	// 🟢 [맨 아랫부분에 추가] 매초마다 갱신된 나의 상태(대화 횟수 등)를 GameInstance 사물함에 실시간 백업!
+	
 	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
 	{
 		if (!NPC_ID.IsNone())
@@ -101,8 +105,7 @@ void ABaseNPC::CheckScheduleAndVisibility()
 			StateToSave.InteractionCount = this->NPCComponent->InteractionCount;
 			StateToSave.SavedDateKey = this->ActiveScheduleDateKey;
 			StateToSave.SavedScheduleIndex = this->ActiveTimeScheduleIndex;
-
-			GI->SavedNPCStates.Add(NPC_ID, StateToSave); // 사물함에 넣기!
+			GI->SavedNPCStates.Add(NPC_ID, StateToSave); 
 		}
 	}
 }
@@ -113,6 +116,7 @@ void ABaseNPC::UpdateAutoSpeechBubble()
 	SpeechBubbleWidget->SetVisibility(true);
 
 	FText TextToShow = CurrentActiveSchedule.AutoSpeechBubbles[CurrentSpeechIndex];
+
 	OnUpdateSpeechBubble(TextToShow); 
 
 	CurrentSpeechIndex++;
