@@ -7,6 +7,7 @@
 #include "DaughterNPC.h"
 #include "BlacksmithGameMode.generated.h" // ⭐️ 무조건 맨 마지막 줄!
 
+
 // =====================================================================
 // 🟢 보수 종류 (재화인지, 아이템인지 구분)
 // =====================================================================
@@ -174,6 +175,65 @@ public:
 	// 🟢 여기에 쏙 넣어주세요!
 	virtual void BeginPlay() override;
 
+	// 🟢 [추가] 현재 진행 중인 모든 의뢰(메인+서브)를 하나의 배열로 합쳐서 반환합니다.
+	UFUNCTION(BlueprintCallable, Category = "Game|Quest")
+	TArray<FQuestData> GetAllActiveQuests();
+
+	// 🟢 [추가] 아까 우편함에 썼던 [메인/서브] 태그와 보수 텍스트 변환 로직을 메뉴에서도 쓰기 위해 분리!
+// 🟢 [수정] 맨 뒤에 남은 기한(OutDeadlineInfo)을 뽑아줄 수 있도록 추가!
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Game|Quest")
+	void FormatQuestForUI(const FQuestData& InQuest, FString& OutTitle, FText& OutDescription, FString& OutRewardInfo, FString& OutDeadlineInfo);	/* =================================================================
+	 * 📬 우편함 (의뢰 및 편지 대기열 시스템)
+	 * ================================================================= */
+	
+	// 🟢 인스펙터에서 선택할 UI 위젯 클래스들
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game|Mail", meta=(DisplayName="의뢰 우편 WBP 클래스"))
+	TSubclassOf<class UMailQuestWidget> QuestMailWidgetClass;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game|Mail", meta=(DisplayName="딸 편지 WBP 클래스"))
+	TSubclassOf<class UMailLetterWidget> WarLetterWidgetClass;
+
+	// 남은 의뢰들을 순서대로 담아둘 대기열[cite: 12]
+	UPROPERTY(BlueprintReadWrite, Category = "Game|Mail")
+	TArray<FQuestData> MailQuestQueue;
+
+	// 딸의 편지가 대기 중인지 여부
+	UPROPERTY(BlueprintReadWrite, Category = "Game|Mail")
+	bool bHasPendingWarLetter = false;
+
+	// 대기 중인 편지 데이터[cite: 12]
+	UPROPERTY(BlueprintReadWrite, Category = "Game|Mail")
+	FWarLetterData PendingWarLetter;
+
+	// 우편함에서 F키를 누르면 호출할 핵심 함수
+	UFUNCTION(BlueprintCallable, Category = "Game|Mail")
+	void OpenMailbox();
+
+	// 현재 창이 닫혔을 때, 다음 우편물을 꺼내오라고 지시하는 함수
+	UFUNCTION(BlueprintCallable, Category = "Game|Mail")
+	void ShowNextMail();
+
+	
+
+	/* --- 블루프린트에서 UI를 띄우기 위해 발사하는 이벤트들 --- */
+	
+	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Mail")
+	void OnShowQuestMailUI(const FQuestData& QuestData);
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Mail")
+	void OnShowWarLetterUI(const FWarLetterData& LetterData);
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Mail")
+	void OnMailSequenceFinished();
+
+	// 🟢 레벨 이동 시 모든 데이터를 인스턴스에 백업하는 함수
+	UFUNCTION(BlueprintCallable, Category = "Game|SaveLoad")
+	void SaveGlobalData();
+
+	// 🟢 맵이 켜졌을 때 인스턴스에서 데이터를 다시 가져오는 함수
+	UFUNCTION(BlueprintCallable, Category = "Game|SaveLoad")
+	void RestoreGlobalData();
+
 	UPROPERTY(EditDefaultsOnly, Category = "Daughter Spawner")
 	TSubclassOf<class ADaughterNPC> DaughterClass;
 
@@ -251,7 +311,10 @@ public:
 	/* =================================================================
 	 * 10분 타이머 & 딸 상태 변수
 	 * ================================================================= */
-	
+	// 🟢 [추가] 오늘 우편함을 열어서 타이머가 돌아가고 있는지 확인하는 스위치
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Time")
+	bool bIsDailyTimerStarted = false;
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Time")
 	float CurrentTimeOfDay = 0.0f; 
 
@@ -325,6 +388,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Game|Interaction") bool CheckCanUseBed(FText& OutDenyMessage);
 	UFUNCTION(BlueprintCallable, Category = "Game|Interaction") bool CheckCanUseDoor(FText& OutDenyMessage);
 	UFUNCTION(BlueprintCallable, Category = "Game|Interaction") bool CheckCanUseDaughterBed(FText& OutDenyMessage);
+	// 🟢 [추가] 밖에서 집으로 들어올 때 검사할 함수
+	UFUNCTION(BlueprintCallable, Category = "Game|Interaction") bool CheckCanUseReturnDoor(FText& OutDenyMessage);
 
 	/* =================================================================
 	 * 블루프린트 통신용 이벤트 노드들

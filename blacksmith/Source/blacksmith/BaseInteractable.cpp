@@ -2,6 +2,8 @@
 #include "BlacksmithGameMode.h" 
 #include "DaughterNPC.h" 
 #include "Kismet/GameplayStatics.h"
+#include "TalkWidget.h"
+#include "TimerManager.h" // 🟢 타이머 매니저 필수 포함
 
 ABaseInteractable::ABaseInteractable()
 {
@@ -41,7 +43,11 @@ void ABaseInteractable::AttemptInteraction(APlayerController* PC)
 			bIsAllowed = GM->CheckCanUseBed(DenyMessage);
 			break;
 		case EInteractableType::Door:
+			// 🟢 [수정됨] 문을 열 수 있는지(28일 이전 딸 기상 여부 등) 게임모드에 물어봅니다!
 			bIsAllowed = GM->CheckCanUseDoor(DenyMessage);
+			break;
+		case EInteractableType::ReturnDoor: // 🟢 [추가됨]
+			bIsAllowed = GM->CheckCanUseReturnDoor(DenyMessage);
 			break;
 		case EInteractableType::DaughterBed:
 			bIsAllowed = GM->CheckCanUseDaughterBed(DenyMessage);
@@ -54,28 +60,28 @@ void ABaseInteractable::AttemptInteraction(APlayerController* PC)
 		switch (ObjectType)
 		{
 			case EInteractableType::RestChair:
-				// 🪑 시간 건너뛰기 (인스펙터에 지정한 목표 시간으로 즉시 워프!)
 				GM->WarpTimeTo(WarpTargetTime);
 				break;
 
 			case EInteractableType::Bed:
-				// 🛏️ 아빠 취침 (하루 넘기기)
 				GM->SleepAndNextDay();
 				break;
 
 			case EInteractableType::Door:
+			case EInteractableType::ReturnDoor:
 				// 🚪 레벨(맵) 이동
 				if (!TargetLevelName.IsNone())
 				{
+					// 🟢 맵이 바뀌기 직전에 모든 것을 영구 인스턴스로 대피시킵니다!
+					GM->SaveGlobalData(); 
+					
 					UGameplayStatics::OpenLevel(this, TargetLevelName);
 				}
 				break;
 
 			case EInteractableType::DaughterBed:
-				// 👧 딸 재우기
-				GM->bIsDaughterAsleep = true; // 게임모드 상태 변경
+				GM->bIsDaughterAsleep = true; 
 				
-				// 맵에 있는 딸 NPC 찾아서 정지 및 투명화 (이불 덮기 연출 대체)
 				if (AActor* DaughterActor = UGameplayStatics::GetActorOfClass(this, ADaughterNPC::StaticClass()))
 				{
 					if (ADaughterNPC* Daughter = Cast<ADaughterNPC>(DaughterActor))
@@ -88,22 +94,45 @@ void ABaseInteractable::AttemptInteraction(APlayerController* PC)
 				break;
 		}
 
-		// 블루프린트 이벤트 발사
 		OnInteractionAllowed();
 	}
-	// 3. 실패 시 ➡️ 거절 대사 UI 띄우기
+	// 3. 실패 시 ➡️ 거절 대사 UI 띄우기 및 조작 뺏기
 	else
 	{
 		if (CurrentTalkWidget && CurrentTalkWidget->IsInViewport()) return; 
 
 		if (TalkWidgetClass && PC)
 		{
-			CurrentTalkWidget = CreateWidget<UUserWidget>(PC, TalkWidgetClass);
+			// 🟢 UUserWidget 대신 새로 만든 UTalkWidget으로 생성
+			CurrentTalkWidget = CreateWidget<UTalkWidget>(PC, TalkWidgetClass);
 			if (CurrentTalkWidget)
 			{
 				CurrentTalkWidget->AddToViewport();
 				OnSetupTalkWidget(CurrentTalkWidget, DenyMessage);
+
+				// 🟢 창이 닫혔다는 신호를 받으면 다시 조작 권한을 돌려주도록 연결
+				CurrentTalkWidget->OnTalkClosed.AddDynamic(this, &ABaseInteractable::HandleTalkWidgetClosed);
+
+				// 이동 키보드 멈춤 및 UI로 포커스 고정
+				FInputModeUIOnly InputMode;
+				InputMode.SetWidgetToFocus(CurrentTalkWidget->TakeWidget());
+				PC->SetInputMode(InputMode);
+				PC->FlushPressedKeys(); 
+				PC->SetShowMouseCursor(true); 
 			}
 		}
+	}
+}
+
+// 🟢 [수정됨] 수동으로 창이 닫혔을 때 호출되어 조작을 돌려주는 함수
+void ABaseInteractable::HandleTalkWidgetClosed()
+{
+	CurrentTalkWidget = nullptr;
+
+	if (APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0))
+	{
+		FInputModeGameOnly InputMode;
+		PC->SetInputMode(InputMode);
+		PC->SetShowMouseCursor(false);
 	}
 }

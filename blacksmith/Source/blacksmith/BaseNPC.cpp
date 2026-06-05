@@ -5,6 +5,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "AIController.h" 
 #include "TimerManager.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 ABaseNPC::ABaseNPC()
 {
@@ -22,6 +23,29 @@ ABaseNPC::ABaseNPC()
 void ABaseNPC::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// 🟢 [추가] 에디터에서 드래그한 마커(상대 좌표)를 맵의 절대 좌표로 변환해서 저장해 둡니다!
+	for (const FVector& LocalPoint : PatrolPoints)
+	{
+		WorldPatrolPoints.Add(GetActorTransform().TransformPosition(LocalPoint));
+	}
+
+	// 🟢 1. 내 고유 ID가 있다면, GameInstance 사물함에서 내 대화 횟수와 기억을 꺼내옵니다.
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		if (!NPC_ID.IsNone() && GI->SavedNPCStates.Contains(NPC_ID))
+		{
+			FNPCSavedState LoadedState = GI->SavedNPCStates[NPC_ID];
+			this->NPCComponent->InteractionCount = LoadedState.InteractionCount;
+			this->ActiveScheduleDateKey = LoadedState.SavedDateKey;
+			this->ActiveTimeScheduleIndex = LoadedState.SavedScheduleIndex;
+		}
+	}
+
+	// 🟢 2. 맵이 켜지자마자 즉시!! 내가 지금 시간에 맵에 보여야 하는지 판단하고 숨거나 나타납니다.
+	CheckScheduleAndVisibility();
+
+	// 🟢 3. 그 이후부터는 1초마다 변동사항이 있는지 확인합니다.
 	GetWorld()->GetTimerManager().SetTimer(ScheduleCheckTimer, this, &ABaseNPC::CheckScheduleAndVisibility, 1.0f, true);
 }
 
@@ -68,6 +92,19 @@ void ABaseNPC::CheckScheduleAndVisibility()
 			SpeechBubbleWidget->SetVisibility(false);
 		}
 	}
+	// 🟢 [맨 아랫부분에 추가] 매초마다 갱신된 나의 상태(대화 횟수 등)를 GameInstance 사물함에 실시간 백업!
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		if (!NPC_ID.IsNone())
+		{
+			FNPCSavedState StateToSave;
+			StateToSave.InteractionCount = this->NPCComponent->InteractionCount;
+			StateToSave.SavedDateKey = this->ActiveScheduleDateKey;
+			StateToSave.SavedScheduleIndex = this->ActiveTimeScheduleIndex;
+
+			GI->SavedNPCStates.Add(NPC_ID, StateToSave); // 사물함에 넣기!
+		}
+	}
 }
 
 void ABaseNPC::UpdateAutoSpeechBubble()
@@ -96,9 +133,17 @@ void ABaseNPC::Interact_Implementation(AActor* Interactor)
 
 	if (SequenceIndex >= CurrentActiveSchedule.InteractionDialogues.Num()) return; 
 
-	NPCComponent->IncrementInteractionCount();
+	NPCComponent->IncrementInteractionCount(); // 대화 횟수 증가
+
+	// 🟢 [추가] 말을 걸어서 횟수가 올랐으니, 즉시 GameInstance에 저장해 줍니다! (중간에 맵을 나가도 기억함)
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		if (!NPC_ID.IsNone() && GI->SavedNPCStates.Contains(NPC_ID))
+		{
+			GI->SavedNPCStates[NPC_ID].InteractionCount = NPCComponent->InteractionCount;
+		}
+	}
 	
-	// 블루프린트 대신 C++로 UI 호출
 	StartDialogueUI(CurrentActiveSchedule.InteractionDialogues[SequenceIndex]);
 }
 
@@ -156,6 +201,12 @@ void ABaseNPC::OnDialogueEndAction()
 void ABaseNPC::FollowPlayer(float StopDistance)
 {
 	CachedFollowRadius = StopDistance;
+
+	// 🟢 따라갈 때는 빠른 걸음이나 뛰는 속도로 복구!
+	if (UCharacterMovementComponent* MoveComp = GetCharacterMovement())
+	{
+		MoveComp->MaxWalkSpeed = 400.0f; // 뛰는 속도 (원하는 대로 조절)
+	}
 	
 	GetWorld()->GetTimerManager().SetTimer(FollowTimerHandle, this, &ABaseNPC::UpdateFollowTarget, 0.5f, true);
 	UpdateFollowTarget(); 
@@ -175,6 +226,7 @@ void ABaseNPC::UpdateFollowTarget()
 void ABaseNPC::StopMoving()
 {
 	GetWorld()->GetTimerManager().ClearTimer(FollowTimerHandle);
+	GetWorld()->GetTimerManager().ClearTimer(PatrolTimerHandle); // 🟢 패트롤 타이머도 확실하게 정지!
 	
 	if (AAIController* AI = Cast<AAIController>(GetController())) 
 	{
@@ -186,4 +238,53 @@ void ABaseNPC::TeleportToLocation(FVector NewLocation)
 {
 	StopMoving();
 	SetActorLocation(NewLocation, false, nullptr, ETeleportType::TeleportPhysics);
+}
+
+/* =================================================================
+ * 🚶 NPC 순찰(Patrol) 로직
+ * ================================================================= */
+void ABaseNPC::StartPatrol()
+{
+	if (WorldPatrolPoints.Num() == 0) return;
+
+	StopMoving(); 
+
+	// 🟢 1. NPC의 이동 속도를 '걷기(Walk)' 속도로 늦춰줍니다 (기본 600 -> 150)
+	if (UCharacterMovementComponent* MoveComp = GetCharacterMovement())
+	{
+		MoveComp->MaxWalkSpeed = 150.0f; // 이 숫자를 조절해서 원하는 걷기 속도를 맞추세요!
+	}
+
+	CurrentPatrolIndex = 0; 
+	
+	// 🟢 2. 타이머를 0.5초 -> 0.1초로 줄여서, 도착하자마자 바로 다음 곳으로 부드럽게 꺾게 만듭니다.
+	GetWorld()->GetTimerManager().SetTimer(PatrolTimerHandle, this, &ABaseNPC::UpdatePatrol, 0.1f, true);
+	UpdatePatrol(); 
+}
+
+void ABaseNPC::UpdatePatrol()
+{
+	if (WorldPatrolPoints.Num() == 0) return;
+
+	FVector TargetLoc = WorldPatrolPoints[CurrentPatrolIndex];
+	float Distance = FVector::Dist2D(GetActorLocation(), TargetLoc);
+	
+	// 🟢 3. 완전히 멈추기 전(거리 50 이하)에 다음 목적지로 인덱스를 미리 바꿉니다. (자연스러운 코너링)
+	if (Distance <= 50.0f) 
+	{
+		CurrentPatrolIndex++;
+		if (CurrentPatrolIndex >= WorldPatrolPoints.Num())
+		{
+			CurrentPatrolIndex = 0; 
+		}
+		
+		// 타겟을 다음 마커로 즉시 갱신!
+		TargetLoc = WorldPatrolPoints[CurrentPatrolIndex]; 
+	}
+
+	// 4. 부드럽게 이동 (목적지가 계속 갱신되므로 멈추지 않고 스무스하게 이어집니다)
+	if (AAIController* AI = Cast<AAIController>(GetController()))
+	{
+		AI->MoveToLocation(TargetLoc, 10.0f); 
+	}
 }

@@ -5,6 +5,7 @@
 #include "EncyclopediaComponent.h"
 #include "BlacksmithGameInstance.h"
 #include "DaughterNPC.h"
+#include "TalkWidget.h"
 
 ABlacksmithGameMode::ABlacksmithGameMode()
 {
@@ -118,6 +119,11 @@ bool ABlacksmithGameMode::CheckCanUseDoor(FText& OutDenyMessage)
  * ================================================================= */
 void ABlacksmithGameMode::StartDailyTimer()
 {
+	// 🟢 [추가] 이미 우편함을 열어 타이머가 시작되었다면 무시하고 돌아갑니다!
+	if (bIsDailyTimerStarted) return;
+
+	bIsDailyTimerStarted = true;
+	
 	CurrentTimeOfDay = 0.0f;
 	bIsTimeToGoHome = false;
 	bIsDaughterFound = false;
@@ -233,6 +239,15 @@ void ABlacksmithGameMode::AdvanceTimeOneSecond()
 		}
 
 		OnFreeTimeStartEvent();
+
+		// 🟢 [여기에 추가!] 600초가 되어 밤이 시작될 때 '밤 이벤트'들을 모두 발사합니다!
+		if (bHasTodaySchedule)
+		{
+			for (const FGeneralEventData& NEvent : TodayScheduleCache.NightEvents)
+			{
+				OnTriggerGeneralEvent(NEvent.EventID, NEvent.WidgetToShow);
+			}
+		}
 	}
 }
 
@@ -356,6 +371,15 @@ void ABlacksmithGameMode::SleepAndNextDay()
 
 	// 🟢 7. 블루프린트로 "새 아침이 밝았음" 신호를 발사합니다! (침대 위 텔레포트용)
 	OnMorningResetEvent();
+
+	// 🟢 [여기에 추가!] 자고 일어난 직후, '새로운 날짜(CurrentDay)'의 아침 이벤트를 모두 발사합니다!
+	if (DailyScheduleMap.Contains(CurrentDay))
+	{
+		for (const FGeneralEventData& MEvent : DailyScheduleMap[CurrentDay].MorningEvents)
+		{
+			OnTriggerGeneralEvent(MEvent.EventID, MEvent.WidgetToShow);
+		}
+	}
 }
 
 // 🟢 까방권(유예 기간) 작동 로직
@@ -454,6 +478,9 @@ void ABlacksmithGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
+	// 🟢 [추가] 맵이 켜지자마자 다른 어떤 것보다 최우선으로 데이터를 복구합니다!
+	RestoreGlobalData();
+
 	UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance());
 	// 🔴 (주의) 블루프린트에서 DaughterClass를 안 넣었으면 여기서 막혀서 스폰 안 됨!
 	if (!GI || !DaughterClass) return; 
@@ -512,4 +539,240 @@ void ABlacksmithGameMode::BeginPlay()
 			if (ExistingDaughter) ExistingDaughter->Destroy();
 		}
 	}
+}
+
+void ABlacksmithGameMode::SaveGlobalData()
+{
+	UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance());
+	if (!GI) return;
+
+	// 1. 게임 진행 데이터 백업
+	GI->SavedCurrentDay = this->CurrentDay;
+	GI->SavedCurrentTimeOfDay = this->CurrentTimeOfDay;
+	GI->SavedDaysUntilDeadline = this->DaysUntilDeadline;
+	GI->SavedHasActiveMainQuest = this->bHasActiveMainQuest;
+	GI->SavedCurrentMainQuest = this->CurrentMainQuest;
+	GI->SavedIsMainQuestCompleted = this->bIsMainQuestCompleted;
+	GI->SavedIsGracePeriodUsed = this->bIsGracePeriodUsed;
+	GI->SavedActiveSubQuests = this->ActiveSubQuests;
+	GI->SavedDaughterSleepWarningCount = this->DaughterSleepWarningCount;
+	GI->SavedIsDailyTimerStarted = this->bIsDailyTimerStarted;
+
+	// 2. 플레이어 데이터(인벤토리, 도감) 찾아내서 백업
+	if (ACharacter* Player = UGameplayStatics::GetPlayerCharacter(this, 0))
+	{
+		if (UInventoryComponent* Inv = Player->FindComponentByClass<UInventoryComponent>())
+			GI->SavedInventory = Inv->Inventory;
+
+		if (UEncyclopediaComponent* Ency = Player->FindComponentByClass<UEncyclopediaComponent>())
+			GI->SavedEncyclopedia = Ency->UnlockedItems;
+	}
+
+	GI->bIsDataSaved = true; // 저장 완료 표시!
+}
+
+void ABlacksmithGameMode::RestoreGlobalData()
+{
+	UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance());
+	
+	// 저장된 적 없으면 무시 (즉, 게임 맨 처음 시작했을 때는 덮어씌우지 않음)
+	if (!GI || !GI->bIsDataSaved) return; 
+
+	// 1. 게임 진행 데이터 복원
+	this->CurrentDay = GI->SavedCurrentDay;
+	this->CurrentTimeOfDay = GI->SavedCurrentTimeOfDay;
+	this->DaysUntilDeadline = GI->SavedDaysUntilDeadline;
+	this->bHasActiveMainQuest = GI->SavedHasActiveMainQuest;
+	this->CurrentMainQuest = GI->SavedCurrentMainQuest;
+	this->bIsMainQuestCompleted = GI->SavedIsMainQuestCompleted;
+	this->bIsGracePeriodUsed = GI->SavedIsGracePeriodUsed;
+	this->ActiveSubQuests = GI->SavedActiveSubQuests;
+	this->DaughterSleepWarningCount = GI->SavedDaughterSleepWarningCount;
+	this->bIsDailyTimerStarted = GI->SavedIsDailyTimerStarted;
+
+	// 2. 캐시 스케줄 재연결 및 타이머 이어서 돌리기!
+	if (DailyScheduleMap.Contains(CurrentDay))
+	{
+		bHasTodaySchedule = true;
+		TodayScheduleCache = DailyScheduleMap[CurrentDay];
+	}
+	// 🟢 [주의/수정] 우편함을 열어서 타이머가 돌고 있을 때만 타이머를 이어서 돌립니다!
+	if (this->bIsDailyTimerStarted)
+	{
+		GetWorld()->GetTimerManager().SetTimer(DailyTimerHandle, this, &ABlacksmithGameMode::AdvanceTimeOneSecond, 1.0f, true);
+	}
+
+	// 3. 플레이어 데이터(인벤토리, 도감) 찾아내서 복원
+	if (ACharacter* Player = UGameplayStatics::GetPlayerCharacter(this, 0))
+	{
+		if (UInventoryComponent* Inv = Player->FindComponentByClass<UInventoryComponent>())
+			Inv->Inventory = GI->SavedInventory;
+
+		if (UEncyclopediaComponent* Ency = Player->FindComponentByClass<UEncyclopediaComponent>())
+			Ency->UnlockedItems = GI->SavedEncyclopedia;
+	}
+}
+
+bool ABlacksmithGameMode::CheckCanUseReturnDoor(FText& OutDenyMessage)
+{
+	// 현재는 집으로 돌아가는 걸 막는 조건이 없으므로 무조건 통과합니다!
+	// (나중에 특정 퀘스트나 이벤트를 봐야만 집에 갈 수 있게 하려면 이곳에 추가하세요)
+	return true;
+}
+
+/* =================================================================
+ * 📬 우편함 시스템 로직
+ * ================================================================= */
+void ABlacksmithGameMode::OpenMailbox()
+{
+	StartDailyTimer();
+	MailQuestQueue.Empty();
+	bHasPendingWarLetter = false;
+
+	if (DailyScheduleMap.Contains(CurrentDay))
+	{
+		const FDailySchedule& TodaySch = DailyScheduleMap[CurrentDay];
+		if (TodaySch.bHasMainQuest) MailQuestQueue.Add(TodaySch.MainQuest);
+		for (const FQuestData& SQ : TodaySch.SubQuests) MailQuestQueue.Add(SQ);
+	}
+
+	if (DaughterClass)
+	{
+		if (ADaughterNPC* DaughterCDO = Cast<ADaughterNPC>(DaughterClass->GetDefaultObject()))
+		{
+			if (CurrentDay >= DaughterCDO->WarStartDay && DaughterCDO->WarLettersByDay.Contains(CurrentDay))
+			{
+				bHasPendingWarLetter = true;
+				PendingWarLetter = DaughterCDO->WarLettersByDay[CurrentDay];
+			}
+		}
+	}
+
+	ShowNextMail();
+}
+
+void ABlacksmithGameMode::ShowNextMail()
+{
+	APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0);
+	if (!PC) return;
+
+	// 1. 대기열에 의뢰가 남아있다면?
+	if (MailQuestQueue.Num() > 0)
+	{
+		FQuestData NextQuest = MailQuestQueue[0];
+		MailQuestQueue.RemoveAt(0); 
+
+		if (QuestMailWidgetClass)
+		{
+			UMailQuestWidget* QuestWidget = CreateWidget<UMailQuestWidget>(PC, QuestMailWidgetClass);
+			if (QuestWidget)
+			{
+				FString Prefix = NextQuest.bIsMainQuest ? TEXT("[메인] ") : TEXT("[서브] ");
+				FString FinalTitle = Prefix + NextQuest.QuestName;
+
+				FString RewardString = TEXT("보수: ");
+				for (int i = 0; i < NextQuest.QuestRewards.Num(); i++)
+				{
+					if (NextQuest.QuestRewards[i].RewardType == ERewardType::Currency)
+						RewardString += FString::Printf(TEXT("%d 골드"), NextQuest.QuestRewards[i].RewardAmount);
+					else if (NextQuest.QuestRewards[i].RewardItem)
+						RewardString += FString::Printf(TEXT("%s %d개"), *NextQuest.QuestRewards[i].RewardItem->ItemName, NextQuest.QuestRewards[i].RewardAmount);
+					
+					if (i < NextQuest.QuestRewards.Num() - 1) RewardString += TEXT(", ");
+				}
+
+				// 🟢 [여기 추가됨!] 기한 텍스트 계산
+				int32 RemainingDays = NextQuest.bIsMainQuest ? DaysUntilDeadline : NextQuest.DeadlineDays;
+				FString DeadlineString = FString::Printf(TEXT("남은 기한: %d일"), RemainingDays);
+
+				// 🟢 [수정됨] 마지막 매개변수로 DeadlineString을 함께 넘겨줍니다!
+				QuestWidget->UpdateMailUI(FinalTitle, NextQuest.QuestDescription, RewardString, DeadlineString);
+				
+				QuestWidget->AddToViewport();
+				QuestWidget->OnTalkClosed.AddDynamic(this, &ABlacksmithGameMode::ShowNextMail);
+
+				FInputModeUIOnly InputMode;
+				PC->SetInputMode(InputMode);
+				PC->SetShowMouseCursor(true);
+			}
+		}
+		else { ShowNextMail(); } 
+	}
+	// 2. 의뢰는 다 봤고, 딸의 편지가 남아있다면?
+	else if (bHasPendingWarLetter)
+	{
+		bHasPendingWarLetter = false;
+		if (WarLetterWidgetClass)
+		{
+			UMailLetterWidget* LetterWidget = CreateWidget<UMailLetterWidget>(PC, WarLetterWidgetClass);
+			if (LetterWidget)
+			{
+				LetterWidget->UpdateLetterUI(PendingWarLetter.LetterText);
+				LetterWidget->AddToViewport();
+				LetterWidget->OnTalkClosed.AddDynamic(this, &ABlacksmithGameMode::ShowNextMail);
+
+				FInputModeUIOnly InputMode;
+				PC->SetInputMode(InputMode);
+				PC->SetShowMouseCursor(true);
+			}
+		}
+		else { ShowNextMail(); }
+	}
+	// 3. 전부 다 확인 완료 시 조작 복구!
+	else
+	{
+		FInputModeGameOnly InputMode;
+		PC->SetInputMode(InputMode);
+		PC->SetShowMouseCursor(false);
+	}
+}
+
+/* =================================================================
+ * 📜 메뉴 UI 연동용 퀘스트 헬퍼 함수
+ * ================================================================= */
+
+TArray<FQuestData> ABlacksmithGameMode::GetAllActiveQuests()
+{
+	TArray<FQuestData> AllQuests;
+
+	// 1. 메인 의뢰가 진행 중이라면 가장 첫 페이지(인덱스 0)에 오도록 추가[cite: 12]
+	if (bHasActiveMainQuest && !bIsMainQuestCompleted)
+	{
+		AllQuests.Add(CurrentMainQuest);
+	}
+
+	// 2. 진행 중인 서브 의뢰들을 그 뒤에 차례대로 추가[cite: 12]
+	for (const FQuestData& SubQuest : ActiveSubQuests)
+	{
+		AllQuests.Add(SubQuest);
+	}
+
+	return AllQuests;
+}
+
+void ABlacksmithGameMode::FormatQuestForUI(const FQuestData& InQuest, FString& OutTitle, FText& OutDescription, FString& OutRewardInfo, FString& OutDeadlineInfo)
+{
+	// 1. [메인/서브] 태그 결합
+	FString Prefix = InQuest.bIsMainQuest ? TEXT("[메인] ") : TEXT("[서브] ");
+	OutTitle = Prefix + InQuest.QuestName;
+
+	// 2. 설명은 그대로 전달
+	OutDescription = InQuest.QuestDescription;
+
+	// 3. 보수 텍스트 예쁘게 합치기
+	OutRewardInfo = TEXT("보수: ");
+	for (int i = 0; i < InQuest.QuestRewards.Num(); i++)
+	{
+		if (InQuest.QuestRewards[i].RewardType == ERewardType::Currency)
+			OutRewardInfo += FString::Printf(TEXT("%d 골드"), InQuest.QuestRewards[i].RewardAmount);
+		else if (InQuest.QuestRewards[i].RewardItem)
+			OutRewardInfo += FString::Printf(TEXT("%s %d개"), *InQuest.QuestRewards[i].RewardItem->ItemName, InQuest.QuestRewards[i].RewardAmount);
+		
+		if (i < InQuest.QuestRewards.Num() - 1) OutRewardInfo += TEXT(", ");
+	}
+
+	// 🟢 4. [새로 추가된 부분] 기한 텍스트 계산
+	// 메인 퀘스트면 전체 마감일(DaysUntilDeadline)을, 서브면 자체 기한(DeadlineDays)을 사용합니다!
+	int32 RemainingDays = InQuest.bIsMainQuest ? DaysUntilDeadline : InQuest.DeadlineDays;
+	OutDeadlineInfo = FString::Printf(TEXT("남은 기한: %d일"), RemainingDays);
 }
