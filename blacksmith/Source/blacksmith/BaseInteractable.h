@@ -7,7 +7,9 @@
 #include "BaseInteractable.generated.h"
 
 class UTalkWidget;
-// 🟢 인스펙터에서 선택할 오브젝트 종류
+class UTimeHUDWidget; // 🟢 [추가됨] 글자를 띄울 위젯을 알기 위한 전방 선언
+
+// 인스펙터에서 선택할 오브젝트 종류
 UENUM(BlueprintType)
 enum class EInteractableType : uint8
 {
@@ -36,11 +38,13 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Interact Settings", meta=(DisplayName="거절 시 띄울 위젯"))
 	TSubclassOf<UTalkWidget> TalkWidgetClass;
 
-	// 🟢 [수정] Door 또는 ReturnDoor일 때 레벨 이름 입력 칸이 보이도록 수정!
+	// 🟢 [복구됨] 글자를 띄우기 위해 기존 HUD 위젯을 연결할 칸
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Interact Settings", meta=(DisplayName="날짜표시 HUD 위젯 클래스"))
+	TSubclassOf<UTimeHUDWidget> TimeHUDWidgetClass;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interact Settings|Logic", meta=(DisplayName="이동할 레벨 이름", EditCondition="ObjectType == EInteractableType::Door || ObjectType == EInteractableType::ReturnDoor", EditConditionHides))
 	FName TargetLevelName;
 
-	// 🪑 의자 전용: 워프할 목표 시간 (기본값 450초 = 7분 30초)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interact Settings|Logic", meta=(DisplayName="워프할 목표 시간(초)", EditCondition="ObjectType == EInteractableType::RestChair", EditConditionHides))
 	float WarpTargetTime = 450.0f;
 
@@ -50,21 +54,30 @@ public:
 	UPROPERTY()
 	UTalkWidget* CurrentTalkWidget;
 
+	// 🟢 [복구됨] 화면에 떠 있는 HUD를 기억해둘 변수
+	UPROPERTY()
+	UTimeHUDWidget* CachedHUDWidget;
+
+	FTimerHandle FadeTimerHandle;
+
 	/* =================================================================
 	 * 함수 및 이벤트
 	 * ================================================================= */
 	
-	// 인터페이스 오버라이드
 	virtual void Interact_Implementation(AActor* Interactor) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Interaction")
 	void AttemptInteraction(class APlayerController* PC);
 
-	// 🟢 [추가/수정] 창이 닫혔을 때 조작을 돌려받을 콜백 함수
 	UFUNCTION()
 	void HandleTalkWidgetClosed();
 
-	// 성공 시 블루프린트 신호 발사
+	UFUNCTION()
+	void ExecuteTimeSkip();
+
+	UFUNCTION()
+	void FinishTransition();
+
 	UFUNCTION(BlueprintImplementableEvent, Category = "Interaction")
 	void OnInteractionAllowed();
 

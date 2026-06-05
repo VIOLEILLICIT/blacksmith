@@ -1,3 +1,4 @@
+#include "BlacksmithGameInstance.h"
 #include "BaseNPC.h"
 #include "DialogueWidget.h" // UI 제어를 위해 필수
 #include "Components/WidgetComponent.h"
