@@ -2,6 +2,7 @@
 #include "BlacksmithGameMode.h" 
 #include "DaughterNPC.h" 
 #include "Kismet/GameplayStatics.h"
+#include "TalkWidget.h"
 #include "TimerManager.h" // 🟢 타이머 매니저 필수 포함
 
 ABaseInteractable::ABaseInteractable()
@@ -42,7 +43,11 @@ void ABaseInteractable::AttemptInteraction(APlayerController* PC)
 			bIsAllowed = GM->CheckCanUseBed(DenyMessage);
 			break;
 		case EInteractableType::Door:
+			// 🟢 [수정됨] 문을 열 수 있는지(28일 이전 딸 기상 여부 등) 게임모드에 물어봅니다!
 			bIsAllowed = GM->CheckCanUseDoor(DenyMessage);
+			break;
+		case EInteractableType::ReturnDoor: // 🟢 [추가됨]
+			bIsAllowed = GM->CheckCanUseReturnDoor(DenyMessage);
 			break;
 		case EInteractableType::DaughterBed:
 			bIsAllowed = GM->CheckCanUseDaughterBed(DenyMessage);
@@ -63,8 +68,13 @@ void ABaseInteractable::AttemptInteraction(APlayerController* PC)
 				break;
 
 			case EInteractableType::Door:
+			case EInteractableType::ReturnDoor:
+				// 🚪 레벨(맵) 이동
 				if (!TargetLevelName.IsNone())
 				{
+					// 🟢 맵이 바뀌기 직전에 모든 것을 영구 인스턴스로 대피시킵니다!
+					GM->SaveGlobalData(); 
+					
 					UGameplayStatics::OpenLevel(this, TargetLevelName);
 				}
 				break;
@@ -93,37 +103,32 @@ void ABaseInteractable::AttemptInteraction(APlayerController* PC)
 
 		if (TalkWidgetClass && PC)
 		{
-			CurrentTalkWidget = CreateWidget<UUserWidget>(PC, TalkWidgetClass);
+			// 🟢 UUserWidget 대신 새로 만든 UTalkWidget으로 생성
+			CurrentTalkWidget = CreateWidget<UTalkWidget>(PC, TalkWidgetClass);
 			if (CurrentTalkWidget)
 			{
 				CurrentTalkWidget->AddToViewport();
 				OnSetupTalkWidget(CurrentTalkWidget, DenyMessage);
 
-				// 🟢 [추가] 플레이어의 이동 키보드 및 마우스 입력을 완전히 뺏어버립니다.
-				FInputModeUIOnly InputMode;
-				PC->SetInputMode(InputMode);
-				PC->FlushPressedKeys(); // 누르고 있던 W, A, S, D 이동키 멈춤
-				PC->SetShowMouseCursor(true); // 마우스 켜기
+				// 🟢 창이 닫혔다는 신호를 받으면 다시 조작 권한을 돌려주도록 연결
+				CurrentTalkWidget->OnTalkClosed.AddDynamic(this, &ABaseInteractable::HandleTalkWidgetClosed);
 
-				// 🟢 [추가] 0.5초 뒤에 창을 닫고 조작을 돌려주는 함수를 타이머로 실행합니다.
-				// (0.5f 숫자를 1.0f 등으로 바꾸시면 메시지가 떠 있는 시간을 늘릴 수 있습니다!)
-				GetWorld()->GetTimerManager().SetTimer(CloseTalkWidgetTimerHandle, this, &ABaseInteractable::CloseTalkWidget, 0.5f, false);
+				// 이동 키보드 멈춤 및 UI로 포커스 고정
+				FInputModeUIOnly InputMode;
+				InputMode.SetWidgetToFocus(CurrentTalkWidget->TakeWidget());
+				PC->SetInputMode(InputMode);
+				PC->FlushPressedKeys(); 
+				PC->SetShowMouseCursor(true); 
 			}
 		}
 	}
 }
 
-// 🟢 [추가] 타이머에 의해 0.5초 뒤 실행되는 함수
-void ABaseInteractable::CloseTalkWidget()
+// 🟢 [수정됨] 수동으로 창이 닫혔을 때 호출되어 조작을 돌려주는 함수
+void ABaseInteractable::HandleTalkWidgetClosed()
 {
-	// 1. 위젯 삭제
-	if (CurrentTalkWidget)
-	{
-		CurrentTalkWidget->RemoveFromParent();
-		CurrentTalkWidget = nullptr;
-	}
+	CurrentTalkWidget = nullptr;
 
-	// 2. 플레이어 컨트롤러를 찾아 다시 조작 권한(GameOnly)을 돌려주고 마우스를 숨깁니다.
 	if (APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0))
 	{
 		FInputModeGameOnly InputMode;

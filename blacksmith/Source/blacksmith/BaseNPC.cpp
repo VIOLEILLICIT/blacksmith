@@ -22,6 +22,23 @@ ABaseNPC::ABaseNPC()
 void ABaseNPC::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// 🟢 1. 내 고유 ID가 있다면, GameInstance 사물함에서 내 대화 횟수와 기억을 꺼내옵니다.
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		if (!NPC_ID.IsNone() && GI->SavedNPCStates.Contains(NPC_ID))
+		{
+			FNPCSavedState LoadedState = GI->SavedNPCStates[NPC_ID];
+			this->NPCComponent->InteractionCount = LoadedState.InteractionCount;
+			this->ActiveScheduleDateKey = LoadedState.SavedDateKey;
+			this->ActiveTimeScheduleIndex = LoadedState.SavedScheduleIndex;
+		}
+	}
+
+	// 🟢 2. 맵이 켜지자마자 즉시!! 내가 지금 시간에 맵에 보여야 하는지 판단하고 숨거나 나타납니다.
+	CheckScheduleAndVisibility();
+
+	// 🟢 3. 그 이후부터는 1초마다 변동사항이 있는지 확인합니다.
 	GetWorld()->GetTimerManager().SetTimer(ScheduleCheckTimer, this, &ABaseNPC::CheckScheduleAndVisibility, 1.0f, true);
 }
 
@@ -68,6 +85,19 @@ void ABaseNPC::CheckScheduleAndVisibility()
 			SpeechBubbleWidget->SetVisibility(false);
 		}
 	}
+	// 🟢 [맨 아랫부분에 추가] 매초마다 갱신된 나의 상태(대화 횟수 등)를 GameInstance 사물함에 실시간 백업!
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		if (!NPC_ID.IsNone())
+		{
+			FNPCSavedState StateToSave;
+			StateToSave.InteractionCount = this->NPCComponent->InteractionCount;
+			StateToSave.SavedDateKey = this->ActiveScheduleDateKey;
+			StateToSave.SavedScheduleIndex = this->ActiveTimeScheduleIndex;
+
+			GI->SavedNPCStates.Add(NPC_ID, StateToSave); // 사물함에 넣기!
+		}
+	}
 }
 
 void ABaseNPC::UpdateAutoSpeechBubble()
@@ -96,9 +126,17 @@ void ABaseNPC::Interact_Implementation(AActor* Interactor)
 
 	if (SequenceIndex >= CurrentActiveSchedule.InteractionDialogues.Num()) return; 
 
-	NPCComponent->IncrementInteractionCount();
+	NPCComponent->IncrementInteractionCount(); // 대화 횟수 증가
+
+	// 🟢 [추가] 말을 걸어서 횟수가 올랐으니, 즉시 GameInstance에 저장해 줍니다! (중간에 맵을 나가도 기억함)
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		if (!NPC_ID.IsNone() && GI->SavedNPCStates.Contains(NPC_ID))
+		{
+			GI->SavedNPCStates[NPC_ID].InteractionCount = NPCComponent->InteractionCount;
+		}
+	}
 	
-	// 블루프린트 대신 C++로 UI 호출
 	StartDialogueUI(CurrentActiveSchedule.InteractionDialogues[SequenceIndex]);
 }
 

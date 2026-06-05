@@ -46,4 +46,13 @@ public:
 	// (GameMode에 만들어두신 WeaponDatabase 배열을 넘겨주면 %를 계산해 줍니다)
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Encyclopedia")
 	float GetCompletionPercentage(const TArray<UItemDataAsset*>& TotalWeaponDB) const;
+	// 🟢 [추가] 도감 UI에 아이템 정보와 최대 3개의 재료 정보를 예쁘게 쪼개서 넘겨주는 헬퍼 함수
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Encyclopedia|UI")
+	void FormatEncyclopediaUI(
+		UItemDataAsset* InItem,
+		class UTexture2D*& OutItemIcon, FString& OutItemName, FString& OutAppearanceDesc,
+		class UTexture2D*& OutMatIcon1, FString& OutMatName1,
+		class UTexture2D*& OutMatIcon2, FString& OutMatName2,
+		class UTexture2D*& OutMatIcon3, FString& OutMatName3
+	);
 };

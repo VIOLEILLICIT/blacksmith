@@ -25,6 +25,10 @@ public:
 	// 상호작용 인터페이스 구현
 	virtual void Interact_Implementation(AActor* Interactor) override;
 
+	// 🟢 [추가] GameInstance가 이 NPC를 알아볼 수 있는 고유 이름표 (예: "Merchant", "Villager_A")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "NPC Data", meta=(DisplayName="NPC 고유 ID (저장용)"))
+	FName NPC_ID;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	class UNPCComponent* NPCComponent;
 

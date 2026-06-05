@@ -74,3 +74,53 @@ float UEncyclopediaComponent::GetCompletionPercentage(const TArray<UItemDataAsse
 	// 퍼센티지 반환 (예: 10개 중 3개 해금 -> 30.0f)
 	return ((float)UnlockedCount / (float)TotalWeaponDB.Num()) * 100.0f;
 }
+
+/* =================================================================
+ * 📖 도감 UI 연동용 헬퍼 함수
+ * ================================================================= */
+void UEncyclopediaComponent::FormatEncyclopediaUI(
+	UItemDataAsset* InItem,
+	UTexture2D*& OutItemIcon, FString& OutItemName, FString& OutAppearanceDesc,
+	UTexture2D*& OutMatIcon1, FString& OutMatName1,
+	UTexture2D*& OutMatIcon2, FString& OutMatName2,
+	UTexture2D*& OutMatIcon3, FString& OutMatName3)
+{
+	// 1. 기본값 초기화 (재료가 없을 경우를 대비해 싹 비워둡니다)
+	OutItemIcon = nullptr; OutMatIcon1 = nullptr; OutMatIcon2 = nullptr; OutMatIcon3 = nullptr;
+	OutItemName = TEXT(""); OutAppearanceDesc = TEXT("");
+	OutMatName1 = TEXT(""); OutMatName2 = TEXT(""); OutMatName3 = TEXT("");
+
+	if (!InItem) return;
+
+	// 2. 완성품 정보 세팅
+	OutItemIcon = InItem->ItemIcon;
+	OutItemName = InItem->ItemName;
+	OutAppearanceDesc = InItem->AppearanceDescription;
+
+	// 3. 재료 정보 추출 (최대 3개까지만 뽑아냅니다)
+	int32 MatIndex = 0;
+	for (const TPair<UItemDataAsset*, int32>& MatPair : InItem->CraftingMaterials)
+	{
+		UItemDataAsset* MatItem = MatPair.Key;
+		if (!MatItem) continue;
+
+		if (MatIndex == 0) 
+		{
+			OutMatIcon1 = MatItem->ItemIcon;
+			OutMatName1 = MatItem->ItemName;
+		} 
+		else if (MatIndex == 1) 
+		{
+			OutMatIcon2 = MatItem->ItemIcon;
+			OutMatName2 = MatItem->ItemName;
+		} 
+		else if (MatIndex == 2) 
+		{
+			OutMatIcon3 = MatItem->ItemIcon;
+			OutMatName3 = MatItem->ItemName;
+		}
+		
+		MatIndex++;
+		if (MatIndex >= 3) break; // 3개를 다 채웠으면 멈춤!
+	}
+}
