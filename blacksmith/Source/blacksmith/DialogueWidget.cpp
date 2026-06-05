@@ -75,8 +75,8 @@ void UDialogueWidget::AdvanceDialogue()
 	else
 	{
 		// 창을 닫기 직전에 "대화 끝났어!" 라고 소리칩니다.
+		// 이후 블루프린트가 바인딩한 이벤트가 있다면 그 쪽의 애니메이션이나 로직이 실행될 것입니다.
 		OnDialogueFinished.Broadcast(); 
-		RemoveFromParent();
 	}
 }
 
