@@ -2,6 +2,7 @@
 #include "BlacksmithGameMode.h" 
 #include "DaughterNPC.h" 
 #include "Kismet/GameplayStatics.h"
+#include "TimerManager.h" // 🟢 타이머 매니저 필수 포함
 
 ABaseInteractable::ABaseInteractable()
 {
@@ -54,17 +55,14 @@ void ABaseInteractable::AttemptInteraction(APlayerController* PC)
 		switch (ObjectType)
 		{
 			case EInteractableType::RestChair:
-				// 🪑 시간 건너뛰기 (인스펙터에 지정한 목표 시간으로 즉시 워프!)
 				GM->WarpTimeTo(WarpTargetTime);
 				break;
 
 			case EInteractableType::Bed:
-				// 🛏️ 아빠 취침 (하루 넘기기)
 				GM->SleepAndNextDay();
 				break;
 
 			case EInteractableType::Door:
-				// 🚪 레벨(맵) 이동
 				if (!TargetLevelName.IsNone())
 				{
 					UGameplayStatics::OpenLevel(this, TargetLevelName);
@@ -72,10 +70,8 @@ void ABaseInteractable::AttemptInteraction(APlayerController* PC)
 				break;
 
 			case EInteractableType::DaughterBed:
-				// 👧 딸 재우기
-				GM->bIsDaughterAsleep = true; // 게임모드 상태 변경
+				GM->bIsDaughterAsleep = true; 
 				
-				// 맵에 있는 딸 NPC 찾아서 정지 및 투명화 (이불 덮기 연출 대체)
 				if (AActor* DaughterActor = UGameplayStatics::GetActorOfClass(this, ADaughterNPC::StaticClass()))
 				{
 					if (ADaughterNPC* Daughter = Cast<ADaughterNPC>(DaughterActor))
@@ -88,10 +84,9 @@ void ABaseInteractable::AttemptInteraction(APlayerController* PC)
 				break;
 		}
 
-		// 블루프린트 이벤트 발사
 		OnInteractionAllowed();
 	}
-	// 3. 실패 시 ➡️ 거절 대사 UI 띄우기
+	// 3. 실패 시 ➡️ 거절 대사 UI 띄우기 및 조작 뺏기
 	else
 	{
 		if (CurrentTalkWidget && CurrentTalkWidget->IsInViewport()) return; 
@@ -103,7 +98,36 @@ void ABaseInteractable::AttemptInteraction(APlayerController* PC)
 			{
 				CurrentTalkWidget->AddToViewport();
 				OnSetupTalkWidget(CurrentTalkWidget, DenyMessage);
+
+				// 🟢 [추가] 플레이어의 이동 키보드 및 마우스 입력을 완전히 뺏어버립니다.
+				FInputModeUIOnly InputMode;
+				PC->SetInputMode(InputMode);
+				PC->FlushPressedKeys(); // 누르고 있던 W, A, S, D 이동키 멈춤
+				PC->SetShowMouseCursor(true); // 마우스 켜기
+
+				// 🟢 [추가] 0.5초 뒤에 창을 닫고 조작을 돌려주는 함수를 타이머로 실행합니다.
+				// (0.5f 숫자를 1.0f 등으로 바꾸시면 메시지가 떠 있는 시간을 늘릴 수 있습니다!)
+				GetWorld()->GetTimerManager().SetTimer(CloseTalkWidgetTimerHandle, this, &ABaseInteractable::CloseTalkWidget, 0.5f, false);
 			}
 		}
+	}
+}
+
+// 🟢 [추가] 타이머에 의해 0.5초 뒤 실행되는 함수
+void ABaseInteractable::CloseTalkWidget()
+{
+	// 1. 위젯 삭제
+	if (CurrentTalkWidget)
+	{
+		CurrentTalkWidget->RemoveFromParent();
+		CurrentTalkWidget = nullptr;
+	}
+
+	// 2. 플레이어 컨트롤러를 찾아 다시 조작 권한(GameOnly)을 돌려주고 마우스를 숨깁니다.
+	if (APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0))
+	{
+		FInputModeGameOnly InputMode;
+		PC->SetInputMode(InputMode);
+		PC->SetShowMouseCursor(false);
 	}
 }

@@ -48,6 +48,9 @@ public:
 	UPROPERTY()
 	UUserWidget* CurrentTalkWidget;
 
+	// 🟢 [추가] 0.5초 뒤 창을 닫기 위한 타이머
+	FTimerHandle CloseTalkWidgetTimerHandle;
+
 	/* =================================================================
 	 * 함수 및 이벤트
 	 * ================================================================= */
@@ -57,6 +60,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Interaction")
 	void AttemptInteraction(class APlayerController* PC);
+
+	// 🟢 [추가] 시간이 지나면 자동으로 위젯을 닫고 조작을 돌려주는 함수
+	UFUNCTION()
+	void CloseTalkWidget();
 
 	// 성공 시 블루프린트 신호 발사
 	UFUNCTION(BlueprintImplementableEvent, Category = "Interaction")
