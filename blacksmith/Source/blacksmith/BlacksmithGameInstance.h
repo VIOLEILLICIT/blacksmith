@@ -28,6 +28,9 @@ class BLACKSMITH_API UBlacksmithGameInstance : public UGameInstance
 	GENERATED_BODY()
 
 public:
+	UPROPERTY(BlueprintReadWrite, Category = "UI")
+	bool bWakeMessageShown = false;
+
 	// 1. 딸이 현재 플레이어를 쫓아다니고 있는가?
 	UPROPERTY(BlueprintReadWrite, Category="Global State")
 	bool bIsDaughterFollowing = false;

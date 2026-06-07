@@ -42,7 +42,7 @@ bool ABlacksmithGameMode::CheckCanUseRestChair(FText& OutDenyMessage)
 		const FDailySchedule& TempSchedule = DailyScheduleMap[CurrentDay];
 		if (!TempSchedule.bCanUseRestChair)
 		{
-			OutDenyMessage = TempSchedule.ChairDenyMessage; 
+			OutDenyMessage = TempSchedule.ChairDenyMessage;
 			return false;
 		}
 	}
@@ -129,11 +129,11 @@ void ABlacksmithGameMode::StartDailyTimer()
 	if (bIsDailyTimerStarted) return;
 
 	bIsDailyTimerStarted = true;
-	
+
 	CurrentTimeOfDay = 0.0f;
 	bIsTimeToGoHome = false;
 	bIsDaughterFound = false;
-	bIsDaughterAsleep = false; 
+	bIsDaughterAsleep = false;
 
 	if (DailyScheduleMap.Contains(CurrentDay))
 	{
@@ -144,16 +144,16 @@ void ABlacksmithGameMode::StartDailyTimer()
 		if (TodayScheduleCache.bHasMainQuest)
 		{
 			CurrentMainQuest = TodayScheduleCache.MainQuest;
-			bIsMainQuestCompleted = false; 
+			bIsMainQuestCompleted = false;
 			bHasActiveMainQuest = true; // 메인 퀘스트 활성화!
-			DaysUntilDeadline = DefaultStartingDeadline; 
+			DaysUntilDeadline = DefaultStartingDeadline;
 		}
 
 		// 무기 도감 자동 해금
 		if (TodayScheduleCache.WeaponsToUnlock.Num() > 0)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("🔍 스케줄에서 해금할 무기를 발견했습니다!"));
-			
+
 			if (ACharacter* PlayerCharacter = UGameplayStatics::GetPlayerCharacter(this, 0))
 			{
 				if (UEncyclopediaComponent* EncyclopediaComp = PlayerCharacter->FindComponentByClass<UEncyclopediaComponent>())
@@ -188,7 +188,7 @@ void ABlacksmithGameMode::StartDailyTimer()
 	}
 	else
 	{
-		bHasTodaySchedule = false; 
+		bHasTodaySchedule = false;
 	}
 
 	GetWorld()->GetTimerManager().SetTimer(DailyTimerHandle, this, &ABlacksmithGameMode::AdvanceTimeOneSecond, 1.0f, true);
@@ -196,7 +196,7 @@ void ABlacksmithGameMode::StartDailyTimer()
 
 void ABlacksmithGameMode::AdvanceTimeOneSecond()
 {
-	CurrentTimeOfDay += 1.0f; 
+	CurrentTimeOfDay += 1.0f;
 
 	if (bHasTodaySchedule)
 	{
@@ -207,23 +207,23 @@ void ABlacksmithGameMode::AdvanceTimeOneSecond()
 		}
 	}
 
-	if (CurrentDay <= 28 && CurrentTimeOfDay == 180.0f) 
+	if (CurrentDay <= 28 && CurrentTimeOfDay == 180.0f)
 		OnDaughterHideEvent();
-	
-	if (CurrentDay <= 42 && CurrentTimeOfDay == 450.0f) 
+
+	if (CurrentDay <= 42 && CurrentTimeOfDay == 450.0f)
 	{
 		bIsTimeToGoHome = true;
 		OnTimeToGoHomeEvent();
 	}
 
 	// 🟢 600초 도달 (딸 수면 경고 시스템 작동)
-	if (CurrentTimeOfDay >= 600.0f) 
+	if (CurrentTimeOfDay >= 600.0f)
 	{
 		GetWorld()->GetTimerManager().ClearTimer(DailyTimerHandle);
-		
+
 		if (CurrentDay <= 42 && !bIsDaughterAsleep)
 		{
-			DaughterSleepWarningCount++; 
+			DaughterSleepWarningCount++;
 
 			if (DaughterSleepWarningCount == 1)
 			{
@@ -237,7 +237,7 @@ void ABlacksmithGameMode::AdvanceTimeOneSecond()
 			}
 			else if (DaughterSleepWarningCount >= 3)
 			{
-				OnGameOverEvent(); 
+				OnGameOverEvent();
 				const TArray<FGeneralEventData>& EventsToPlay = bIsDaughterFound ? GameOver_FoundEvents : GameOver_NotFoundEvents;
 				for (const FGeneralEventData& Event : EventsToPlay) OnTriggerGeneralEvent(Event.EventID, Event.WidgetToShow);
 				return; // 3차는 게임 오버이므로 자율 시간 시작 안 함
@@ -264,7 +264,7 @@ void ABlacksmithGameMode::WarpTimeTo(float TargetSeconds)
 	{
 		if (CurrentDay <= 28 && CurrentTimeOfDay < 180.0f && TargetSeconds >= 180.0f)
 			OnDaughterHideEvent();
-		
+
 		if (CurrentDay <= 42 && CurrentTimeOfDay < 450.0f && TargetSeconds >= 450.0f)
 		{
 			bIsTimeToGoHome = true;
@@ -277,10 +277,10 @@ void ABlacksmithGameMode::WarpTimeTo(float TargetSeconds)
 		if (CurrentTimeOfDay >= 600.0f)
 		{
 			GetWorld()->GetTimerManager().ClearTimer(DailyTimerHandle);
-			
+
 			if (CurrentDay <= 42 && !bIsDaughterAsleep)
 			{
-				DaughterSleepWarningCount++; 
+				DaughterSleepWarningCount++;
 
 				if (DaughterSleepWarningCount == 1)
 				{
@@ -294,10 +294,10 @@ void ABlacksmithGameMode::WarpTimeTo(float TargetSeconds)
 				}
 				else if (DaughterSleepWarningCount >= 3)
 				{
-					OnGameOverEvent(); 
+					OnGameOverEvent();
 					const TArray<FGeneralEventData>& EventsToPlay = bIsDaughterFound ? GameOver_FoundEvents : GameOver_NotFoundEvents;
 					for (const FGeneralEventData& Event : EventsToPlay) OnTriggerGeneralEvent(Event.EventID, Event.WidgetToShow);
-					return; 
+					return;
 				}
 			}
 			OnFreeTimeStartEvent();
@@ -308,8 +308,10 @@ void ABlacksmithGameMode::WarpTimeTo(float TargetSeconds)
 // 🛏️ 수면 후 다음 날 처리 (하루 결산)
 void ABlacksmithGameMode::SleepAndNextDay()
 {
+	
+
 	// 🟢 1. 잠을 잤으니 무조건 기한부터 하루 깎습니다.
-	DaysUntilDeadline--; 
+	DaysUntilDeadline--;
 
 	// 🟢 2. 깎인 마감일이 0이 되었는지 검사 (억울한 실패 방지 스위치 포함)
 	if (bHasActiveMainQuest && DaysUntilDeadline <= 0 && !bIsMainQuestCompleted)
@@ -318,40 +320,40 @@ void ABlacksmithGameMode::SleepAndNextDay()
 		{
 			// 첫 번째 실패: 까방권 발동
 			FText GraceMsg = ActivateGracePeriod();
-			bIsGracePeriodUsed = true; 
-			
+			bIsGracePeriodUsed = true;
+
 			for (const FGeneralEventData& Event : GracePeriodEvents)
 				OnTriggerGeneralEvent(Event.EventID, Event.WidgetToShow);
 		}
 		else
 		{
 			// 두 번째 실패: 게임 오버
-			OnGameOverEvent(); 
-			
+			OnGameOverEvent();
+
 			for (const FGeneralEventData& Event : GameOverEvents)
 				OnTriggerGeneralEvent(Event.EventID, Event.WidgetToShow);
-				
+
 			return; // 게임 오버 시 여기서 완전히 멈춤
 		}
 	}
 
 	// 3. 정상 진행: 날짜 증가
-	CurrentDay++; 
+	CurrentDay++;
 
 	// 4. 서브 퀘스트 기한 차감 및 만료된 것 삭제
 	for (int32 i = ActiveSubQuests.Num() - 1; i >= 0; i--)
 	{
-		ActiveSubQuests[i].DeadlineDays--; 
+		ActiveSubQuests[i].DeadlineDays--;
 		if (ActiveSubQuests[i].DeadlineDays <= 0)
 		{
-			ActiveSubQuests.RemoveAt(i); 
+			ActiveSubQuests.RemoveAt(i);
 		}
 	}
 
 	// 🟢 5. 아침 상태 및 딸 관련 변수 초기화
-	CurrentTimeOfDay = 0.0f; 
+	CurrentTimeOfDay = 0.0f;
 	bIsDailyTimerStarted = false;
-	bIsDaughterAwake = false; 
+	bIsDaughterAwake = false;
 	bIsDaughterFound = false;  // (추가) 다음 날이 되었으니 찾음 상태 초기화
 	bIsDaughterAsleep = false; // (추가) 다음 날이 되었으니 수면 상태 초기화
 
@@ -393,7 +395,7 @@ void ABlacksmithGameMode::SleepAndNextDay()
 FText ABlacksmithGameMode::ActivateGracePeriod()
 {
 	int32 MaxDay = 0;
-	
+
 	// 전체 스케줄의 마지막 날짜 찾기
 	for (auto& Pair : DailyScheduleMap)
 	{
@@ -434,11 +436,11 @@ FText ABlacksmithGameMode::ActivateGracePeriod()
 	// 🟢 밀어낸 7일 동안 매일매일 '1일 기한짜리' 파밍 서브 퀘스트 생성
 	for (int32 i = 1; i <= GracePeriodDays; i++)
 	{
-		int32 GraceDay = CurrentDay + i; 
+		int32 GraceDay = CurrentDay + i;
 		FDailySchedule GraceSchedule;
-		GraceSchedule.bHasMainQuest = false; 
-		
-		if (ValidWeapons.Num() > 0) 
+		GraceSchedule.bHasMainQuest = false;
+
+		if (ValidWeapons.Num() > 0)
 		{
 			int32 RandomIndex = FMath::RandRange(0, ValidWeapons.Num() - 1);
 			UItemDataAsset* SelectedWeapon = ValidWeapons[RandomIndex];
@@ -448,7 +450,7 @@ FText ABlacksmithGameMode::ActivateGracePeriod()
 			GraceQuest.bIsMainQuest = false;
 			GraceQuest.QuestName = TEXT("유예 기간 일일 의뢰");
 			GraceQuest.TargetItem = SelectedWeapon;
-			
+
 			// 요구 수량 밸런싱
 			if (SelectedUnlockNum == MainWeaponUnlockNum)
 				GraceQuest.TargetQuantity = 5;
@@ -459,14 +461,14 @@ FText ABlacksmithGameMode::ActivateGracePeriod()
 				FText::FromString(TEXT("{0}을(를) 만들어 주세요.")),
 				FText::FromString(SelectedWeapon->ItemName)
 			);
-			
+
 			// 🟢 1일로 고정! 당일 못 깨면 사라짐
-			GraceQuest.DeadlineDays = 1; 
+			GraceQuest.DeadlineDays = 1;
 
 			// 🟢 퀘스트 완료 보상 (재화 = 아이템 판매가 * 요구 수량)
 			FQuestReward CurrencyReward;
 			CurrencyReward.RewardType = ERewardType::Currency;
-			CurrencyReward.RewardAmount = SelectedWeapon->SellPrice * GraceQuest.TargetQuantity; 
+			CurrencyReward.RewardAmount = SelectedWeapon->SellPrice * GraceQuest.TargetQuantity;
 			GraceQuest.QuestRewards.Add(CurrencyReward);
 
 			GraceSchedule.SubQuests.Add(GraceQuest);
@@ -476,7 +478,7 @@ FText ABlacksmithGameMode::ActivateGracePeriod()
 	}
 
 	// 까방권 일수만큼 메인 마감일 연장
-	DaysUntilDeadline += GracePeriodDays; 
+	DaysUntilDeadline += GracePeriodDays;
 
 	return GracePeriodUseText;
 }
@@ -490,7 +492,7 @@ void ABlacksmithGameMode::BeginPlay()
 
 	UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance());
 	// 🔴 (주의) 블루프린트에서 DaughterClass를 안 넣었으면 여기서 막혀서 스폰 안 됨!
-	if (!GI || !DaughterClass) return; 
+	if (!GI || !DaughterClass) return;
 
 	// 🟢 [핵심 추가] 맵이 새로 켜질 때, 지워진 플래그를 GameInstance에서 가져와 복구합니다!
 	this->bIsDaughterAwake = GI->bIsDaughterAwake;
@@ -508,19 +510,19 @@ void ABlacksmithGameMode::BeginPlay()
 		ACharacter* Player = UGameplayStatics::GetPlayerCharacter(this, 0);
 		if (Player)
 		{
-			FVector SpawnLoc = Player->GetActorLocation() + (Player->GetActorForwardVector() * -150.0f); 
-			
-			if (!ExistingDaughter) 
+			FVector SpawnLoc = Player->GetActorLocation() + (Player->GetActorForwardVector() * -150.0f);
+
+			if (!ExistingDaughter)
 			{
 				// 스폰 시 SpawnParams 옵션을 추가로 넘겨줍니다.
 				ExistingDaughter = GetWorld()->SpawnActor<ADaughterNPC>(DaughterClass, SpawnLoc, Player->GetActorRotation(), SpawnParams);
 			}
-			else 
+			else
 			{
 				ExistingDaughter->SetActorLocation(SpawnLoc);
 			}
 
-			if (ExistingDaughter) ExistingDaughter->FollowPlayer(150.0f); 
+			if (ExistingDaughter) ExistingDaughter->FollowPlayer(150.0f);
 		}
 	}
 	else if (GI->DaughterSavedLevel.ToString() == CurrentLevel)
@@ -529,11 +531,11 @@ void ABlacksmithGameMode::BeginPlay()
 		UGameplayStatics::GetAllActorsWithTag(this, GI->DaughterSavedLocationTag, FoundActors);
 		if (FoundActors.Num() > 0)
 		{
-			if (!ExistingDaughter) 
+			if (!ExistingDaughter)
 			{
 				ExistingDaughter = GetWorld()->SpawnActor<ADaughterNPC>(DaughterClass, FoundActors[0]->GetActorLocation(), FoundActors[0]->GetActorRotation(), SpawnParams);
 			}
-			else 
+			else
 			{
 				ExistingDaughter->SetActorLocation(FoundActors[0]->GetActorLocation());
 			}
@@ -581,9 +583,9 @@ void ABlacksmithGameMode::SaveGlobalData()
 void ABlacksmithGameMode::RestoreGlobalData()
 {
 	UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance());
-	
+
 	// 저장된 적 없으면 무시 (즉, 게임 맨 처음 시작했을 때는 덮어씌우지 않음)
-	if (!GI || !GI->bIsDataSaved) return; 
+	if (!GI || !GI->bIsDataSaved) return;
 
 	// 1. 게임 진행 데이터 복원
 	this->CurrentDay = GI->SavedCurrentDay;
@@ -667,7 +669,7 @@ void ABlacksmithGameMode::ShowNextMail()
 	if (MailQuestQueue.Num() > 0)
 	{
 		FQuestData NextQuest = MailQuestQueue[0];
-		MailQuestQueue.RemoveAt(0); 
+		MailQuestQueue.RemoveAt(0);
 
 		if (QuestMailWidgetClass)
 		{
@@ -684,7 +686,7 @@ void ABlacksmithGameMode::ShowNextMail()
 						RewardString += FString::Printf(TEXT("%d 골드"), NextQuest.QuestRewards[i].RewardAmount);
 					else if (NextQuest.QuestRewards[i].RewardItem)
 						RewardString += FString::Printf(TEXT("%s %d개"), *NextQuest.QuestRewards[i].RewardItem->ItemName, NextQuest.QuestRewards[i].RewardAmount);
-					
+
 					if (i < NextQuest.QuestRewards.Num() - 1) RewardString += TEXT(", ");
 				}
 
@@ -694,7 +696,7 @@ void ABlacksmithGameMode::ShowNextMail()
 
 				// 🟢 [수정됨] 마지막 매개변수로 DeadlineString을 함께 넘겨줍니다!
 				QuestWidget->UpdateMailUI(FinalTitle, NextQuest.QuestDescription, RewardString, DeadlineString);
-				
+
 				QuestWidget->AddToViewport();
 				QuestWidget->OnTalkClosed.AddDynamic(this, &ABlacksmithGameMode::ShowNextMail);
 
@@ -703,7 +705,7 @@ void ABlacksmithGameMode::ShowNextMail()
 				PC->SetShowMouseCursor(true);
 			}
 		}
-		else { ShowNextMail(); } 
+		else { ShowNextMail(); }
 	}
 	// 2. 의뢰는 다 봤고, 딸의 편지가 남아있다면?
 	else if (bHasPendingWarLetter)
@@ -774,7 +776,7 @@ void ABlacksmithGameMode::FormatQuestForUI(const FQuestData& InQuest, FString& O
 			OutRewardInfo += FString::Printf(TEXT("%d 골드"), InQuest.QuestRewards[i].RewardAmount);
 		else if (InQuest.QuestRewards[i].RewardItem)
 			OutRewardInfo += FString::Printf(TEXT("%s %d개"), *InQuest.QuestRewards[i].RewardItem->ItemName, InQuest.QuestRewards[i].RewardAmount);
-		
+
 		if (i < InQuest.QuestRewards.Num() - 1) OutRewardInfo += TEXT(", ");
 	}
 
