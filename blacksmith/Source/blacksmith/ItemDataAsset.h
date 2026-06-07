@@ -37,13 +37,13 @@ public:
 	/* =================================================================
 	 * 2. 텍스트 & 도감 시스템 (Descriptions & Encyclopedia)
 	 * ================================================================= */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "2. Encyclopedia", meta=(DisplayName = "인벤토리 짧은 설명", MultiLine=true))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "2. Encyclopedia", meta=(DisplayName = "인벤토리 짧은 설명", MultiLine = "true"))
 	FText InventoryDescription;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "2. Encyclopedia", meta=(DisplayName = "도감 상세 스토리 설명", MultiLine=true))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "2. Encyclopedia", meta=(DisplayName = "도감 상세 스토리 설명", MultiLine = "true"))
 	FText EncyclopediaDescription;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "2. Encyclopedia", meta = (DisplayName = "무기 외형 묘사"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "2. Encyclopedia", meta = (DisplayName = "무기 외형 묘사", MultiLine = "true"))
 	FString AppearanceDescription;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "2. Encyclopedia", meta = (DisplayName = "특수 무기 해금 조건"))

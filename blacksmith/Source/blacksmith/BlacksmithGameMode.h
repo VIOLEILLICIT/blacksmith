@@ -52,7 +52,8 @@ struct FQuestData
 	FString QuestName;
 
 	// 플레이어가 수행할 의뢰의 상세 스토리 및 내용입니다. UI에 출력됩니다.
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) 
+	// 줄넘김 가능하도록 수정
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (MultiLine = "true"))
 	FText QuestDescription;
 
 	// 제작해서 납품해야 할 목표 아이템(데이터 에셋)을 지정합니다.
