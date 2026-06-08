@@ -101,7 +101,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Daughter Settings|Adult") 
 	TArray<FAdultHideoutData> AdultHideoutList;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Daughter Settings|War") 
+	// 성인기(훈련)에 우편함을 열면 보여줄 날짜별 출발 메시지 (MailLetterWidget 사용)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Daughter Settings|Adult")
+	TMap<int32, FText> TrainingMessagesByDay;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Daughter Settings|War")
 	TMap<int32, FWarLetterData> WarLettersByDay;
 
 	/* =================================================================
@@ -116,6 +120,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Daughter AI")
 	void TeleportToRandomHideout();
+
+	// 성인기 아침: 훈련 장소로 즉시 이동 (대사 없음)
+	UFUNCTION(BlueprintCallable, Category = "Daughter AI")
+	void TeleportToAdultTraining();
 
 	// 대사 표시 후 대사 창이 닫히면 순간이동 (3분 숨기 전용)
 	UFUNCTION(BlueprintCallable, Category = "Daughter AI")
@@ -132,6 +140,10 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Daughter AI")
 	void OnLeaveLetterAtDesk(TSubclassOf<class UUserWidget> WidgetClass, const FText& LetterText);
+
+	// 페이즈가 변경될 때 발동 — BP에서 메시 교체 등 처리
+	UFUNCTION(BlueprintImplementableEvent, Category = "Daughter AI")
+	void OnDaughterPhaseChanged(EDaughterPhase NewPhase);
 
 private:
 	// 대사 중 선택된 숨는 장소를 기억해두는 임시 저장소

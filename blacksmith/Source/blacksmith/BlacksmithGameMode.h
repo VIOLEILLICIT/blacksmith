@@ -223,9 +223,17 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "Game|Mail")
 	bool bHasPendingWarLetter = false;
 
-	// 대기 중인 편지 데이터[cite: 12]
+	// 대기 중인 편지 데이터
 	UPROPERTY(BlueprintReadWrite, Category = "Game|Mail")
 	FWarLetterData PendingWarLetter;
+
+	// 성인기 훈련 출발 메시지 대기 여부
+	UPROPERTY(BlueprintReadWrite, Category = "Game|Mail")
+	bool bHasPendingTrainingMessage = false;
+
+	// 대기 중인 훈련 출발 메시지
+	UPROPERTY(BlueprintReadWrite, Category = "Game|Mail")
+	FText PendingTrainingMessage;
 
 	// 우편함에서 F키를 누르면 호출할 핵심 함수
 	UFUNCTION(BlueprintCallable, Category = "Game|Mail")

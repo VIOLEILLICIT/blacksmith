@@ -115,9 +115,23 @@ bool ABlacksmithGameMode::CheckCanUseDaughterBed(FText& OutDenyMessage)
  * ================================================================= */
 bool ABlacksmithGameMode::CheckCanUseDoor(FText& OutDenyMessage)
 {
+	// 딸이 잠든 밤 시간이면 외출 허용 (어린시절/성인 모두)
+	if (bIsDaughterAsleep) return true;
+
+	// 600초 이후 자유 시간이면 외출 허용
+	if (CurrentTimeOfDay >= 600.0f) return true;
+
+	// 어린시절: 아침에 딸이 아직 깨기 전이면 외출 불가
 	if (CurrentDay <= 28 && !bIsDaughterAwake)
 	{
 		OutDenyMessage = FText::FromString(TEXT("아직 딸이 자고 있다. 먼저 깨우고 나가자..."));
+		return false;
+	}
+
+	// 성인시절: 딸이 집에 돌아왔는데 아직 재우지 않았으면 외출 불가
+	if (CurrentDay > 28 && bIsDaughterFound && !bIsDaughterAsleep)
+	{
+		OutDenyMessage = FText::FromString(TEXT("딸을 재우고 나가자..."));
 		return false;
 	}
 
@@ -211,14 +225,17 @@ void ABlacksmithGameMode::AdvanceTimeOneSecond()
 		}
 	}
 
-	if (CurrentDay <= 28 && CurrentTimeOfDay == 180.0f)
+	if (CurrentTimeOfDay == 180.0f)
 	{
-		OnDaughterHideEvent();
 		if (AActor* DaughterActor = UGameplayStatics::GetActorOfClass(this, ADaughterNPC::StaticClass()))
 		{
 			if (ADaughterNPC* Daughter = Cast<ADaughterNPC>(DaughterActor))
 			{
-				Daughter->ShowHideoutDialogueAndTeleport();
+				if (Daughter->CurrentPhase == EDaughterPhase::Child)
+				{
+					OnDaughterHideEvent();
+					Daughter->ShowHideoutDialogueAndTeleport();
+				}
 			}
 		}
 	}
@@ -275,14 +292,17 @@ void ABlacksmithGameMode::WarpTimeTo(float TargetSeconds)
 {
 	if (CurrentTimeOfDay < TargetSeconds)
 	{
-		if (CurrentDay <= 28 && CurrentTimeOfDay < 180.0f && TargetSeconds >= 180.0f)
+		if (CurrentTimeOfDay < 180.0f && TargetSeconds >= 180.0f)
 		{
-			OnDaughterHideEvent();
 			if (AActor* DaughterActor = UGameplayStatics::GetActorOfClass(this, ADaughterNPC::StaticClass()))
 			{
 				if (ADaughterNPC* Daughter = Cast<ADaughterNPC>(DaughterActor))
 				{
-					Daughter->ShowHideoutDialogueAndTeleport();
+					if (Daughter->CurrentPhase == EDaughterPhase::Child)
+					{
+						OnDaughterHideEvent();
+						Daughter->ShowHideoutDialogueAndTeleport();
+					}
 				}
 			}
 		}
@@ -383,7 +403,9 @@ void ABlacksmithGameMode::SleepAndNextDay()
 	{
 		GI->bIsDaughterAwake = false;
 		GI->bIsDaughterFound = false;
-		GI->bMorningDialogueShownToday = false; // 새 날 → 아침 대사 초기화
+		GI->bIsDaughterFollowing = false;
+		GI->bDaughterTagPriority = false;
+		GI->bMorningDialogueShownToday = false;
 	}
 
 	// 🟢 6. 맵에 있는 딸을 찾아서 투명화(수면 상태)를 해제하고 멈춰 세웁니다.
@@ -391,13 +413,21 @@ void ABlacksmithGameMode::SleepAndNextDay()
 	{
 		if (ADaughterNPC* Daughter = Cast<ADaughterNPC>(DaughterActor))
 		{
-			// 전쟁터 파병 기간이 아닐 때만 모습을 켭니다.
-			if (Daughter->CurrentPhase != EDaughterPhase::War)
+			const bool bIsWarDay   = (CurrentDay >= Daughter->WarStartDay);
+			const bool bIsAdultDay = (!bIsWarDay && CurrentDay >= Daughter->AdultStartDay);
+
+			if (!bIsWarDay)
 			{
 				Daughter->SetActorHiddenInGame(false);
 				Daughter->SetActorEnableCollision(true);
 			}
 			Daughter->StopMoving();
+
+			// 성인기: 주인공이 일어나기 전에 이미 훈련 장소로 출발
+			if (bIsAdultDay)
+			{
+				Daughter->TeleportToAdultTraining();
+			}
 		}
 	}
 
@@ -568,14 +598,34 @@ void ABlacksmithGameMode::BeginPlay()
 	this->bIsDaughterAwake = GI->bIsDaughterAwake;
 	this->bIsDaughterFound = GI->bIsDaughterFound;
 
-	FString CurrentLevel = UGameplayStatics::GetCurrentLevelName(this);
+	// FName으로 비교 (대소문자 무시)
+	FName CurrentLevelName(*UGameplayStatics::GetCurrentLevelName(this));
 	ADaughterNPC* ExistingDaughter = Cast<ADaughterNPC>(UGameplayStatics::GetActorOfClass(this, ADaughterNPC::StaticClass()));
 
-	// 🟢 핵심 추가: 벽이나 바닥에 약간 겹쳐도 무조건 안전한 곳으로 밀어내서 스폰하도록 강제합니다!
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 
-	if (GI->bIsDaughterFollowing)
+	// 태그 우선이 켜져 있고 딸의 목적 레벨이 현재 레벨이면 → 태그 위치에 스폰
+	if (GI->bDaughterTagPriority && GI->DaughterSavedLevel == CurrentLevelName)
+	{
+		TArray<AActor*> FoundActors;
+		UGameplayStatics::GetAllActorsWithTag(this, GI->DaughterSavedLocationTag, FoundActors);
+		if (FoundActors.Num() > 0)
+		{
+			if (!ExistingDaughter)
+				ExistingDaughter = GetWorld()->SpawnActor<ADaughterNPC>(DaughterClass, FoundActors[0]->GetActorLocation(), FoundActors[0]->GetActorRotation(), SpawnParams);
+			else
+				ExistingDaughter->SetActorLocation(FoundActors[0]->GetActorLocation());
+
+			if (ExistingDaughter)
+			{
+				ExistingDaughter->SetActorHiddenInGame(false);
+				ExistingDaughter->SetActorEnableCollision(true);
+			}
+		}
+	}
+	// 따라오기 모드 (태그 우선 없을 때만)
+	else if (GI->bIsDaughterFollowing && !GI->bDaughterTagPriority)
 	{
 		ACharacter* Player = UGameplayStatics::GetPlayerCharacter(this, 0);
 		if (Player)
@@ -583,31 +633,34 @@ void ABlacksmithGameMode::BeginPlay()
 			FVector SpawnLoc = Player->GetActorLocation() + (Player->GetActorForwardVector() * -150.0f);
 
 			if (!ExistingDaughter)
-			{
-				// 스폰 시 SpawnParams 옵션을 추가로 넘겨줍니다.
 				ExistingDaughter = GetWorld()->SpawnActor<ADaughterNPC>(DaughterClass, SpawnLoc, Player->GetActorRotation(), SpawnParams);
-			}
 			else
-			{
 				ExistingDaughter->SetActorLocation(SpawnLoc);
-			}
 
-			if (ExistingDaughter) ExistingDaughter->FollowPlayer(150.0f);
+			if (ExistingDaughter)
+			{
+				ExistingDaughter->SetActorHiddenInGame(false);
+				ExistingDaughter->SetActorEnableCollision(true);
+				ExistingDaughter->FollowPlayer(150.0f);
+			}
 		}
 	}
-	else if (GI->DaughterSavedLevel.ToString() == CurrentLevel)
+	// 저장된 태그 위치로 스폰
+	else if (GI->DaughterSavedLevel == CurrentLevelName)
 	{
 		TArray<AActor*> FoundActors;
 		UGameplayStatics::GetAllActorsWithTag(this, GI->DaughterSavedLocationTag, FoundActors);
 		if (FoundActors.Num() > 0)
 		{
 			if (!ExistingDaughter)
-			{
 				ExistingDaughter = GetWorld()->SpawnActor<ADaughterNPC>(DaughterClass, FoundActors[0]->GetActorLocation(), FoundActors[0]->GetActorRotation(), SpawnParams);
-			}
 			else
-			{
 				ExistingDaughter->SetActorLocation(FoundActors[0]->GetActorLocation());
+
+			if (ExistingDaughter)
+			{
+				ExistingDaughter->SetActorHiddenInGame(false);
+				ExistingDaughter->SetActorEnableCollision(true);
 			}
 		}
 	}
@@ -719,10 +772,20 @@ void ABlacksmithGameMode::OpenMailbox()
 		for (const FQuestData& SQ : TodaySch.SubQuests) MailQuestQueue.Add(SQ);
 	}
 
+	bHasPendingTrainingMessage = false;
 	if (DaughterClass)
 	{
 		if (ADaughterNPC* DaughterCDO = Cast<ADaughterNPC>(DaughterClass->GetDefaultObject()))
 		{
+			// 성인기 훈련 출발 메시지 (AdultStartDay ~ WarStartDay 사이)
+			if (CurrentDay >= DaughterCDO->AdultStartDay && CurrentDay < DaughterCDO->WarStartDay
+				&& DaughterCDO->TrainingMessagesByDay.Contains(CurrentDay))
+			{
+				bHasPendingTrainingMessage = true;
+				PendingTrainingMessage = DaughterCDO->TrainingMessagesByDay[CurrentDay];
+			}
+
+			// 전쟁터 편지
 			if (CurrentDay >= DaughterCDO->WarStartDay && DaughterCDO->WarLettersByDay.Contains(CurrentDay))
 			{
 				bHasPendingWarLetter = true;
@@ -781,7 +844,27 @@ void ABlacksmithGameMode::ShowNextMail()
 		}
 		else { ShowNextMail(); }
 	}
-	// 2. 의뢰는 다 봤고, 딸의 편지가 남아있다면?
+	// 2. 성인기 훈련 출발 메시지가 있다면?
+	else if (bHasPendingTrainingMessage)
+	{
+		bHasPendingTrainingMessage = false;
+		if (WarLetterWidgetClass)
+		{
+			UMailLetterWidget* TrainingWidget = CreateWidget<UMailLetterWidget>(PC, WarLetterWidgetClass);
+			if (TrainingWidget)
+			{
+				TrainingWidget->UpdateLetterUI(PendingTrainingMessage);
+				TrainingWidget->AddToViewport();
+				TrainingWidget->OnTalkClosed.AddDynamic(this, &ABlacksmithGameMode::ShowNextMail);
+
+				FInputModeUIOnly InputMode;
+				PC->SetInputMode(InputMode);
+				PC->SetShowMouseCursor(true);
+			}
+		}
+		else { ShowNextMail(); }
+	}
+	// 3. 전쟁터 편지가 남아있다면?
 	else if (bHasPendingWarLetter)
 	{
 		bHasPendingWarLetter = false;
@@ -994,11 +1077,16 @@ void ABlacksmithGameMode::ResetMorningState()
 {
     OnMorningResetEvent();
 
-    // 레벨 이동 시 중복 방지: 오늘 이미 아침 대사를 봤으면 건너뜁니다
+    // 레벨 이동 시 중복 방지: 오늘 이미 아침 이벤트가 실행됐으면 입력만 복구하고 끝냄
     UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance());
     if (GI && GI->bMorningDialogueShownToday)
     {
-        ExecuteMorningEvents();
+        if (APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0))
+        {
+            FInputModeGameOnly InputMode;
+            PC->SetInputMode(InputMode);
+            PC->SetShowMouseCursor(false);
+        }
         return;
     }
 

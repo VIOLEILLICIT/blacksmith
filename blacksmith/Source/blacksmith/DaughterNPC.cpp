@@ -42,17 +42,23 @@ void ADaughterNPC::UpdateDaughterRoutine()
 	else if (GM->CurrentDay >= AdultStartDay) NewPhase = EDaughterPhase::Adult;
 	else NewPhase = EDaughterPhase::Child;
 
-	CurrentPhase = NewPhase;
+	if (NewPhase != CurrentPhase)
+	{
+		CurrentPhase = NewPhase;
+		OnDaughterPhaseChanged(NewPhase);
+	}
 
 	// 방어 코드: 전쟁터 페이즈 시 부모의 스케줄 개입 차단
 	if (CurrentPhase == EDaughterPhase::War)
 	{
 		SetActorHiddenInGame(true);
 		SetActorEnableCollision(false);
-		GetWorld()->GetTimerManager().PauseTimer(ScheduleCheckTimer); 
+		GetWorld()->GetTimerManager().PauseTimer(ScheduleCheckTimer);
 	}
 	else
 	{
+		SetActorHiddenInGame(false);
+		SetActorEnableCollision(true);
 		GetWorld()->GetTimerManager().UnPauseTimer(ScheduleCheckTimer);
 	}
 }
@@ -88,12 +94,28 @@ void ADaughterNPC::Interact_Implementation(AActor* Interactor)
 		}
 		else if (GM->CurrentTimeOfDay >= 450.0f)
 		{
-			if (!GM->bIsDaughterFound) 
+			if (!GM->bIsDaughterFound)
 			{
 				GM->bIsDaughterFound = true;
-				if (GI) GI->bIsDaughterFound = true; // 🟢 백업!
+				if (GI) GI->bIsDaughterFound = true;
 			}
+			if (GI) GI->bDaughterTagPriority = false;
 			FollowPlayer(150.0f);
+			if (GI) GI->bIsDaughterFollowing = true;
+		}
+	}
+	else if (CurrentPhase == EDaughterPhase::Adult)
+	{
+		if (GM && GM->CurrentTimeOfDay >= 450.0f)
+		{
+			if (!GM->bIsDaughterFound)
+			{
+				GM->bIsDaughterFound = true;
+				if (GI) GI->bIsDaughterFound = true;
+			}
+			if (GI) GI->bDaughterTagPriority = false;
+			FollowPlayer(150.0f);
+			if (GI) GI->bIsDaughterFollowing = true;
 		}
 	}
 }
@@ -200,9 +222,10 @@ void ADaughterNPC::ExecutePendingHideout()
 
 	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
 	{
-		GI->bIsDaughterFollowing      = false;
-		GI->DaughterSavedLevel        = TargetLevel;
-		GI->DaughterSavedLocationTag  = TargetTag;
+		GI->bIsDaughterFollowing     = false;
+		GI->bDaughterTagPriority     = true;
+		GI->DaughterSavedLevel       = TargetLevel;
+		GI->DaughterSavedLocationTag = TargetTag;
 	}
 
 	if (UGameplayStatics::GetCurrentLevelName(this) == TargetLevel.ToString())
@@ -215,6 +238,39 @@ void ADaughterNPC::ExecutePendingHideout()
 			if (PendingHideoutData.BubbleWidgetClass)
 				OnShowTeleportBubble(PendingHideoutData.BubbleWidgetClass, PendingHideoutData.SpeechText);
 		}
+	}
+	else
+	{
+		Destroy();
+	}
+}
+
+void ADaughterNPC::TeleportToAdultTraining()
+{
+	if (AdultHideoutList.Num() == 0) return;
+
+	int32 RandomIndex = FMath::RandRange(0, AdultHideoutList.Num() - 1);
+	const FAdultHideoutData& HideoutData = AdultHideoutList[RandomIndex];
+
+	FName TargetLevel = HideoutData.TargetLevelName;
+	FName TargetTag   = HideoutData.TargetPointTag;
+
+	if (TargetLevel.IsNone() || TargetTag.IsNone()) return;
+
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		GI->bIsDaughterFollowing     = false;
+		GI->bDaughterTagPriority     = true;
+		GI->DaughterSavedLevel       = TargetLevel;
+		GI->DaughterSavedLocationTag = TargetTag;
+	}
+
+	if (UGameplayStatics::GetCurrentLevelName(this) == TargetLevel.ToString())
+	{
+		TArray<AActor*> FoundActors;
+		UGameplayStatics::GetAllActorsWithTag(this, TargetTag, FoundActors);
+		if (FoundActors.Num() > 0)
+			TeleportToLocation(FoundActors[0]->GetActorLocation());
 	}
 	else
 	{
@@ -265,8 +321,9 @@ void ADaughterNPC::TeleportToRandomHideout()
 	// 1. 게임 인스턴스에 딸의 목표 레벨과 태그 저장 (목적지가 어딘지 기록)
 	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
 	{
-		GI->bIsDaughterFollowing = false; 
-		GI->DaughterSavedLevel = TargetLevel;
+		GI->bIsDaughterFollowing     = false;
+		GI->bDaughterTagPriority     = true;
+		GI->DaughterSavedLevel       = TargetLevel;
 		GI->DaughterSavedLocationTag = TargetTag;
 	}
 

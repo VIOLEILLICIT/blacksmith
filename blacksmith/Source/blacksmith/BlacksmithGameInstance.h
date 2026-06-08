@@ -35,6 +35,10 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category="Global State")
 	bool bIsDaughterFollowing = false;
 
+	// 태그 위치 이동 우선 플래그 (true면 Follow보다 태그 위치가 우선)
+	UPROPERTY(BlueprintReadWrite, Category="Global State")
+	bool bDaughterTagPriority = false;
+
 	// 2. (혼자 있을 때) 딸이 머물러야 할 레벨(맵) 이름
 	UPROPERTY(BlueprintReadWrite, Category="Global State")
 	FName DaughterSavedLevel;
