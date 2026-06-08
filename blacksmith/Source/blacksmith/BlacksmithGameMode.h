@@ -319,6 +319,10 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Time")
 	float CurrentTimeOfDay = 0.0f; 
 
+	// 🟢 [추가] 아침 초기화 전용 함수
+	UFUNCTION(BlueprintCallable, Category = "Game|Time") 
+	void ResetMorningState();
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Daughter")
 	bool bIsTimeToGoHome = false; 
 
@@ -364,7 +368,26 @@ public:
 	/* =================================================================
 	 * 날짜별 스케줄 리스트
 	 * ================================================================= */
+	/* =================================================================
+	 * 🌅 날짜별 아침 독백 시스템 (완전 독립 카테고리)
+	 * ================================================================= */
 	
+	// 아침 대사를 띄울 WBP_Talk 위젯 클래스 지정 칸
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game|MorningDialogue", meta=(DisplayName="아침 대사 WBP 클래스"))
+	TSubclassOf<class UTalkWidget> MorningTalkWidgetClass;
+
+	// 인스펙터에서 개별 구역으로 관리되는 대사 배열 (0번 엘리먼트 = 1일차 대사)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|MorningDialogue", meta=(DisplayName="날짜별 아침 대사 배열 (0번=1일차)", MultiLine="true"))
+	TArray<FText> DailyMorningDialogueArray;
+
+	// 블루프린트 위젯에 텍스트를 전달하기 위한 이벤트 노드
+	UFUNCTION(BlueprintImplementableEvent, Category = "Game|MorningDialogue") 
+	void OnSetupMorningTalkWidget(UUserWidget* SpawnedWidget, const FText& MorningMessage);
+
+	// 대사가 끝나면 실행될 이벤트 처리기 함수
+	UFUNCTION()
+	void ExecuteMorningEvents();
+
 	// 🟢 날짜를 접었을 때 요약 메모가 제목으로 보이도록 TitleProperty 적용
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Game|Schedule", meta=(DisplayName="날짜별 전체 스케줄", TitleProperty="ScheduleMemo"))
 	TMap<int32, FDailySchedule> DailyScheduleMap;

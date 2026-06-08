@@ -378,17 +378,48 @@ void ABlacksmithGameMode::SleepAndNextDay()
 		}
 	}
 
-	// 🟢 7. 블루프린트로 "새 아침이 밝았음" 신호를 발사합니다! (침대 위 텔레포트용)
+	// 7. 블루프린트로 "새 아침이 밝았음" 신호를 발사합니다! (침대 위 텔레포트용)
 	OnMorningResetEvent();
 
-	// 🟢 [여기에 추가!] 자고 일어난 직후, '새로운 날짜(CurrentDay)'의 아침 이벤트를 모두 발사합니다!
-	if (DailyScheduleMap.Contains(CurrentDay))
+	// 🟢 아침 대사 배열에서 대사를 확인합니다.
+	int32 DialogueIndex = CurrentDay; 
+
+	if (DailyMorningDialogueArray.IsValidIndex(DialogueIndex) && 
+		!DailyMorningDialogueArray[DialogueIndex].IsEmpty() && 
+		MorningTalkWidgetClass)
 	{
-		for (const FGeneralEventData& MEvent : DailyScheduleMap[CurrentDay].MorningEvents)
+		if (APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0))
 		{
-			OnTriggerGeneralEvent(MEvent.EventID, MEvent.WidgetToShow);
+			UTalkWidget* MorningWidget = CreateWidget<UTalkWidget>(PC, MorningTalkWidgetClass);
+			if (MorningWidget)
+			{
+				MorningWidget->AddToViewport();
+				
+				// =====================================================================
+				// 🟢 [수정됨] 블루프린트 이벤트 호출 대신, C++에서 다이렉트로 글자를 꽂아줍니다!
+				// =====================================================================
+				if (MorningWidget->descript)
+				{
+					MorningWidget->descript->SetText(DailyMorningDialogueArray[DialogueIndex]);
+				}
+				
+				// 대사 창이 닫히면 기존 스케줄(Morning Events) 실행
+				MorningWidget->OnTalkClosed.AddDynamic(this, &ABlacksmithGameMode::ExecuteMorningEvents);
+
+				// UI 조작 모드 활성화
+				FInputModeUIOnly InputMode;
+				InputMode.SetWidgetToFocus(MorningWidget->TakeWidget());
+				PC->SetInputMode(InputMode);
+				PC->FlushPressedKeys();
+				PC->SetShowMouseCursor(true);
+
+				return; // 대기
+			}
 		}
 	}
+
+	// 해당 일차의 대사가 비어있다면 대기하지 않고 즉시 스케줄 이벤트 실행
+	ExecuteMorningEvents();
 }
 
 // 🟢 까방권(유예 기간) 작동 로직
@@ -487,8 +518,11 @@ void ABlacksmithGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// 🟢 [추가] 맵이 켜지자마자 다른 어떤 것보다 최우선으로 데이터를 복구합니다!
-	RestoreGlobalData();
+	// 데이터 복구 (현재 CurrentDay 등이 복구됨)
+    RestoreGlobalData();
+
+    // 🟢 게임 시작 시점
+    ResetMorningState();
 
 	UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance());
 	// 🔴 (주의) 블루프린트에서 DaughterClass를 안 넣었으면 여기서 막혀서 스폰 안 됨!
@@ -784,4 +818,58 @@ void ABlacksmithGameMode::FormatQuestForUI(const FQuestData& InQuest, FString& O
 	// 메인 퀘스트면 전체 마감일(DaysUntilDeadline)을, 서브면 자체 기한(DeadlineDays)을 사용합니다!
 	int32 RemainingDays = InQuest.bIsMainQuest ? DaysUntilDeadline : InQuest.DeadlineDays;
 	OutDeadlineInfo = FString::Printf(TEXT("남은 기한: %d일"), RemainingDays);
+}
+
+// 🟢 아침 대사 UI 창이 닫히는 시점에 기존 스케줄(Schedule)의 아침 이벤트들을 작동시키는 함수
+void ABlacksmithGameMode::ExecuteMorningEvents()
+{
+	// 대사 UI가 완전히 닫혔으므로 캐릭터 조작 권한과 마우스 커서를 원상복구합니다.
+	if (APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0))
+	{
+		FInputModeGameOnly InputMode;
+		PC->SetInputMode(InputMode);
+		PC->SetShowMouseCursor(false);
+	}
+
+	// 이제 기존 스케줄(Schedule) 카테고리에 등록해두었던 원래 아침 이벤트(rune_1 등)들이 정상 실행됩니다!
+	if (DailyScheduleMap.Contains(CurrentDay))
+	{
+		for (const FGeneralEventData& MEvent : DailyScheduleMap[CurrentDay].MorningEvents)
+		{
+			OnTriggerGeneralEvent(MEvent.EventID, MEvent.WidgetToShow);
+		}
+	}
+}
+
+void ABlacksmithGameMode::ResetMorningState()
+{
+        // 3. 아침 신호 발사
+    OnMorningResetEvent();
+
+    // 4. 아침 대사 출력 로직
+    int32 DialogueIndex = CurrentDay;
+    if (DailyMorningDialogueArray.IsValidIndex(DialogueIndex) && 
+        !DailyMorningDialogueArray[DialogueIndex].IsEmpty() && 
+        MorningTalkWidgetClass)
+    {
+        if (APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0))
+        {
+            UTalkWidget* MorningWidget = CreateWidget<UTalkWidget>(PC, MorningTalkWidgetClass);
+            if (MorningWidget)
+            {
+                MorningWidget->AddToViewport();
+                if (MorningWidget->descript)
+                    MorningWidget->descript->SetText(DailyMorningDialogueArray[DialogueIndex]);
+                
+                MorningWidget->OnTalkClosed.AddDynamic(this, &ABlacksmithGameMode::ExecuteMorningEvents);
+                
+                FInputModeUIOnly InputMode;
+                InputMode.SetWidgetToFocus(MorningWidget->TakeWidget());
+                PC->SetInputMode(InputMode);
+                PC->SetShowMouseCursor(true);
+                return; 
+            }
+        }
+    }
+    ExecuteMorningEvents();
 }

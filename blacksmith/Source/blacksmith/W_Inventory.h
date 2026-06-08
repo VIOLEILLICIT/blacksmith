@@ -29,7 +29,7 @@ public:
 
 	// 인벤토리를 다시 그리는 함수
 	UFUNCTION(BlueprintCallable, Category = "Inventory")
-	void RefreshInventory(UInventoryComponent* InventoryComp, bool bShowWeapons = false);
+	void RefreshInventory(UInventoryComponent* InventoryComp, bool bShowWeapons = false, bool bShowSellWeapon = false); // 🟢 이 부분이 3개로 잘 적혀있는지 확인!
 
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Inventory")
     void UpdateDetailView(class UItemDataAsset* Asset, int32 Count);

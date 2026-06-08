@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
-
+#include "Components/TextBlock.h"
 // ⭐️ 무조건 마지막 #include 이어야 합니다!
 #include "TalkWidget.generated.h"
 
@@ -21,6 +21,12 @@ public:
 	// 거절 메시지가 닫혔음을 상호작용 물체(문, 침대 등)에 알리는 신호
 	UPROPERTY(BlueprintAssignable, Category = "Talk")
 	FOnTalkClosed OnTalkClosed;
+
+	// 🟢 [추가됨] 블루프린트에 있는 'descript' 텍스트 변수와 C++을 다이렉트로 연결합니다!
+	// (블루프린트의 텍스트 블록 이름이 반드시 'descript' 여야 작동합니다)
+	// 🟢 [수정됨] BlueprintReadWrite 권한을 추가하여 에러를 방지합니다!
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UTextBlock* descript;
 
 protected:
 	virtual FReply NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent) override;

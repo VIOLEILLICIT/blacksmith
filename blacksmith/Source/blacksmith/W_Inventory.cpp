@@ -3,11 +3,10 @@
 #include "W_ItemSlot.h"
 #include "InventoryComponent.h" // 진짜 가방 컴포넌트
 
-void UW_Inventory::RefreshInventory(UInventoryComponent* InventoryComp, bool bShowWeapons)
+void UW_Inventory::RefreshInventory(UInventoryComponent* InventoryComp, bool bShowWeapons, bool bShowSellWeapon)
 {
 	CachedInventoryComp = InventoryComp;
 
-	// 에러 방지용 체크
 	if (!InventoryComp || !ItemSlotClass || !InventoryWrapBox) return;
 
 	// 1. 기존에 그려진 타일들 싹 다 지우기 (초기화)
@@ -39,6 +38,17 @@ void UW_Inventory::RefreshInventory(UInventoryComponent* InventoryComp, bool bSh
 				if (Category == EItemCategory::Material)
 				{
 					bMatchTab = true;
+				}
+			}
+
+			// 🟢 [핵심 추가] '판매 가능한 무기만 보기'가 켜져 있다면?
+			if (bShowSellWeapon)
+			{
+				// 현재 아이템이 무기가 아니거나(bMatchTab == false), 
+				// 무기이긴 한데 판매가 불가능하다면(bIsSellable == false) 목록에서 탈락시킵니다!
+				if (!bMatchTab || !InvItem.ItemAsset->bIsSellable)
+				{
+					bMatchTab = false;
 				}
 			}
 
