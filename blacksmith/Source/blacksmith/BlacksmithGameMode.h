@@ -75,6 +75,10 @@ struct FQuestData
 	// 이 퀘스트를 성공적으로 완료했을 때 플레이어에게 지급할 보수 목록입니다.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Reward", meta=(DisplayName="퀘스트 완료 보수 목록"))
 	TArray<FQuestReward> QuestRewards;
+
+	// 지금까지 납품한 수량 (런타임에만 사용, 인스펙터 편집 불필요)
+	UPROPERTY(BlueprintReadWrite)
+	int32 SubmittedQuantity = 0;
 };
 
 // =====================================================================
@@ -179,6 +183,20 @@ public:
 	// 🟢 [추가] 현재 진행 중인 모든 의뢰(메인+서브)를 하나의 배열로 합쳐서 반환합니다.
 	UFUNCTION(BlueprintCallable, Category = "Game|Quest")
 	TArray<FQuestData> GetAllActiveQuests();
+
+	// 특정 무기가 퀘스트 대상인지 확인하고 Txt_quest에 표시할 텍스트 반환 (없으면 빈 텍스트)
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Game|Quest")
+	FText GetQuestTextForWeapon(UItemDataAsset* Weapon);
+
+	// 무기 1개 납품 처리 - 진행도 업데이트, 완료 시 알림 FText 반환 (미완료·비대상은 빈 텍스트)
+	UFUNCTION(BlueprintCallable, Category = "Game|Quest")
+	FText SubmitWeaponForQuest(UItemDataAsset* Weapon);
+
+	// 퀘스트 완료 시 블루프린트로 추가 처리를 넘기는 이벤트
+	UFUNCTION(BlueprintImplementableEvent, Category = "Game|Quest")
+	void OnQuestCompleted(const FQuestData& CompletedQuest, bool bWasMainQuest);
+
+public:
 
 	// 🟢 [추가] 아까 우편함에 썼던 [메인/서브] 태그와 보수 텍스트 변환 로직을 메뉴에서도 쓰기 위해 분리!
 // 🟢 [수정] 맨 뒤에 남은 기한(OutDeadlineInfo)을 뽑아줄 수 있도록 추가!

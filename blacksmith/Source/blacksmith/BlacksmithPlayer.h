@@ -32,6 +32,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction|Debug")
 	bool bShowDebugSphere = false;
 
-public:	
+public:
 	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Currency")
+	int32 Gold = 0;
 };

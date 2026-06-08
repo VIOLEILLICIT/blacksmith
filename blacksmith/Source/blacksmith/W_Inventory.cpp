@@ -1,7 +1,12 @@
 #include "W_Inventory.h"
 #include "Components/WrapBox.h"
+#include "Components/TextBlock.h"
 #include "W_ItemSlot.h"
-#include "InventoryComponent.h" // 진짜 가방 컴포넌트
+#include "InventoryComponent.h"
+#include "BlacksmithGameMode.h"
+#include "BlacksmithPlayer.h"
+#include "Kismet/GameplayStatics.h"
+#include "TimerManager.h"
 
 void UW_Inventory::RefreshInventory(UInventoryComponent* InventoryComp, bool bShowWeapons, bool bShowSellWeapon)
 {
@@ -80,7 +85,47 @@ void UW_Inventory::SellSelectedWeapon(UItemDataAsset* Asset)
 	{
 		if (CachedInventoryComp->RemoveItem(Asset, 1))
 		{
-			RefreshInventory(CachedInventoryComp, true);
+			// 판매가만큼 플레이어 골드 추가
+			if (ABlacksmithPlayer* Player = Cast<ABlacksmithPlayer>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)))
+			{
+				Player->Gold += Asset->SellPrice;
+			}
+
+			if (ABlacksmithGameMode* GM = Cast<ABlacksmithGameMode>(UGameplayStatics::GetGameMode(GetWorld())))
+			{
+				FText CompletionMsg = GM->SubmitWeaponForQuest(Asset);
+				if (!CompletionMsg.IsEmpty())
+				{
+					ShowQuestComplete(CompletionMsg);
+				}
+			}
+
+			RefreshInventory(CachedInventoryComp, true, true);
+			OnSellListRefresh();
 		}
+	}
+}
+
+void UW_Inventory::ShowQuestComplete(const FText& Message)
+{
+	if (!Txt_title) return;
+
+	Txt_title->SetText(Message);
+	Txt_title->SetVisibility(ESlateVisibility::Visible);
+
+	GetWorld()->GetTimerManager().SetTimer(
+		TitleHideTimerHandle,
+		this,
+		&UW_Inventory::HideTitleText,
+		2.0f,
+		false
+	);
+}
+
+void UW_Inventory::HideTitleText()
+{
+	if (Txt_title)
+	{
+		Txt_title->SetVisibility(ESlateVisibility::Hidden);
 	}
 }

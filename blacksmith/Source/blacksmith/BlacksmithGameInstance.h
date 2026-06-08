@@ -106,6 +106,13 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category="Global State|Game")
 	bool SavedIsDailyTimerStarted = false;
 
+	UPROPERTY(BlueprintReadWrite, Category="Global State|Game")
+	int32 SavedGold = 0;
+
+	// 오늘 아침 대화를 이미 봤는지 여부 (레벨 이동 시 중복 방지)
+	UPROPERTY(BlueprintReadWrite, Category="Global State|Game")
+	bool bMorningDialogueShownToday = false;
+
 	// 🟢 [추가] NPC들의 고유 ID를 Key로 삼아 각자의 상태를 보관하는 사물함!
 	UPROPERTY(BlueprintReadWrite, Category="Global State|NPCs")
 	TMap<FName, FNPCSavedState> SavedNPCStates;
