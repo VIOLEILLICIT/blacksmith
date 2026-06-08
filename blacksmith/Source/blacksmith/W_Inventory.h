@@ -13,6 +13,12 @@ class BLACKSMITH_API UW_Inventory : public UUserWidget
 	GENERATED_BODY()
 
 public:
+	UPROPERTY(BlueprintReadOnly, Category = "Inventory")
+	UInventoryComponent* CachedInventoryComp;
+
+	UFUNCTION(BlueprintCallable, Category = "Trade")
+	void SellSelectedWeapon(UItemDataAsset* Asset);
+
 	// ⭐️ 블루프린트의 랩 박스 이름과 똑같아야 합니다.
 	UPROPERTY(meta = (BindWidget))
 	UWrapBox* InventoryWrapBox;

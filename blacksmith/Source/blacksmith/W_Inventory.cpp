@@ -5,6 +5,8 @@
 
 void UW_Inventory::RefreshInventory(UInventoryComponent* InventoryComp, bool bShowWeapons)
 {
+	CachedInventoryComp = InventoryComp;
+
 	// 에러 방지용 체크
 	if (!InventoryComp || !ItemSlotClass || !InventoryWrapBox) return;
 
@@ -56,6 +58,19 @@ void UW_Inventory::RefreshInventory(UInventoryComponent* InventoryComp, bool bSh
 					InventoryWrapBox->AddChildToWrapBox(NewSlot);
 				}
 			}
+		}
+	}
+}
+void UW_Inventory::SellSelectedWeapon(UItemDataAsset* Asset)
+{
+	if (!CachedInventoryComp || !Asset) return;
+
+	if (Asset->ItemCategory == EItemCategory::Weapon ||
+		Asset->ItemCategory == EItemCategory::SpecialWeapon)
+	{
+		if (CachedInventoryComp->RemoveItem(Asset, 1))
+		{
+			RefreshInventory(CachedInventoryComp, true);
 		}
 	}
 }
