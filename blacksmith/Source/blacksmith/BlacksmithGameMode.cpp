@@ -1,11 +1,15 @@
 #include "BlacksmithGameMode.h"
-#include "TimerManager.h" 
+#include "TimerManager.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/Character.h"
 #include "EncyclopediaComponent.h"
+#include "InventoryComponent.h"
 #include "BlacksmithGameInstance.h"
+#include "BlacksmithPlayer.h"
 #include "DaughterNPC.h"
 #include "TalkWidget.h"
+#include "TimeHUDWidget.h"
+#include "Components/TextBlock.h"
 
 ABlacksmithGameMode::ABlacksmithGameMode()
 {
@@ -379,6 +383,7 @@ void ABlacksmithGameMode::SleepAndNextDay()
 	{
 		GI->bIsDaughterAwake = false;
 		GI->bIsDaughterFound = false;
+		GI->bMorningDialogueShownToday = false; // 새 날 → 아침 대사 초기화
 	}
 
 	// 🟢 6. 맵에 있는 딸을 찾아서 투명화(수면 상태)를 해제하고 멈춰 세웁니다.
@@ -542,7 +547,7 @@ void ABlacksmithGameMode::BeginPlay()
     // 1. 아침 초기화 로직 (대사 띄우기)
 	ResetMorningState();
 
-	// 🟢 [추가] 레벨 이동 시 시간 HUD를 새로 생성합니다.
+	// 시간 HUD 생성
 	if (TimeHUDWidgetClass)
 	{
 		if (APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0))
@@ -632,9 +637,11 @@ void ABlacksmithGameMode::SaveGlobalData()
 	GI->SavedDaughterSleepWarningCount = this->DaughterSleepWarningCount;
 	GI->SavedIsDailyTimerStarted = this->bIsDailyTimerStarted;
 
-	// 2. 플레이어 데이터(인벤토리, 도감) 찾아내서 백업
-	if (ACharacter* Player = UGameplayStatics::GetPlayerCharacter(this, 0))
+	// 2. 플레이어 데이터(인벤토리, 도감, 골드) 찾아내서 백업
+	if (ABlacksmithPlayer* Player = Cast<ABlacksmithPlayer>(UGameplayStatics::GetPlayerCharacter(this, 0)))
 	{
+		GI->SavedGold = Player->Gold;
+
 		if (UInventoryComponent* Inv = Player->FindComponentByClass<UInventoryComponent>())
 			GI->SavedInventory = Inv->Inventory;
 
@@ -677,8 +684,10 @@ void ABlacksmithGameMode::RestoreGlobalData()
 	}
 
 	// 3. 플레이어 데이터(인벤토리, 도감) 찾아내서 복원
-	if (ACharacter* Player = UGameplayStatics::GetPlayerCharacter(this, 0))
+	if (ABlacksmithPlayer* Player = Cast<ABlacksmithPlayer>(UGameplayStatics::GetPlayerCharacter(this, 0)))
 	{
+		Player->Gold = GI->SavedGold;
+
 		if (UInventoryComponent* Inv = Player->FindComponentByClass<UInventoryComponent>())
 			Inv->Inventory = GI->SavedInventory;
 
@@ -851,6 +860,115 @@ void ABlacksmithGameMode::FormatQuestForUI(const FQuestData& InQuest, FString& O
 	OutDeadlineInfo = FString::Printf(TEXT("남은 기한: %d일"), RemainingDays);
 }
 
+/* =================================================================
+ * 📦 무기 납품 / 퀘스트 클리어 시스템
+ * ================================================================= */
+
+FText ABlacksmithGameMode::GetQuestTextForWeapon(UItemDataAsset* Weapon)
+{
+	if (!Weapon) return FText::GetEmpty();
+
+	// 메인 퀘스트 확인
+	if (bHasActiveMainQuest && !bIsMainQuestCompleted && CurrentMainQuest.TargetItem == Weapon)
+	{
+		FString Text = FString::Printf(TEXT("[메인] %s\n%d / %d"),
+			*CurrentMainQuest.QuestName,
+			CurrentMainQuest.SubmittedQuantity,
+			CurrentMainQuest.TargetQuantity);
+		return FText::FromString(Text);
+	}
+
+	// 서브 퀘스트 확인
+	for (const FQuestData& SubQuest : ActiveSubQuests)
+	{
+		if (SubQuest.TargetItem == Weapon)
+		{
+			FString Text = FString::Printf(TEXT("[서브] %s\n%d / %d"),
+				*SubQuest.QuestName,
+				SubQuest.SubmittedQuantity,
+				SubQuest.TargetQuantity);
+			return FText::FromString(Text);
+		}
+	}
+
+	return FText::GetEmpty();
+}
+
+FText ABlacksmithGameMode::SubmitWeaponForQuest(UItemDataAsset* Weapon)
+{
+	if (!Weapon) return FText::GetEmpty();
+
+	ABlacksmithPlayer* Player = Cast<ABlacksmithPlayer>(UGameplayStatics::GetPlayerCharacter(this, 0));
+	UInventoryComponent* InvComp = Player ? Player->FindComponentByClass<UInventoryComponent>() : nullptr;
+
+	// 보상 지급 + 보상 내역 문자열 생성 람다
+	auto GiveRewardsAndGetText = [&](const FQuestData& Quest) -> FString
+	{
+		FString RewardParts;
+		for (int32 i = 0; i < Quest.QuestRewards.Num(); i++)
+		{
+			const FQuestReward& Reward = Quest.QuestRewards[i];
+			if (i > 0) RewardParts += TEXT(", ");
+
+			if (Reward.RewardType == ERewardType::Currency)
+			{
+				if (Player) Player->Gold += Reward.RewardAmount;
+				RewardParts += FString::Printf(TEXT("%d 골드"), Reward.RewardAmount);
+			}
+			else if (Reward.RewardItem)
+			{
+				if (InvComp) InvComp->AddItem(Reward.RewardItem, Reward.RewardAmount);
+				RewardParts += FString::Printf(TEXT("%s %d개"), *Reward.RewardItem->ItemName, Reward.RewardAmount);
+			}
+		}
+		return RewardParts.IsEmpty() ? TEXT("없음") : RewardParts;
+	};
+
+	// 완료 알림 메시지 조합 람다 ([메인/서브] 이름 완료!\n보상: ...)
+	auto BuildNotifMessage = [](const FString& Prefix, const FString& QuestName, const FString& RewardText) -> FText
+	{
+		return FText::FromString(
+			FString::Printf(TEXT("%s %s 완료!\n보상: %s"), *Prefix, *QuestName, *RewardText)
+		);
+	};
+
+	// 메인 퀘스트 납품 확인
+	if (bHasActiveMainQuest && !bIsMainQuestCompleted && CurrentMainQuest.TargetItem == Weapon)
+	{
+		CurrentMainQuest.SubmittedQuantity++;
+
+		if (CurrentMainQuest.SubmittedQuantity >= CurrentMainQuest.TargetQuantity)
+		{
+			bIsMainQuestCompleted = true;
+			FString RewardText = GiveRewardsAndGetText(CurrentMainQuest);
+			OnQuestCompleted(CurrentMainQuest, true);
+			return BuildNotifMessage(TEXT("[메인 의뢰]"), CurrentMainQuest.QuestName, RewardText);
+		}
+		return FText::GetEmpty();
+	}
+
+	// 서브 퀘스트 납품 확인
+	for (int32 i = 0; i < ActiveSubQuests.Num(); i++)
+	{
+		if (ActiveSubQuests[i].TargetItem == Weapon)
+		{
+			ActiveSubQuests[i].SubmittedQuantity++;
+
+			if (ActiveSubQuests[i].SubmittedQuantity >= ActiveSubQuests[i].TargetQuantity)
+			{
+				FQuestData CompletedQuest = ActiveSubQuests[i];
+				ActiveSubQuests.RemoveAt(i);
+				FString RewardText = GiveRewardsAndGetText(CompletedQuest);
+				OnQuestCompleted(CompletedQuest, false);
+				return BuildNotifMessage(TEXT("[서브 의뢰]"), CompletedQuest.QuestName, RewardText);
+			}
+			return FText::GetEmpty();
+		}
+	}
+
+	return FText::GetEmpty();
+}
+
 // 🟢 아침 대사 UI 창이 닫히는 시점에 기존 스케줄(Schedule)의 아침 이벤트들을 작동시키는 함수
 void ABlacksmithGameMode::ExecuteMorningEvents()
 {
@@ -874,13 +992,19 @@ void ABlacksmithGameMode::ExecuteMorningEvents()
 
 void ABlacksmithGameMode::ResetMorningState()
 {
-        // 3. 아침 신호 발사
     OnMorningResetEvent();
 
-    // 4. 아침 대사 출력 로직
+    // 레벨 이동 시 중복 방지: 오늘 이미 아침 대사를 봤으면 건너뜁니다
+    UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance());
+    if (GI && GI->bMorningDialogueShownToday)
+    {
+        ExecuteMorningEvents();
+        return;
+    }
+
     int32 DialogueIndex = CurrentDay;
-    if (DailyMorningDialogueArray.IsValidIndex(DialogueIndex) && 
-        !DailyMorningDialogueArray[DialogueIndex].IsEmpty() && 
+    if (DailyMorningDialogueArray.IsValidIndex(DialogueIndex) &&
+        !DailyMorningDialogueArray[DialogueIndex].IsEmpty() &&
         MorningTalkWidgetClass)
     {
         if (APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0))
@@ -891,14 +1015,17 @@ void ABlacksmithGameMode::ResetMorningState()
                 MorningWidget->AddToViewport();
                 if (MorningWidget->descript)
                     MorningWidget->descript->SetText(DailyMorningDialogueArray[DialogueIndex]);
-                
+
+                // 오늘 아침 대사 표시 완료 표시
+                if (GI) GI->bMorningDialogueShownToday = true;
+
                 MorningWidget->OnTalkClosed.AddDynamic(this, &ABlacksmithGameMode::ExecuteMorningEvents);
-                
+
                 FInputModeUIOnly InputMode;
                 InputMode.SetWidgetToFocus(MorningWidget->TakeWidget());
                 PC->SetInputMode(InputMode);
                 PC->SetShowMouseCursor(true);
-                return; 
+                return;
             }
         }
     }
