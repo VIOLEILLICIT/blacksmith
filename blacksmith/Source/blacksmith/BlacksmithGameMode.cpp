@@ -431,6 +431,33 @@ void ABlacksmithGameMode::SleepAndNextDay()
 		}
 	}
 
+	// 딸이 다른 맵에 있어서 액터를 못 찾은 경우 CDO로 fallback
+	if (UBlacksmithGameInstance* GI2 = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		if (GI2->PendingAdultTrainingMessage.IsEmpty() && DaughterClass)
+		{
+			if (ADaughterNPC* CDO = Cast<ADaughterNPC>(DaughterClass->GetDefaultObject()))
+			{
+				const bool bIsCDOWarDay   = (CurrentDay >= CDO->WarStartDay);
+				const bool bIsCDOAdultDay = (!bIsCDOWarDay && CurrentDay >= CDO->AdultStartDay);
+
+				if (bIsCDOAdultDay && CDO->AdultHideoutList.Num() > 0)
+				{
+					int32 Idx = FMath::RandRange(0, CDO->AdultHideoutList.Num() - 1);
+					const FAdultHideoutData& HideoutData = CDO->AdultHideoutList[Idx];
+
+					if (!HideoutData.LetterText.IsEmpty())
+						GI2->PendingAdultTrainingMessage = HideoutData.LetterText;
+
+					GI2->bIsDaughterFollowing     = false;
+					GI2->bDaughterTagPriority     = true;
+					GI2->DaughterSavedLevel       = HideoutData.TargetLevelName;
+					GI2->DaughterSavedLocationTag = HideoutData.TargetPointTag;
+				}
+			}
+		}
+	}
+
 	// 7. 블루프린트로 "새 아침이 밝았음" 신호를 발사합니다! (침대 위 텔레포트용)
 	OnMorningResetEvent();
 
@@ -773,12 +800,25 @@ void ABlacksmithGameMode::OpenMailbox()
 	}
 
 	bHasPendingTrainingMessage = false;
+
+	// GameInstance에 저장된 훈련 출발 편지 우선 확인 (TeleportToAdultTraining에서 저장)
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		if (!GI->PendingAdultTrainingMessage.IsEmpty())
+		{
+			bHasPendingTrainingMessage = true;
+			PendingTrainingMessage = GI->PendingAdultTrainingMessage;
+			GI->PendingAdultTrainingMessage = FText::GetEmpty();
+		}
+	}
+
 	if (DaughterClass)
 	{
 		if (ADaughterNPC* DaughterCDO = Cast<ADaughterNPC>(DaughterClass->GetDefaultObject()))
 		{
-			// 성인기 훈련 출발 메시지 (AdultStartDay ~ WarStartDay 사이)
-			if (CurrentDay >= DaughterCDO->AdultStartDay && CurrentDay < DaughterCDO->WarStartDay
+			// GameInstance 편지가 없을 때만 TrainingMessagesByDay fallback
+			if (!bHasPendingTrainingMessage
+				&& CurrentDay >= DaughterCDO->AdultStartDay && CurrentDay < DaughterCDO->WarStartDay
 				&& DaughterCDO->TrainingMessagesByDay.Contains(CurrentDay))
 			{
 				bHasPendingTrainingMessage = true;

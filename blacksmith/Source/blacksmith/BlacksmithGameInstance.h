@@ -117,6 +117,10 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category="Global State|Game")
 	bool bMorningDialogueShownToday = false;
 
+	// 성인기 훈련 출발 시 남긴 편지 (TeleportToAdultTraining에서 저장, OpenMailbox에서 소비)
+	UPROPERTY(BlueprintReadWrite, Category="Global State|Game")
+	FText PendingAdultTrainingMessage;
+
 	// 🟢 [추가] NPC들의 고유 ID를 Key로 삼아 각자의 상태를 보관하는 사물함!
 	UPROPERTY(BlueprintReadWrite, Category="Global State|NPCs")
 	TMap<FName, FNPCSavedState> SavedNPCStates;

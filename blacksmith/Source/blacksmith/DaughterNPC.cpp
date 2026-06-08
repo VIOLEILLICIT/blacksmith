@@ -259,10 +259,13 @@ void ADaughterNPC::TeleportToAdultTraining()
 
 	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
 	{
-		GI->bIsDaughterFollowing     = false;
-		GI->bDaughterTagPriority     = true;
-		GI->DaughterSavedLevel       = TargetLevel;
-		GI->DaughterSavedLocationTag = TargetTag;
+		GI->bIsDaughterFollowing       = false;
+		GI->bDaughterTagPriority       = true;
+		GI->DaughterSavedLevel         = TargetLevel;
+		GI->DaughterSavedLocationTag   = TargetTag;
+		// 랜덤으로 고른 훈련 장소의 편지 텍스트를 저장 (다음 날 우편함에서 표시)
+		if (!HideoutData.LetterText.IsEmpty())
+			GI->PendingAdultTrainingMessage = HideoutData.LetterText;
 	}
 
 	if (UGameplayStatics::GetCurrentLevelName(this) == TargetLevel.ToString())
