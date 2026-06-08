@@ -4,6 +4,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "TimerManager.h"
 #include "BlacksmithGameInstance.h"
+#include "DialogueWidget.h"
 
 ADaughterNPC::ADaughterNPC() {}
 
@@ -120,6 +121,104 @@ void ADaughterNPC::OnDialogueEndAction()
 	{
 		FollowPlayer(150.0f); 
 		if (GI) GI->bIsDaughterFollowing = true;
+	}
+}
+
+void ADaughterNPC::ShowHideoutDialogueAndTeleport()
+{
+	// Child 페이즈가 아니거나 숨는 장소가 없으면 바로 순간이동
+	if (CurrentPhase != EDaughterPhase::Child || ChildHideoutList.Num() == 0)
+	{
+		TeleportToRandomHideout();
+		return;
+	}
+
+	int32 RandomIndex = FMath::RandRange(0, ChildHideoutList.Num() - 1);
+	PendingHideoutData = ChildHideoutList[RandomIndex];
+
+	// 대사 텍스트나 위젯 클래스가 없으면 바로 순간이동
+	if (PendingHideoutData.SpeechText.IsEmpty() || !DialogueWidgetClass)
+	{
+		ExecutePendingHideout();
+		return;
+	}
+
+	APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0);
+	if (!PC)
+	{
+		ExecutePendingHideout();
+		return;
+	}
+
+	HideoutDialogueWidget = CreateWidget<UDialogueWidget>(PC, DialogueWidgetClass);
+	if (!HideoutDialogueWidget)
+	{
+		ExecutePendingHideout();
+		return;
+	}
+
+	FDialogueLine Line;
+	Line.SpeakerName = TEXT("딸");
+	Line.DialogueText = PendingHideoutData.SpeechText;
+
+	FDialogueSequence Sequence;
+	Sequence.Lines.Add(Line);
+
+	StopMoving();
+	HideoutDialogueWidget->AddToViewport();
+	HideoutDialogueWidget->StartDialogue(Sequence);
+	HideoutDialogueWidget->OnDialogueFinished.AddDynamic(this, &ADaughterNPC::ExecutePendingHideout);
+
+	FInputModeUIOnly InputMode;
+	InputMode.SetWidgetToFocus(HideoutDialogueWidget->TakeWidget());
+	PC->SetInputMode(InputMode);
+	PC->SetShowMouseCursor(true);
+}
+
+void ADaughterNPC::ExecutePendingHideout()
+{
+	// 대화창 닫기
+	if (HideoutDialogueWidget)
+	{
+		HideoutDialogueWidget->RemoveFromParent();
+		HideoutDialogueWidget = nullptr;
+	}
+
+	// 입력 복구
+	if (APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0))
+	{
+		FInputModeGameOnly InputMode;
+		PC->SetInputMode(InputMode);
+		PC->SetShowMouseCursor(false);
+	}
+
+	// 선택해둔 숨는 장소로 순간이동
+	FName TargetLevel = PendingHideoutData.TargetLevelName;
+	FName TargetTag   = PendingHideoutData.TargetPointTag;
+
+	if (TargetLevel.IsNone() || TargetTag.IsNone()) return;
+
+	if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
+	{
+		GI->bIsDaughterFollowing      = false;
+		GI->DaughterSavedLevel        = TargetLevel;
+		GI->DaughterSavedLocationTag  = TargetTag;
+	}
+
+	if (UGameplayStatics::GetCurrentLevelName(this) == TargetLevel.ToString())
+	{
+		TArray<AActor*> FoundActors;
+		UGameplayStatics::GetAllActorsWithTag(this, TargetTag, FoundActors);
+		if (FoundActors.Num() > 0)
+		{
+			TeleportToLocation(FoundActors[0]->GetActorLocation());
+			if (PendingHideoutData.BubbleWidgetClass)
+				OnShowTeleportBubble(PendingHideoutData.BubbleWidgetClass, PendingHideoutData.SpeechText);
+		}
+	}
+	else
+	{
+		Destroy();
 	}
 }
 

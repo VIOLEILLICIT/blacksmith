@@ -208,7 +208,16 @@ void ABlacksmithGameMode::AdvanceTimeOneSecond()
 	}
 
 	if (CurrentDay <= 28 && CurrentTimeOfDay == 180.0f)
+	{
 		OnDaughterHideEvent();
+		if (AActor* DaughterActor = UGameplayStatics::GetActorOfClass(this, ADaughterNPC::StaticClass()))
+		{
+			if (ADaughterNPC* Daughter = Cast<ADaughterNPC>(DaughterActor))
+			{
+				Daughter->ShowHideoutDialogueAndTeleport();
+			}
+		}
+	}
 
 	if (CurrentDay <= 42 && CurrentTimeOfDay == 450.0f)
 	{
@@ -263,7 +272,16 @@ void ABlacksmithGameMode::WarpTimeTo(float TargetSeconds)
 	if (CurrentTimeOfDay < TargetSeconds)
 	{
 		if (CurrentDay <= 28 && CurrentTimeOfDay < 180.0f && TargetSeconds >= 180.0f)
+		{
 			OnDaughterHideEvent();
+			if (AActor* DaughterActor = UGameplayStatics::GetActorOfClass(this, ADaughterNPC::StaticClass()))
+			{
+				if (ADaughterNPC* Daughter = Cast<ADaughterNPC>(DaughterActor))
+				{
+					Daughter->ShowHideoutDialogueAndTeleport();
+				}
+			}
+		}
 
 		if (CurrentDay <= 42 && CurrentTimeOfDay < 450.0f && TargetSeconds >= 450.0f)
 		{
@@ -521,8 +539,21 @@ void ABlacksmithGameMode::BeginPlay()
 	// 데이터 복구 (현재 CurrentDay 등이 복구됨)
     RestoreGlobalData();
 
-    // 🟢 게임 시작 시점
-    ResetMorningState();
+    // 1. 아침 초기화 로직 (대사 띄우기)
+	ResetMorningState();
+
+	// 🟢 [추가] 레벨 이동 시 시간 HUD를 새로 생성합니다.
+	if (TimeHUDWidgetClass)
+	{
+		if (APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0))
+		{
+			UTimeHUDWidget* TimeHUD = CreateWidget<UTimeHUDWidget>(PC, TimeHUDWidgetClass);
+			if (TimeHUD)
+			{
+				TimeHUD->AddToViewport();
+			}
+		}
+	}
 
 	UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance());
 	// 🔴 (주의) 블루프린트에서 DaughterClass를 안 넣었으면 여기서 막혀서 스폰 안 됨!
