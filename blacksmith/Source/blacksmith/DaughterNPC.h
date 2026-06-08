@@ -114,8 +114,12 @@ public:
 
 	virtual void Interact_Implementation(AActor* Interactor) override;
 
-	UFUNCTION(BlueprintCallable, Category = "Daughter AI") 
+	UFUNCTION(BlueprintCallable, Category = "Daughter AI")
 	void TeleportToRandomHideout();
+
+	// 대사 표시 후 대사 창이 닫히면 순간이동 (3분 숨기 전용)
+	UFUNCTION(BlueprintCallable, Category = "Daughter AI")
+	void ShowHideoutDialogueAndTeleport();
 
 	// 🟢 부모의 '대화 끝난 후 행동'을 딸 전용으로 덮어씁니다.
 	virtual void OnDialogueEndAction() override;
@@ -123,9 +127,19 @@ public:
 	/* =================================================================
 	 * 블루프린트 통신용 이벤트 노드
 	 * ================================================================= */
-	UFUNCTION(BlueprintImplementableEvent, Category = "Daughter AI") 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Daughter AI")
 	void OnShowTeleportBubble(TSubclassOf<class UUserWidget> WidgetClass, const FText& SpeechText);
-	
-	UFUNCTION(BlueprintImplementableEvent, Category = "Daughter AI") 
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Daughter AI")
 	void OnLeaveLetterAtDesk(TSubclassOf<class UUserWidget> WidgetClass, const FText& LetterText);
+
+private:
+	// 대사 중 선택된 숨는 장소를 기억해두는 임시 저장소
+	FChildHideoutData PendingHideoutData;
+
+	UPROPERTY()
+	class UDialogueWidget* HideoutDialogueWidget = nullptr;
+
+	UFUNCTION()
+	void ExecutePendingHideout();
 };

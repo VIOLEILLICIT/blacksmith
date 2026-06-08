@@ -187,6 +187,9 @@ public:
 	 * 📬 우편함 (의뢰 및 편지 대기열 시스템)
 	 * ================================================================= */
 	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game|UI", meta=(DisplayName="시간 HUD 위젯 클래스"))
+	TSubclassOf<class UTimeHUDWidget> TimeHUDWidgetClass;
+
 	// 🟢 인스펙터에서 선택할 UI 위젯 클래스들
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game|Mail", meta=(DisplayName="의뢰 우편 WBP 클래스"))
 	TSubclassOf<class UMailQuestWidget> QuestMailWidgetClass;
