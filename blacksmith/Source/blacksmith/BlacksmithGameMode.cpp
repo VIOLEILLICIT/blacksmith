@@ -406,6 +406,7 @@ void ABlacksmithGameMode::SleepAndNextDay()
 		GI->bIsDaughterFollowing = false;
 		GI->bDaughterTagPriority = false;
 		GI->bMorningDialogueShownToday = false;
+		GI->bIsDaughterAsleep = false;
 	}
 
 	// 🟢 6. 맵에 있는 딸을 찾아서 투명화(수면 상태)를 해제하고 멈춰 세웁니다.
@@ -646,8 +647,17 @@ void ABlacksmithGameMode::BeginPlay()
 
 			if (ExistingDaughter)
 			{
-				ExistingDaughter->SetActorHiddenInGame(false);
-				ExistingDaughter->SetActorEnableCollision(true);
+				// 수면 중이면 침대 위치에 숨긴 상태로 유지
+				if (GI->bIsDaughterAsleep)
+				{
+					ExistingDaughter->SetActorHiddenInGame(true);
+					ExistingDaughter->SetActorEnableCollision(false);
+				}
+				else
+				{
+					ExistingDaughter->SetActorHiddenInGame(false);
+					ExistingDaughter->SetActorEnableCollision(true);
+				}
 			}
 		}
 	}

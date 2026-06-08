@@ -35,6 +35,10 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category="Global State")
 	bool bIsDaughterFollowing = false;
 
+	// 딸이 잠든 상태인가 (레벨 이동 후에도 유지)
+	UPROPERTY(BlueprintReadWrite, Category="Global State")
+	bool bIsDaughterAsleep = false;
+
 	// 태그 위치 이동 우선 플래그 (true면 Follow보다 태그 위치가 우선)
 	UPROPERTY(BlueprintReadWrite, Category="Global State")
 	bool bDaughterTagPriority = false;

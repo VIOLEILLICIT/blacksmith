@@ -57,9 +57,21 @@ void ADaughterNPC::UpdateDaughterRoutine()
 	}
 	else
 	{
-		SetActorHiddenInGame(false);
-		SetActorEnableCollision(true);
-		GetWorld()->GetTimerManager().UnPauseTimer(ScheduleCheckTimer);
+		UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance());
+		if (GI && GI->bIsDaughterAsleep)
+		{
+			// 수면 중: 숨김 유지 + 스케줄/이동 완전 정지
+			SetActorHiddenInGame(true);
+			SetActorEnableCollision(false);
+			StopMoving();
+			GetWorld()->GetTimerManager().PauseTimer(ScheduleCheckTimer);
+		}
+		else
+		{
+			SetActorHiddenInGame(false);
+			SetActorEnableCollision(true);
+			GetWorld()->GetTimerManager().UnPauseTimer(ScheduleCheckTimer);
+		}
 	}
 }
 

@@ -1,6 +1,7 @@
 #include "BaseInteractable.h"
-#include "BlacksmithGameMode.h" 
-#include "DaughterNPC.h" 
+#include "BlacksmithGameMode.h"
+#include "BlacksmithGameInstance.h"
+#include "DaughterNPC.h"
 #include "Kismet/GameplayStatics.h"
 #include "TalkWidget.h"
 #include "TimerManager.h" 
@@ -81,14 +82,22 @@ void ABaseInteractable::AttemptInteraction(APlayerController* PC)
 					break;
 
 				case EInteractableType::DaughterBed:
-					GM->bIsDaughterAsleep = true; 
-					if (AActor* DaughterActor = UGameplayStatics::GetActorOfClass(this, ADaughterNPC::StaticClass()))
+					if (GM->CurrentTimeOfDay >= 450.0f)
 					{
-						if (ADaughterNPC* Daughter = Cast<ADaughterNPC>(DaughterActor))
+						GM->bIsDaughterAsleep = true;
+						if (UBlacksmithGameInstance* GI = Cast<UBlacksmithGameInstance>(GetGameInstance()))
 						{
-							Daughter->StopMoving();
-							Daughter->SetActorHiddenInGame(true);
-							Daughter->SetActorEnableCollision(false);
+							GI->bIsDaughterAsleep    = true;
+							GI->bIsDaughterFollowing = false;
+						}
+						if (AActor* DaughterActor = UGameplayStatics::GetActorOfClass(this, ADaughterNPC::StaticClass()))
+						{
+							if (ADaughterNPC* Daughter = Cast<ADaughterNPC>(DaughterActor))
+							{
+								Daughter->StopMoving();
+								Daughter->SetActorHiddenInGame(true);
+								Daughter->SetActorEnableCollision(false);
+							}
 						}
 					}
 					break;
