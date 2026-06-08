@@ -32,6 +32,10 @@ class BLACKSMITH_API UInventoryComponent : public UActorComponent
 public:	
 	UInventoryComponent();
 
+	// 아이템 있는지 체킹 용
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+	bool HasAnyWeapon() const;
+
 	// 실제 아이템들이 담기는 가방 배열
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
 	TArray<FInventoryItem> Inventory;
@@ -53,3 +57,4 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Inventory|Cheat")
 	void AddAllItemsCheat(int32 AmountPerItem = 10);
 };
+

@@ -129,3 +129,20 @@ void UInventoryComponent::AddAllItemsCheat(int32 AmountPerItem)
 		}
 	}
 }
+
+bool UInventoryComponent::HasAnyWeapon() const
+{
+	for (const FInventoryItem& Item : Inventory)
+	{
+		if (Item.ItemAsset && Item.Quantity > 0)
+		{
+			if (Item.ItemAsset->ItemCategory == EItemCategory::Weapon ||
+				Item.ItemAsset->ItemCategory == EItemCategory::SpecialWeapon)
+			{
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
